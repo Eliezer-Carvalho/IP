@@ -32,7 +32,9 @@ def KV_CACHE_GQA (num_layers, context_length, kv_heads, head_dim, bytes_per_valu
 #Context_Length pode ser vários valores mas nunca superiores ao contexto máximo do modelo
 #Head_dim = Hidden_Size // num_attention_heads
 
-    KV_CACHE = humanize.naturalsize (2 * num_layers * context_length * kv_heads * head_dim * bytes_per_value)
+    #KV_CACHE = humanize.naturalsize (2 * num_layers * context_length * kv_heads * head_dim * bytes_per_value)
+    KV_CACHE = 2 * num_layers * context_length * kv_heads * head_dim * bytes_per_value
+    
     return KV_CACHE
 
 
