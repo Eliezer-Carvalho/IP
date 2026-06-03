@@ -22,5 +22,8 @@
 <h2> Modelos Base vs Instruct </h2>
 
 <h2> Stack </h2>
-<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval </p>
+<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval, uv </p>
 
+<h2> Fórmulas usadas </h2>
+
+<p> N_Tokens / Tempo Médio </p>
