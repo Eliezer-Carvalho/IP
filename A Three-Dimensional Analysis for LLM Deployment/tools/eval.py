@@ -3,8 +3,7 @@ import lm_eval
 #https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/python-api.md
 
 #Muito lento --> testar com diferentes params 
-
-
+#Para avaliar um modelo estilo benchmark profissional
 
 teste = lm_eval.simple_evaluate (
     model = "hf",

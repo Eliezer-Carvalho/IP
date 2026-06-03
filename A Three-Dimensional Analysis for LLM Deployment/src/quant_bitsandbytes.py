@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-MODELO_PATH = r"C:\Users\Admin\Desktop\models\Teste\Qwen3-4B-Base\BASE"
 
+MODELO_PATH = r"C:\Users\Admin\Desktop\models\Teste\Qwen3-4B-Base\BASE"
 
 quantization = BitsAndBytesConfig (
     load_in_4bit = True,  #Quantização
@@ -14,5 +14,5 @@ modelo = AutoModelForCausalLM.from_pretrained (MODELO_PATH, device_map = 'auto',
 
 tokenizer = AutoTokenizer.from_pretrained (MODELO_PATH)
 
-modelo.save_pretrained ('/models')
-tokenizer.save_pretrained ('/models')
+modelo.save_pretrained ("path")
+tokenizer.save_pretrained ("path")

@@ -39,6 +39,6 @@ def KV_CACHE_GQA (batch_size, num_layers, context_length, kv_heads, head_dim, by
 
 
 #Exemplo:
-contexto_max = KV_CACHE_GQA (1, 36, 4000, 8, 128, 2)
-print (f"KV_CACHE_MAX do modelo Qwen3-4B-Base = {contexto_max}")
+#contexto_max = KV_CACHE_GQA (1, 36, 30000, 8, 128, 2)
+#print (f"KV_CACHE_MAX do modelo Qwen3-4B-Base = {contexto_max}")
 
