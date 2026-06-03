@@ -22,5 +22,5 @@
 <h2> Modelos Base vs Instruct </h2>
 
 <h2> Stack </h2>
-<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models </p>
+<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval </p>
 
