@@ -27,3 +27,7 @@
 <h2> Fórmulas usadas </h2>
 
 <p> N_Tokens / Tempo Médio </p>
+
+<h2> Cenas Interessantes </h2>
+
+<p> Attention apresentada (End-to-end Continuous Speech Recognition using Attention-based Recurrent NN: First Results) </p>
