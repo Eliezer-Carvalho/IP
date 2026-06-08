@@ -1,934 +1,1012 @@
 [
   {
     "question": "Quem organiza a Copa do Mundo?",
-    "answer": "A FIFA (Fédération Internationale de Football Association)."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Com que frequência a Copa do Mundo é realizada?",
-    "answer": "A cada quatro anos."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que ano aconteceu a primeira Copa do Mundo?",
-    "answer": "1930."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o país-sede da primeira Copa do Mundo?",
-    "answer": "Uruguai."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem venceu a primeira Copa do Mundo?",
-    "answer": "O Uruguai."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais edições da Copa do Mundo foram canceladas devido à Segunda Guerra Mundial?",
-    "answer": "As edições de 1942 e 1946."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantos títulos mundiais o Brasil possui?",
-    "answer": "Cinco títulos."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em quais anos o Brasil conquistou seus títulos mundiais?",
-    "answer": "1958, 1962, 1970, 1994 e 2002."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção é a única a ter disputado todas as edições da Copa do Mundo?",
-    "answer": "O Brasil."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem é o único jogador tricampeão mundial mencionado no texto?",
-    "answer": "Pelé."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais seleções possuem quatro títulos mundiais?",
-    "answer": "Itália e Alemanha."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção venceu a Copa do Mundo de 2022?",
-    "answer": "A Argentina."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas seleções participarão da Copa do Mundo a partir de 2026?",
-    "answer": "48 seleções."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem foi o presidente da FIFA responsável pela criação da Copa do Mundo?",
-    "answer": "Jules Rimet."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o primeiro gol da história das Copas do Mundo e quem o marcou?",
-    "answer": "Foi marcado por Lucien Laurent, da França."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção derrotou a Argentina na final da Copa de 1930?",
-    "answer": "O Uruguai."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Por que o Uruguai foi escolhido como sede da Copa do Mundo de 1930?",
-    "answer": "Porque era bicampeão olímpico de futebol e comemorava o centenário de sua independência."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Como ficou conhecida a vitória do Uruguai sobre o Brasil na Copa de 1950?",
-    "answer": "Maracanaço."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas equipes participaram da primeira Copa do Mundo?",
-    "answer": "13 equipes."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção marcou presença em todas as edições da Copa do Mundo?",
-    "answer": "O Brasil."
+    "doc": "Mundial de Futebol.txt"
   },
 
   {
     "question": "Quais países conquistaram uma Copa do Mundo jogando fora de seus continentes?",
-    "answer": "Brasil, Espanha, Alemanha e Argentina."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi a única seleção sul-americana a disputar as Copas de 1934 e 1938?",
-    "answer": "O Brasil."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual era o número de seleções participantes entre 1934 e 1978, com exceção de casos especiais?",
-    "answer": "16 seleções."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem propôs aumentar a Copa do Mundo para 40 seleções antes da expansão para 48 equipes ser aprovada?",
-    "answer": "Michel Platini."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual presidente da FIFA declarou apoio a uma Copa do Mundo com 48 seleções em 2026?",
-    "answer": "Gianni Infantino."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi a primeira competição internacional de futebol mencionada no texto?",
-    "answer": "O British Home Championship, em 1884."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Por que o futebol foi retirado dos Jogos Olímpicos de 1932?",
-    "answer": "Devido ao desacordo entre FIFA e COI sobre o status dos jogadores amadores."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção conquistou o quarto lugar na Copa do Mundo de 2022 representando uma região fora da Europa e da América do Sul?",
-    "answer": "Marrocos."
+    "doc": "Mundial de Futebol.txt"
   },
 
   {
     "question": "Por que a expansão para 48 seleções pode aumentar a representatividade global da Copa do Mundo?",
-    "answer": "Porque permite a participação de mais seleções de diferentes continentes, especialmente África, Ásia e Oceania."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Segundo o texto, quais benefícios econômicos um país pode obter ao sediar uma Copa do Mundo?",
-    "answer": "Melhorias em infraestrutura, estradas, aeroportos, hotéis e desenvolvimento de determinados setores econômicos."
+    "doc": "Mundial de Futebol.txt"
   },
   {
-    "question": "Qual evidência no texto sugere o domínio histórico de Europa e América do Sul na Copa do Mundo?",
-    "answer": "Todas as seleções campeãs e finalistas da história pertencem a esses continentes."
+  "question": "Qual evidência no texto sugere o domínio histórico de Europa e América do Sul na Copa do Mundo?",
+  "doc": "Mundial de Futebol.txt"
   },
 
   {
     "question": "Em que ano a FIFA foi fundada?",
-    "answer": "1904."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual cidade sediou o Congresso da FIFA que decidiu criar a Copa do Mundo?",
-    "answer": "Amsterdã."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que data foi tomada a decisão de criar a Copa do Mundo?",
-    "answer": "28 de maio de 1928."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas seleções europeias participaram da Copa de 1930?",
-    "answer": "Quatro."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais seleções europeias participaram da Copa de 1930?",
-    "answer": "Bélgica, França, Romênia e Iugoslávia."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais foram os dois primeiros jogos da história da Copa do Mundo?",
-    "answer": "França x México e Estados Unidos x Bélgica."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o resultado de França x México na abertura da Copa de 1930?",
-    "answer": "4 a 1 para a França."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o resultado de Estados Unidos x Bélgica na abertura da Copa de 1930?",
-    "answer": "3 a 0 para os Estados Unidos."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que cidade ocorreu a final da Copa do Mundo de 1930?",
-    "answer": "Montevidéu."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas pessoas assistiram à final da Copa de 1930 segundo o texto?",
-    "answer": "Quase 93 mil pessoas."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual troféu foi conquistado definitivamente pelo Brasil em 1970?",
-    "answer": "A Taça Jules Rimet."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual era a condição para ganhar definitivamente a Taça Jules Rimet?",
-    "answer": "Vencer a Copa do Mundo pela terceira vez."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção venceu a Copa do Mundo de 1966?",
-    "answer": "Inglaterra."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção venceu a Copa do Mundo de 2010?",
-    "answer": "Espanha."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção venceu a Copa do Mundo de 2014?",
-    "answer": "Alemanha."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção venceu a Copa do Mundo de 2018?",
-    "answer": "França."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais países foram campeões do mundo jogando em casa segundo o texto?",
-    "answer": "Uruguai, Itália, Inglaterra, Alemanha, Argentina e França."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o primeiro torneio internacional de futebol realizado em 1884?",
-    "answer": "British Home Championship."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi o resultado do primeiro jogo internacional de futebol da história?",
-    "answer": "Empate por 0 a 0 entre Escócia e Inglaterra."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que cidade foi disputado o primeiro jogo internacional de futebol?",
-    "answer": "Glasgow."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em quais cidades os Jogos Olímpicos de 1900 e 1904 foram realizados?",
-    "answer": "Paris e Saint Louis."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual entidade reconheceu oficialmente o futebol nos Jogos Olímpicos de 1908?",
-    "answer": "O Comitê Olímpico Internacional."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem organizou o torneio olímpico de futebol de 1908?",
-    "answer": "The Football Association (FA)."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem conquistou a medalha de ouro no futebol olímpico de 1908?",
-    "answer": "A Grã-Bretanha."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem conquistou a medalha de ouro no futebol olímpico de 1912?",
-    "answer": "A Grã-Bretanha."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem criou o Troféu Sir Thomas Lipton?",
-    "answer": "Thomas Lipton."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que cidade foi disputado o Troféu Sir Thomas Lipton?",
-    "answer": "Turim."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual clube representou a Inglaterra no Troféu Sir Thomas Lipton?",
-    "answer": "West Auckland Town FC."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais edições do Troféu Sir Thomas Lipton foram vencidas pelo West Auckland Town FC?",
-    "answer": "1909 e 1911."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que ano a FIFA passou a reconhecer o torneio olímpico como Campeonato Mundial Amador de Futebol?",
-    "answer": "1914."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem venceu o torneio olímpico de futebol de 1920?",
-    "answer": "Bélgica."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem venceu os torneios olímpicos de futebol de 1924 e 1928?",
-    "answer": "Uruguai."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Por que muitos países europeus hesitaram em participar da Copa de 1930?",
-    "answer": "Porque a viagem ao Uruguai era longa e cara."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção não participou das Copas de 1934 e 1938 por ter sido anexada pela Alemanha?",
-    "answer": "Áustria."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quais seleções desistiram da Copa do Mundo de 1950?",
-    "answer": "Índia, Escócia e Turquia."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas seleções participaram efetivamente da Copa de 1950?",
-    "answer": "13 seleções."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual foi a primeira Copa do Mundo com participação da Inglaterra?",
-    "answer": "1950."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que ano a Inglaterra retornou à FIFA?",
-    "answer": "1946."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Por que a Inglaterra havia deixado a FIFA em 1920?",
-    "answer": "Por recusa em jogar contra países envolvidos na guerra e em protesto contra a influência estrangeira no futebol."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção chegou às semifinais da Copa do Mundo de 1930 fora dos continentes europeu e sul-americano?",
-    "answer": "Estados Unidos."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção asiática alcançou as quartas de final da Copa de 1966?",
-    "answer": "Coreia do Norte."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas equipes participaram da Copa do Mundo a partir de 1982?",
-    "answer": "24 equipes."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas equipes participaram da Copa do Mundo a partir de 1998?",
-    "answer": "32 equipes."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção africana alcançou as quartas de final em 1990?",
-    "answer": "Camarões."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção africana alcançou as quartas de final em 2010?",
-    "answer": "Gana."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Qual seleção centro-americana alcançou as quartas de final em 2014?",
-    "answer": "Costa Rica."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quantas seleções participaram das Eliminatórias da Copa do Mundo de 2022?",
-    "answer": "210 seleções."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem era o presidente da FIFA quando foi discutida a ampliação das vagas para África e Ásia em 2013?",
-    "answer": "Joseph Blatter."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Quem era o presidente da UEFA que propôs uma Copa com 40 seleções?",
-    "answer": "Michel Platini."
+    "doc": "Mundial de Futebol.txt"
   },
   {
     "question": "Em que data a FIFA confirmou oficialmente uma Copa do Mundo com 48 seleções?",
-    "answer": "10 de janeiro de 2017."
+    "doc": "Mundial de Futebol.txt"
   },
-
   {
     "question": "Entre quais anos ocorreu a Segunda Guerra Mundial?",
-    "answer": "De 1939 a 1945."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais eram as duas principais alianças militares da Segunda Guerra Mundial?",
-    "answer": "Os Aliados e o Eixo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quantos militares foram mobilizados durante a Segunda Guerra Mundial?",
-    "answer": "Mais de 100 milhões."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o conflito mais letal da história da humanidade segundo o texto?",
-    "answer": "A Segunda Guerra Mundial."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quantas pessoas morreram na Segunda Guerra Mundial?",
-    "answer": "Entre 50 e 70 milhões de pessoas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que foi o Holocausto mencionado no texto?",
-    "answer": "Um dos ataques em massa contra civis ocorridos durante a Segunda Guerra Mundial."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi a única guerra em que armas nucleares foram utilizadas em combate?",
-    "answer": "A Segunda Guerra Mundial."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento é geralmente considerado o início da Segunda Guerra Mundial?",
-    "answer": "A invasão da Polônia pela Alemanha Nazista em 1 de setembro de 1939."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que países declararam guerra à Alemanha após a invasão da Polônia?",
-    "answer": "A França e a maioria dos países do Império Britânico e da Commonwealth."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que data a Alemanha invadiu a Polônia?",
-    "answer": "1 de setembro de 1939."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quantos dias após a invasão da Polônia o Reino Unido e a França declararam guerra à Alemanha?",
-    "answer": "Dois dias depois."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual organização foi criada após a guerra para promover a cooperação internacional?",
-    "answer": "A Organização das Nações Unidas (ONU)."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais países emergiram como superpotências após a Segunda Guerra Mundial?",
-    "answer": "Os Estados Unidos e a União Soviética."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual conflito geopolítico surgiu após a Segunda Guerra Mundial entre Estados Unidos e União Soviética?",
-    "answer": "A Guerra Fria."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Entre quais anos durou a Guerra Fria segundo o texto?",
-    "answer": "De 1945 a 1991."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que continentes tiveram movimentos acelerados de descolonização após a guerra?",
-    "answer": "Ásia e África."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual outra data alguns historiadores utilizam para marcar o início da Segunda Guerra Mundial?",
-    "answer": "7 de julho de 1937, início da Segunda Guerra Sino-Japonesa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual historiador considerava que a Guerra Sino-Japonesa e a guerra europeia se fundiram em 1941?",
-    "answer": "A. J. P. Taylor."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que evento de 1935 também é apontado por alguns como início da Segunda Guerra Mundial?",
-    "answer": "A invasão italiana da Abissínia em 3 de outubro de 1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual historiador associou o início da guerra às batalhas de Khalkhin Gol?",
-    "answer": "Antony Beevor."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Entre quais meses ocorreram as batalhas de Khalkhin Gol?",
-    "answer": "De maio a setembro de 1939."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual data é conhecida como Dia V-E?",
-    "answer": "8 de maio de 1945."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual data é conhecida como Dia V-J?",
-    "answer": "14 de agosto de 1945."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que data ocorreu a rendição formal do Japão?",
-    "answer": "2 de setembro de 1945."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano foi assinado o tratado de paz com o Japão?",
-    "answer": "1951."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano foi ratificado o acordo de paz com a Alemanha?",
-    "answer": "1990."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual tratado impôs severas perdas territoriais e econômicas à Alemanha após a Primeira Guerra Mundial?",
-    "answer": "O Tratado de Versalhes."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que porcentagem aproximada do território a Alemanha perdeu após a Primeira Guerra Mundial?",
-    "answer": "Cerca de 13%."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual república foi criada na Alemanha após a Revolução Alemã de 1918-1919?",
-    "answer": "A República de Weimar."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quem liderou o movimento fascista que chegou ao poder na Itália entre 1922 e 1925?",
-    "answer": "Benito Mussolini."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano Adolf Hitler tornou-se chanceler da Alemanha?",
-    "answer": "1933."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que tipo de governo Hitler estabeleceu após consolidar seu poder?",
-    "answer": "Um governo unipartidário e totalitário nazista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento fortaleceu o apoio doméstico aos nazistas na Alemanha?",
-    "answer": "A Grande Depressão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual partido liderado por Hitler procurava estabelecer um Estado nazista na Alemanha?",
-    "answer": "O Partido Nazista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país europeu recebeu liberdade de ação na Etiópia com a tolerância da França?",
-    "answer": "A Itália."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano Hitler repudiou o Tratado de Versalhes e acelerou o rearmamento alemão?",
-    "answer": "1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que território foi anexado legalmente à Alemanha em 1935?",
-    "answer": "A Bacia do Sarre."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual partido político liderava o processo de unificação da China?",
-    "answer": "O Kuomintang (KMT)."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país iniciou a invasão da Manchúria em 1931?",
-    "answer": "O Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual Estado fantoche foi criado pelos japoneses na Manchúria?",
-    "answer": "Manchukuo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual organização internacional condenou a invasão japonesa da Manchúria?",
-    "answer": "A Liga das Nações."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que o Japão fez após ser condenado pela Liga das Nações?",
-    "answer": "Retirou-se da organização."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual trégua foi assinada entre China e Japão em 1933?",
-    "answer": "A Trégua de Tanggu."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual aliança foi formada por Reino Unido, França e Itália para conter a Alemanha?",
-    "answer": "A Frente de Stresa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano o Reino Unido assinou um acordo naval independente com a Alemanha?",
-    "answer": "1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que mês e ano a Itália invadiu a Etiópia?",
-    "answer": "Outubro de 1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que mês e ano ocorreu a remilitarização da Renânia pela Alemanha?",
-    "answer": "Março de 1936."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que conflito serviu para Alemanha e Itália testarem novas armas e métodos de guerra?",
-    "answer": "A Guerra Civil Espanhola."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quando foi formado o Eixo Roma-Berlim?",
-    "answer": "Em outubro de 1936."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que pacto foi assinado entre Alemanha e Japão em novembro de 1936?",
-    "answer": "O Pacto Anticomintern."
+    "doc": "Primeira Guerra Mundial.txt"
   },
-
   {
     "question": "Qual conflito entre China e Japão já estava em andamento quando a Segunda Guerra Mundial começou na Europa?",
-    "answer": "A Segunda Guerra Sino-Japonesa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual conflito entre Itália e Etiópia antecedeu a Segunda Guerra Mundial?",
-    "answer": "A Segunda Guerra Ítalo-Etíope."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que ataque japonês levou os Estados Unidos a entrarem na guerra?",
-    "answer": "O ataque a Pearl Harbor."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Além de Pearl Harbor, que outros alvos japoneses contribuíram para a entrada de novos países na guerra?",
-    "answer": "Colônias ultramarinas britânicas no Pacífico."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais países declararam guerra ao Japão após os ataques japoneses no Pacífico?",
-    "answer": "Estados Unidos, Países Baixos e Commonwealth Britânico."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual conceito descreve o envolvimento total dos recursos econômicos, industriais e científicos dos países na guerra?",
-    "answer": "Guerra total."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a Segunda Guerra Mundial é considerada uma guerra total?",
-    "answer": "Porque os países mobilizaram toda sua capacidade econômica, industrial e científica para o esforço de guerra."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi uma das principais consequências políticas da Segunda Guerra Mundial?",
-    "answer": "A ascensão dos Estados Unidos e da União Soviética como superpotências."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o objetivo principal da criação da ONU?",
-    "answer": "Promover a cooperação internacional e evitar futuros conflitos."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que princípio internacional acelerou os movimentos de descolonização após a guerra?",
-    "answer": "O princípio da autodeterminação."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual região iniciou um processo de integração política após a Segunda Guerra Mundial?",
-    "answer": "A Europa Ocidental."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual império foi derrotado na Primeira Guerra Mundial e posteriormente dissolvido?",
-    "answer": "O Império Alemão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais impérios foram derrotados na Primeira Guerra Mundial segundo o texto?",
-    "answer": "Áustria-Hungria, Alemanha e Império Otomano."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que grupo tomou o poder na Rússia em 1917?",
-    "answer": "Os Bolcheviques."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que sentimento surgiu na Alemanha após as perdas impostas pelo Tratado de Versalhes?",
-    "answer": "Nacionalismo irredentista e revanchista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Além de território, o que mais a Alemanha perdeu após o Tratado de Versalhes?",
-    "answer": "Suas colônias ultramarinas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que restrições militares foram impostas à Alemanha pelo Tratado de Versalhes?",
-    "answer": "Limitações ao tamanho e à capacidade de suas forças armadas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual revolução levou ao surgimento da República de Weimar?",
-    "answer": "A Revolução Alemã de 1918-1919."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Como era caracterizado o período entreguerras na Alemanha?",
-    "answer": "Por conflitos entre defensores da república e opositores radicais de direita e esquerda."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que nacionalistas italianos ficaram insatisfeitos após a Primeira Guerra Mundial?",
-    "answer": "Porque promessas feitas por Reino Unido e França não foram plenamente cumpridas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual ideologia política chegou ao poder na Itália sob Mussolini?",
-    "answer": "O fascismo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era um dos objetivos da política externa de Mussolini?",
-    "answer": "Transformar a Itália em uma potência mundial por meio da força."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano Hitler tentou derrubar o governo alemão antes de chegar ao poder?",
-    "answer": "1923."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento permitiu a Hitler consolidar um governo totalitário?",
-    "answer": "O incêndio do Palácio do Reichstag."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual política Hitler iniciou logo após chegar ao poder?",
-    "answer": "Um programa de rearmamento massivo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país africano era alvo das ambições coloniais italianas?",
-    "answer": "A Etiópia."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual tratado Hitler repudiou para acelerar o rearmamento alemão?",
-    "answer": "O Tratado de Versalhes."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que organização política dominava a China antes da invasão japonesa em larga escala?",
-    "answer": "O Kuomintang."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Contra quem o Kuomintang travou uma guerra civil na China?",
-    "answer": "Contra os comunistas chineses."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual slogan político justificava a expansão japonesa na Ásia?",
-    "answer": "Hakkō ichiu."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que significava o slogan Hakkō ichiu segundo o texto?",
-    "answer": "\"Todos sobre o mesmo teto\"."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual incidente serviu de pretexto para a invasão japonesa da Manchúria?",
-    "answer": "O Incidente de Mukden."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a China recorreu à Liga das Nações?",
-    "answer": "Porque era fraca demais para resistir sozinha ao Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais regiões foram palco de confrontos entre chineses e japoneses após a invasão da Manchúria?",
-    "answer": "Xangai, Rehe e Hebei."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que regiões continuaram resistindo à ocupação japonesa após a Trégua de Tanggu?",
-    "answer": "Manchúria, Chahar e Suiyuan."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a União Soviética buscou uma aliança com a França?",
-    "answer": "Porque temia a expansão alemã para o leste europeu."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que enfraqueceu o pacto franco-soviético antes de sua implementação?",
-    "answer": "A burocracia da Liga das Nações."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual lei aprovada pelos Estados Unidos refletia sua preocupação com os conflitos na Europa e Ásia?",
-    "answer": "A Lei de Neutralidade."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Em que ano os Estados Unidos aprovaram a Lei de Neutralidade?",
-    "answer": "1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual grande potência europeia apoiou a invasão italiana da Etiópia?",
-    "answer": "A Alemanha."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quais tratados foram desafiados pela remilitarização da Renânia?",
-    "answer": "Os tratados de Versalhes e Locarno."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Como reagiram as demais potências europeias à remilitarização da Renânia?",
-    "answer": "Com pouca reação."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quem apoiou os nacionalistas durante a Guerra Civil Espanhola?",
-    "answer": "Alemanha e Itália."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quem apoiou a República Espanhola durante a Guerra Civil Espanhola?",
-    "answer": "A União Soviética."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quem venceu a Guerra Civil Espanhola segundo o texto?",
-    "answer": "Os nacionalistas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi um dos objetivos ocultos das potências estrangeiras ao participar da Guerra Civil Espanhola?",
-    "answer": "Testar novas armas e métodos de guerra."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que aliança formal foi criada entre Alemanha e Itália em 1936?",
-    "answer": "O Eixo Roma-Berlim."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país aderiu ao Pacto Anticomintern após Alemanha e Japão?",
-    "answer": "A Itália."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que aconteceu após o Incidente de Xi’an na China?",
-    "answer": "O Kuomintang e os comunistas concordaram com um cessar-fogo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era o objetivo da frente unida formada após o Incidente de Xi’an?",
-    "answer": "Resistir à invasão japonesa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
-
   {
     "question": "Que evento ocorreu primeiro: a invasão da Manchúria pelo Japão ou a chegada de Hitler ao cargo de chanceler?",
-    "answer": "A invasão da Manchúria ocorreu primeiro, em 1931; Hitler tornou-se chanceler em 1933."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que evento ocorreu primeiro: a remilitarização da Renânia ou a formação do Eixo Roma-Berlim?",
-    "answer": "A remilitarização da Renânia ocorreu primeiro, em março de 1936."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi a consequência da condenação do Japão pela Liga das Nações?",
-    "answer": "O Japão retirou-se da Liga das Nações."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a União Soviética assinou um tratado de assistência mútua com a França?",
-    "answer": "Porque estava preocupada com os planos expansionistas da Alemanha no leste europeu."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "O que dificultou a efetividade do pacto franco-soviético?",
-    "answer": "A necessidade de aprovação pela burocracia da Liga das Nações."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Como a Grande Depressão contribuiu para a ascensão de Hitler?",
-    "answer": "Fortaleceu o apoio popular ao Partido Nazista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual relação existe entre o Tratado de Versalhes e o crescimento do nacionalismo alemão?",
-    "answer": "As perdas territoriais, coloniais e econômicas impostas pelo tratado alimentaram o nacionalismo revanchista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a Itália ficou insatisfeita após a Primeira Guerra Mundial apesar de estar entre os vencedores?",
-    "answer": "Porque considerava que as promessas feitas por Reino Unido e França não foram plenamente cumpridas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual objetivo comum aproximou Alemanha e Itália durante a década de 1930?",
-    "answer": "Políticas expansionistas e revisionistas da ordem internacional estabelecida após a Primeira Guerra Mundial."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o objetivo do Kuomintang ao formar uma frente unida com os comunistas chineses?",
-    "answer": "Combater a invasão japonesa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que país apoiou a invasão italiana da Etiópia quando outras grandes potências europeias não o fizeram?",
-    "answer": "A Alemanha."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento serviu como teste para novas armas e estratégias militares antes da Segunda Guerra Mundial?",
-    "answer": "A Guerra Civil Espanhola."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Quem apoiava os nacionalistas espanhóis e quem apoiava a República Espanhola?",
-    "answer": "Alemanha e Itália apoiavam os nacionalistas; a União Soviética apoiava a República."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi uma consequência geopolítica imediata da Segunda Guerra Mundial?",
-    "answer": "A emergência dos Estados Unidos e da União Soviética como superpotências."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que organização criada após a guerra tinha o objetivo de evitar novos conflitos globais?",
-    "answer": "A ONU."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual processo político foi acelerado na Ásia e na África após a guerra?",
-    "answer": "A descolonização."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a Segunda Guerra Mundial é considerada diferente de conflitos anteriores em termos de mobilização?",
-    "answer": "Porque envolveu guerra total, mobilizando recursos civis e militares em larga escala."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi a principal justificativa usada pelos japoneses para invadir a Manchúria?",
-    "answer": "O Incidente de Mukden."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o resultado político da Revolução Alemã de 1918-1919?",
-    "answer": "A criação da República de Weimar."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual regime substituiu a República de Weimar após a ascensão de Hitler?",
-    "answer": "O regime nazista."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual acontecimento levou Hitler a consolidar um governo unipartidário?",
-    "answer": "O incêndio do Reichstag."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que potência europeia recebeu pouca oposição ao remilitarizar a Renânia?",
-    "answer": "A Alemanha."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi uma consequência da falta de reação das potências europeias à remilitarização da Renânia?",
-    "answer": "O fortalecimento da confiança e da agressividade da política externa alemã."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual ligação existe entre o Tratado de Versalhes e o programa de rearmamento de Hitler?",
-    "answer": "Hitler rejeitou as restrições impostas pelo tratado e acelerou o rearmamento alemão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era o objetivo japonês ao expandir sua influência sobre a China?",
-    "answer": "Estabelecer domínio regional na Ásia."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi a importância do Eixo Roma-Berlim para os acontecimentos posteriores?",
-    "answer": "Formalizou a cooperação política entre Alemanha e Itália."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual pacto aproximou Alemanha e Japão antes da Segunda Guerra Mundial?",
-    "answer": "O Pacto Anticomintern."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país aderiu ao Pacto Anticomintern depois de Alemanha e Japão?",
-    "answer": "A Itália."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual relação existe entre Pearl Harbor e a entrada dos Estados Unidos na guerra?",
-    "answer": "O ataque japonês a Pearl Harbor levou os Estados Unidos a declarar guerra ao Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o principal efeito da Segunda Guerra Mundial sobre a ordem internacional?",
-    "answer": "A substituição da antiga ordem europeia pela rivalidade entre Estados Unidos e União Soviética."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento ocorreu primeiro: a invasão italiana da Etiópia ou a Guerra Civil Espanhola?",
-    "answer": "A invasão italiana da Etiópia ocorreu primeiro, em 1935."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento ocorreu primeiro: o Pacto Anticomintern ou o início da Segunda Guerra Mundial?",
-    "answer": "O Pacto Anticomintern ocorreu primeiro, em 1936."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento ocorreu primeiro: a chegada de Mussolini ao poder ou a chegada de Hitler ao poder?",
-    "answer": "Mussolini chegou ao poder primeiro."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual evento ocorreu primeiro: a formação da Frente de Stresa ou a remilitarização da Renânia?",
-    "answer": "A formação da Frente de Stresa."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que líder chegou ao poder primeiro, Mussolini ou Hitler?",
-    "answer": "Mussolini."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual país se retirou de uma organização internacional após ser condenado por agressão territorial?",
-    "answer": "O Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era a principal preocupação da União Soviética na década de 1930?",
-    "answer": "A expansão alemã para o leste europeu."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual conflito serviu de prelúdio para a aliança entre Alemanha e Itália?",
-    "answer": "A cooperação entre ambos durante a Guerra Civil Espanhola."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que ideologia política dominava a Alemanha sob Hitler?",
-    "answer": "O nazismo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que ideologia política dominava a Itália sob Mussolini?",
-    "answer": "O fascismo."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual semelhança existia entre os regimes de Hitler e Mussolini segundo o texto?",
-    "answer": "Ambos eram autoritários, nacionalistas e expansionistas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era o principal objetivo da Lei de Neutralidade aprovada pelos Estados Unidos?",
-    "answer": "Evitar o envolvimento direto em conflitos externos."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o resultado da assinatura da Trégua de Tanggu?",
-    "answer": "A redução temporária dos confrontos diretos entre China e Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Por que a China buscou apoio internacional contra o Japão?",
-    "answer": "Porque não tinha força suficiente para resistir sozinha."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual fator contribuiu para o enfraquecimento do sistema internacional de segurança coletiva antes da guerra?",
-    "answer": "A incapacidade da Liga das Nações de impedir agressões territoriais."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Que país utilizou o incidente de Mukden como justificativa para expansão territorial?",
-    "answer": "O Japão."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi uma consequência do enfraquecimento da Liga das Nações?",
-    "answer": "O aumento das agressões por regimes expansionistas."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual era a relação entre o nacionalismo revanchista alemão e a política externa de Hitler?",
-    "answer": "O revanchismo alimentou políticas expansionistas e a revisão da ordem pós-Versalhes."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o principal resultado militar da vitória dos Aliados em 1945?",
-    "answer": "O fim da Segunda Guerra Mundial."
+    "doc": "Primeira Guerra Mundial.txt"
   },
   {
     "question": "Qual foi o principal resultado político da vitória dos Aliados em 1945?",
-    "answer": "A reorganização da ordem mundial sob liderança das novas superpotências."
-  }
+    "doc": "Primeira Guerra Mundial.txt"
+  },
   
+  {
+    "question": "O que resulta da fusão entre a REFER e a Estradas de Portugal?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual era a principal função da Estradas de Portugal antes da fusão?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Quando foi criada a sociedade Estradas de Portugal, S.A.?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual foi a entidade que antecedeu a Estradas de Portugal (EP)?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Em que data foi criada a Junta Autónoma das Estradas (JAE)?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual foi o objetivo principal da REFER quando foi criada em 1997?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Porque é que a REFER não podia explorar serviços ferroviários?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Que rede foi integrada na REFER em 2011?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual decreto-lei determinou a fusão entre a REFER e a EP?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual é o novo nome da empresa após a fusão de 2015?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+
+  {
+    "question": "Que tipo de infraestruturas são geridas pela Infraestruturas de Portugal?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual era a designação da REFER após a alteração de 2008?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Que reorganização ocorreu na empresa RAVE em 2011?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual foi o efeito do Decreto-Lei nº 91/2015 na REFER e na EP?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Que atividades eram desempenhadas pela Estradas de Portugal?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Que ministérios exerciam tutela sobre a REFER?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual era a principal função da Direcção Geral de Engenharia e Investimentos antes da criação da REFER?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Quantos trabalhadores foram transferidos para a REFER na sua criação?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual foi a data de criação do IEP - Instituto das Estradas de Portugal?",
+    "doc": "Infraestruturas de Portugal.txt"
+  },
+  {
+    "question": "Qual é a função da Infraestruturas de Portugal no contexto das redes ferroviária e rodoviária?",
+    "doc": "Infraestruturas de Portugal.txt"
+  }
 ]
 
