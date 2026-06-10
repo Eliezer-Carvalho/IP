@@ -1,0 +1,169 @@
+Arquitetura e Attention
+Evolução de RNN → Transformer → LLM
+Self-Attention vs Cross-Attention
+Complexidade da Attention (O(n²))
+Positional Encoding
+RoPE (Rotary Positional Embeddings)
+ALiBi
+Mixture of Experts (MoE)
+Sparse Attention
+Context Window
+Relação entre contexto e consumo de memória
+Long Context Models
+Context Extension Techniques
+Context Compression
+RAG vs Contexto Longo
+Lost in the Middle Problem
+KV Cache (expandir)
+
+Já tens o tema, mas acrescentaria:
+
+Fórmula de consumo de memória do KV Cache
+Prefix Caching
+Continuous Batching
+KV Cache Reuse
+Trade-off entre Throughput e Latência
+Serving / Inferência
+Dynamic Batching
+Continuous Batching
+Speculative Decoding
+Chunked Prefill
+Tensor Parallelism
+Pipeline Parallelism
+Data Parallelism
+Model Sharding
+Quantização
+
+Além de "Quantization Matters":
+
+FP32
+FP16
+BF16
+INT8
+INT4
+GPTQ
+AWQ
+GGUF Quantizations (Q4_K_M, Q5_K_M, Q8_0, etc.)
+Accuracy vs Throughput vs Memory
+Hardware
+
+Uma secção própria faz sentido:
+
+GPU vs CPU Inference
+VRAM como principal bottleneck
+Memory Bandwidth
+HBM vs DDR
+PCIe Bottleneck
+CUDA Cores vs Tensor Cores
+Multi-GPU Inference
+Métricas
+
+Além de:
+
+Tokens/s=
+Tempo
+N
+tokens
+	​
+
+	​
+
+
+Acrescentaria:
+
+TTFT (Time To First Token)
+TPOT (Time Per Output Token)
+Throughput (req/s)
+Latência P50, P95 e P99
+Utilização de GPU
+Utilização de Memória
+Benchmarks
+MMLU
+GSM8K
+HumanEval
+MT-Bench
+Arena Hard
+lm_eval
+Modelos Base vs Instruct
+
+Expandir para:
+
+Pretraining
+SFT (Supervised Fine-Tuning)
+RLHF
+DPO
+Instruction Tuning
+Stack
+
+Poderias organizar por camadas:
+
+Models
+├── GGUF
+├── Safetensors
+
+Inference
+├── llama.cpp
+├── vLLM
+├── TensorRT-LLM
+├── SGLang
+├── TGI
+
+Libraries
+├── transformers
+├── bitsandbytes
+├── accelerate
+
+Evaluation
+├── lm_eval
+├── OpenAI Evals
+
+Tooling
+├── uv
+├── huggingface_hub
+Fórmulas Úteis
+
+KV Cache:
+
+KV
+mem
+	​
+
+=2×Layers×Heads×HeadDim×SeqLen×Batch×Bytes
+
+Throughput:
+
+Throughput=
+Tempo
+Requests
+	​
+
+
+Latência média:
+
+Latency=TTFT+Decode
+Cenas Interessantes
+
+Eu adicionaria:
+
+Artigo original Transformer: Attention Is All You Need
+FlashAttention
+PagedAttention (base do vLLM)
+Speculative Decoding
+Multi-Head → Multi-Query → Grouped-Query Attention
+Mixture of Experts (MoE)
+DeepSeek's MLA (Multi-head Latent Attention)
+
+Se o objetivo for uma análise séria de hospedagem de LLMs, os tópicos que normalmente mais impressionam são:
+
+KV Cache
+Memory Bandwidth
+Prefill vs Decode
+Continuous Batching
+Quantização
+PagedAttention
+Speculative Decoding
+TTFT e Throughput
+vLLM vs llama.cpp
+GPU Economics (custo por milhão de tokens)
+
+Esses dez temas explicam grande parte das diferenças de desempenho observadas na prática.
