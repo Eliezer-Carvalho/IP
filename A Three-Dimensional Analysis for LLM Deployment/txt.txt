@@ -167,3 +167,191 @@ vLLM vs llama.cpp
 GPU Economics (custo por milhão de tokens)
 
 Esses dez temas explicam grande parte das diferenças de desempenho observadas na prática.
+
+
+1. Arquitetura de Inferência de LLMs
+Pipeline de Inferência
+
+Separar claramente:
+
+Tokenização
+Prefill Phase
+KV Cache Generation
+Decode Phase
+Detokenização
+
+Explicar:
+
+Prefill → paralelizável → compute-bound
+Decode → sequencial → memory-bound
+
+Isto é uma das conclusões mais importantes quando se fala de serving.
+
+2. Métricas Fundamentais
+
+Muita gente fala de tokens/s mas faltam métricas reais de serving.
+
+Throughput
+Throughput=
+Tempo
+Total Tokens
+	​
+
+
+Throughput=
+Tempo
+Total Tokens
+	​
+
+
+Time To First Token (TTFT)
+
+Tempo entre pedido e primeiro token gerado.
+
+Extremamente relevante para UX.
+
+Inter-Token Latency (ITL)
+
+Tempo médio entre tokens.
+
+End-to-End Latency
+
+Tempo total da inferência.
+
+3. KV Cache Deep Dive
+
+Já tens KV Cache, mas eu aprofundaria:
+
+Porque existe
+
+Evita recomputar attention para todos os tokens anteriores.
+
+Sem cache:
+
+Complexidade aproximadamente:
+
+O(n
+2
+)
+
+Com cache:
+
+O(n)
+
+para cada novo token gerado.
+
+Problemas
+Consumo de VRAM
+Contextos longos
+Batchs grandes
+Fragmentação de memória
+4. Técnicas Modernas de Serving
+
+Além das que já tens:
+
+Continuous Batching
+
+Usado por:
+
+vLLM
+Anyscale
+
+Permite inserir novos pedidos sem esperar que batches terminem.
+
+Grande aumento de throughput.
+
+Speculative Decoding
+
+Modelos pequenos geram candidatos.
+
+Modelo grande valida.
+
+Pode aumentar significativamente tokens/s.
+
+Exemplos:
+
+Draft Model
+Target Model
+Prefix Caching
+
+Muito útil em aplicações RAG.
+
+Se vários utilizadores partilham o mesmo prompt inicial.
+
+5. Quantização
+
+Tens "Quantization Matters", mas falta detalhe.
+
+PTQ
+
+Post Training Quantization
+
+Exemplos:
+
+INT8
+INT4
+GPTQ
+AWQ
+QLoRA
+
+Treino eficiente usando:
+
+4-bit quantization
+LoRA adapters
+6. Formatos de Modelo
+
+Adicionar:
+
+GGUF
+
+Focado em:
+
+llama.cpp
+CPU inference
+Safetensors
+
+Vantagens:
+
+Segurança
+Loading rápido
+7. Frameworks de Serving
+
+Atualmente só tens tooling.
+
+Eu acrescentaria:
+
+Inferência
+vLLM
+Text Generation Inference (TGI)
+llama.cpp
+Treino/Fine-Tuning
+PyTorch
+Transformers
+PEFT
+8. Benchmarking
+
+Isto é algo que distingue um relatório de engenharia.
+
+Hardware
+
+Exemplo:
+
+A100 80GB
+H100
+RTX 4090
+L40S
+Modelos
+Llama 3
+Qwen 3
+Mistral
+Avaliação
+Prompt fixo
+Contexto fixo
+Batch size variável
+
+Métricas:
+
+TTFT
+Tokens/s
+VRAM
+ITL
