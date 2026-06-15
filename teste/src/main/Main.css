@@ -1,0 +1,96 @@
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    }
+}
+
+
+
+
+
+.x {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    margin-left: 250px;
+    position: fixed;
+    top: 100px
+}
+
+
+.barra {
+    position: absolute  ;
+    left: 260px;
+    top: 300px;
+    border-radius: 20px;
+    
+    background-color: rgb(255, 255, 255);
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    animation: glow 10s infinite;
+    
+    /*border: 1px solid whitesmoke;
+    box-shadow: 0 0 100px rgb(241, 4, 4);
+    animation: borderMove 10s; */
+    /*
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow:
+    0 0 15px rgba(168,85,247,0.4),
+    0 0 30px rgba(59,130,246,0.3);
+    */
+    font-family: "Outfit", sans-serif;
+    width: 600px;
+    height: 40px;
+    padding-left: 50px;
+}
+
+.barra:focus {
+    outline: none;
+}
+
+.welcome {
+    position: absolute;
+    left: 270px;
+    top: 180px;
+    background-color: whitesmoke;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+
+.footer {
+    font-family: "Outfit", sans-serif;
+    position: absolute;
+    top: 590px;
+    margin-left: 500px;
+}
+
+.button {
+    width: 35px;
+    height: 30px;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 268px;
+    margin-top: 307px;
+    border: none;
+    font-weight: 100;
+}
+
+
+
+/* Mudar frases, continuar a trabalhar aparência, tipo de fonte, trabalhar o tempo dos exemplos, comentar código*/
