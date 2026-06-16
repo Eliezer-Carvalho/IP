@@ -1,96 +1,96 @@
-
+/* Animação da Barra de Input Text */
 @keyframes glow {
-    0% {
-        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-    }
+    0% {box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);}
 
-    50% {
-        box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
-    }
+    50% {box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);}
 
-    100% {
-        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-    }
+    100% {box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);}
 }
 
-
-
-
-
-.x {
+/* Definição do tamanho do container */
+.container {
     display: flex;
+    position: fixed;
+
+    top: 100px;
     width: 100vw;
     height: 100vh;
-    background-color: whitesmoke;
-    margin-left: 250px;
-    position: fixed;
-    top: 100px
+
+    background-color: white;
+
+    margin-left: 250px
 }
 
-
-.barra {
-    position: absolute  ;
-    left: 260px;
-    top: 300px;
-    border-radius: 20px;
-    
-    background-color: rgb(255, 255, 255);
-    border: 1px solid whitesmoke;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-    animation: glow 10s infinite;
-    
-    /*border: 1px solid whitesmoke;
-    box-shadow: 0 0 100px rgb(241, 4, 4);
-    animation: borderMove 10s; */
-    /*
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow:
-    0 0 15px rgba(168,85,247,0.4),
-    0 0 30px rgba(59,130,246,0.3);
-    */
-    font-family: "Outfit", sans-serif;
-    width: 600px;
-    height: 40px;
-    padding-left: 50px;
-}
-
-.barra:focus {
-    outline: none;
-}
-
+/* Mensagem de boas vindas */
 .welcome {
     position: absolute;
-    left: 270px;
-    top: 180px;
-    background-color: whitesmoke;
+
+    left: 25vw;
+    top: 20vh;
+
+    background-color: white;
+
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 50px;
+
     white-space: nowrap;
 }
 
-
-.footer {
-    font-family: "Outfit", sans-serif;
+/* Barra de Input text*/
+.input_text {
     position: absolute;
-    top: 590px;
-    margin-left: 500px;
+
+    width: 700px;
+    height: 40px;
+
+    left: 21.9vw;
+    top: 300px;
+    padding-left: 50px; /* Posição das mensagens dentro da Box */
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    
+    background-color: white;
+
+    animation: glow 10s infinite; /* Call da animação */
+    
+    font-family: "Outfit", sans-serif;
 }
 
+/* Barra de Input text quando é clicada*/
+.input_text:focus {
+    outline: none;
+}
+
+/* Botão + */
 .button {
+    position: fixed;
+
     width: 35px;
     height: 30px;
+
     background: white;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    margin-left: 268px;
+    color: black;
+
+    font-size: 25px;
+    font-weight: lighter;
+    
+    margin-left: 22.5vw;
     margin-top: 307px;
+
     border: none;
-    font-weight: 100;
 }
 
+/* Footer da Página */
+.footer {
+    position: fixed;
+
+    top: 95vh;
+    margin-left: 38vw;
+
+    font-family: "Outfit", sans-serif;
+}
 
 
 /* Mudar frases, continuar a trabalhar aparência, tipo de fonte, trabalhar o tempo dos exemplos, comentar código*/

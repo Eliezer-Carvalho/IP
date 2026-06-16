@@ -1,17 +1,18 @@
 .header {
-    margin-left: 250px;
+    margin-left: 248px;
     position: fixed;
     top: 1px;
-    background-color: whitesmoke;
+    background-color: white;
     width: 100vw;
-    height: 100px;
+    height: 70.4px;
+    border-bottom: solid #5c697d 1px;
 }
 
 .nomeProjeto {
-    margin-left: 80px;
-    margin-top: 30px;
+    margin-left: 50px;
+    margin-top: 28px;
 
-    background-color: whitesmoke;
+    background-color: white;
 
     font-family: "Outfit", sans-serif;
     font-size: 25px;
