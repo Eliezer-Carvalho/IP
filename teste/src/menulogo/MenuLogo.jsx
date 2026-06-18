@@ -10,8 +10,8 @@ function MenuLogo () {
 
             <img className = 'logo' src = {logo} alt = "Infraestruturas de Portugal"/>
             
-            <h1 style = {{fontFamily: "Outfit, sans-serif"}}></h1>
-            <p style = {{fontFamily: "Outfit, sans-serif"}}></p>
+            <h1 style = {{fontFamily: "Outfit, sans-serif"}}> Rag </h1>
+            <p style = {{fontFamily: "Outfit, sans-serif"}}> Agentic  </p>
             
            
             

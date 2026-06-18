@@ -1,0 +1,1767 @@
+[
+    {
+    "query": "O que é um campo elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um campo elétrico é uma região do espaço onde uma carga elétrica fica sujeita a uma força. Essa força é proporcional ao valor da carga e inversamente proporcional ao quadrado da distância entre as cargas."
+    },
+    {
+    "query": "O que é um campo magnético?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um campo magnético é uma região do espaço gerada por cargas em movimento ou materiais magnetizados, na qual outras cargas em movimento ou materiais ferromagnéticos ficam sujeitos a forças magnéticas."
+    },
+    {
+    "query": "Como se gera um campo magnético num íman?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um íman gera um campo magnético permanente que se manifesta através de pólos norte e sul, onde a força de atração é mais intensa."
+    },
+    {
+    "query": "Qual o efeito da corrente elétrica num condutor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A corrente elétrica num condutor gera um campo magnético à sua volta, que pode ser observado através da deflexão de uma bússola ou da orientação de limalha de ferro."
+    },
+    {
+    "query": "Porque se usam espiras e bobinas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Porque o enrolamento de condutores em espiras ou bobinas reforça o campo magnético gerado, aumentando significativamente a sua intensidade."
+    },
+    {
+    "query": "O que é auto-indução?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Auto-indução é o fenómeno em que uma variação de corrente numa bobina induz uma força eletromotriz na própria bobina que se opõe a essa variação."
+    },
+    {
+    "query": "O que é indução mútua?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Indução mútua ocorre quando a variação de corrente numa bobina induz uma f.e.m. noutra bobina próxima."
+    },
+    {
+    "query": "O que diz a Lei de Lenz?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A Lei de Lenz afirma que a f.e.m. induzida tem sempre um sentido que se opõe à causa que lhe deu origem."
+    },
+    {
+    "query": "Como funciona a indução eletromagnética?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A indução eletromagnética ocorre quando uma variação de fluxo magnético através de um condutor gera uma força eletromotriz nesse condutor."
+    },
+    {
+    "query": "O que acontece quando um íman se move numa bobina?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É induzida uma força eletromotriz na bobina, que depende da velocidade e intensidade do movimento do íman."
+    },
+    {
+    "query": "O que é um gerador elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um gerador elétrico converte energia mecânica em energia elétrica através do fenómeno de indução eletromagnética."
+    },
+    {
+    "query": "Como funciona um alternador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um alternador gera corrente alternada através da rotação de uma espira num campo magnético, produzindo uma f.e.m. sinusoidal."
+    },
+    {
+    "query": "Como funciona um dínamo?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um dínamo converte corrente alternada gerada numa espira em corrente contínua através de um comutador mecânico."
+    },
+    {
+    "query": "O que é um transformador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um transformador é uma máquina estática que altera os níveis de tensão e corrente através de indução magnética entre enrolamentos."
+    },
+    {
+    "query": "Qual a relação entre espiras e tensão num transformador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A relação entre tensões é proporcional ao número de espiras dos enrolamentos primário e secundário."
+    },
+    {
+    "query": "O que é o núcleo de um transformador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "O núcleo é um material ferromagnético que facilita a passagem do fluxo magnético entre o primário e o secundário."
+    },
+    {
+    "query": "Porque o núcleo dos transformadores é laminado?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Para reduzir correntes de Foucault e diminuir perdas por aquecimento no núcleo."
+    },
+    {
+    "query": "O que é um motor elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Um motor elétrico converte energia elétrica em energia mecânica através de forças eletromagnéticas."
+    },
+    {
+    "query": "Como funciona um motor de corrente contínua?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Funciona através da força eletromagnética num condutor em campo magnético, produzindo rotação com auxílio de um comutador."
+    },
+    {
+    "query": "O que é a força eletromagnética?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a força exercida num condutor percorrido por corrente quando está num campo magnético."
+    },
+    {
+    "query": "O que é um motor de indução?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um motor que funciona através da indução de correntes no rotor por um campo magnético rotativo no estator."
+    },
+    {
+    "query": "O que é escorregamento num motor de indução?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a diferença entre a velocidade do campo magnético do estator e a velocidade de rotação do rotor."
+    },
+    {
+    "query": "O que é um motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um motor cuja velocidade de rotação é igual à velocidade do campo magnético girante."
+    },
+    {
+    "query": "O que é auto-indução numa bobina?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É o fenómeno em que a própria bobina induz uma f.e.m. quando a corrente varia."
+    },
+    {
+    "query": "O que é indução mútua entre bobinas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a indução de uma f.e.m. numa bobina devido à variação de corrente noutra bobina próxima."
+    },
+    {
+    "query": "O que é fluxo magnético?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a quantidade de linhas de campo magnético que atravessa uma determinada área."
+    },
+    {
+    "query": "O que acontece quando se aumenta a corrente numa bobina?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "O campo magnético aumenta proporcionalmente, intensificando o fluxo magnético gerado."
+    },
+    {
+    "query": "O que é um campo gravítico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É uma região onde massas ficam sujeitas a uma força de atração gravitacional."
+    },
+    {
+    "query": "Qual a diferença entre campo elétrico e magnético?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "O campo elétrico atua sobre cargas em repouso ou movimento, enquanto o magnético atua principalmente sobre cargas em movimento."
+    },
+    {
+    "query": "O que é um íman permanente?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um material que mantém a sua magnetização e gera um campo magnético constante."
+    },
+    {
+    "query": "O que são pólos magnéticos?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "São as regiões de um íman onde o campo magnético é mais intenso, denominadas norte e sul."
+    },
+    {
+    "query": "O que é a indução eletromagnética de Faraday?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É o fenómeno em que uma variação de fluxo magnético induz uma força eletromotriz num condutor."
+    },
+    {
+    "query": "O que é um rotor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a parte móvel de uma máquina elétrica que gira sob ação de forças eletromagnéticas."
+    },
+    {
+    "query": "O que é um estator?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a parte fixa de uma máquina elétrica que cria o campo magnético rotativo."
+    },
+    {
+    "query": "O que são perdas elétricas num transformador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "São perdas de energia sob forma de calor, incluindo perdas no núcleo e nos enrolamentos."
+    },
+    {
+    "query": "O que é o rendimento de uma máquina elétrica?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a relação entre a potência útil de saída e a potência elétrica ou mecânica de entrada."
+    },
+    {
+    "query": "O que é corrente alternada?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É uma corrente elétrica que varia periodicamente de intensidade e sentido."
+    },
+    {
+    "query": "O que é corrente contínua?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É uma corrente elétrica que flui sempre no mesmo sentido."
+    },
+    {
+    "query": "O que é um conversor elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um dispositivo que transforma energia elétrica entre diferentes formas de tensão e corrente."
+    },
+    {
+    "query": "O que é um retificador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um conversor que transforma corrente alternada em corrente contínua."
+    },
+    {
+    "query": "O que é um inversor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um dispositivo que converte corrente contínua em corrente alternada."
+    },
+    {
+    "query": "O que é um regulador CC?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um conversor que ajusta os níveis de tensão ou corrente em sistemas de corrente contínua."
+    },
+    {
+    "query": "Em que consiste a força de Laplace?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a força exercida sobre um condutor percorrido por corrente quando está num campo magnético."
+    },
+    {
+    "query": "Porque o alternador gera corrente sinusoidal?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Porque a rotação da espira no campo magnético gera uma variação periódica do fluxo magnético, resultando numa f.e.m. sinusoidal."
+    },
+    {
+    "query": "O que acontece ao aumentar o número de espiras?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Aumenta a intensidade do campo magnético e a f.e.m. induzida."
+    },
+    {
+    "query": "O que é um condutor em movimento num campo magnético?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um condutor que ao se mover num campo magnético corta linhas de fluxo e gera uma f.e.m. induzida."
+    },
+    {
+    "query": "O que é um campo girante?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um campo magnético rotativo produzido por correntes alternadas no estator de motores elétricos."
+    },
+    {
+    "query": "O que é um gerador de corrente contínua?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É um dispositivo que converte energia mecânica em corrente contínua através de um sistema de comutação."
+    },
+    {
+    "query": "O que são correntes de Foucault?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "São correntes induzidas no núcleo de materiais condutores que causam perdas por aquecimento."
+    },
+    {
+    "query": "O que é o princípio de funcionamento de um motor elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Baseia-se na interação entre corrente elétrica e campo magnético que gera uma força de rotação."
+    },
+    {
+    "query": "O que é um motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É uma máquina síncrona cuja construção é idêntica à de um alternador e que pode funcionar como motor ou gerador dependendo do sentido da conversão de energia."
+    },
+    {
+    "query": "Qual é o princípio de funcionamento do motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "No modo motor, fornece-se energia elétrica ao estator (trifásica) e ao rotor, sendo obtida energia mecânica na saída."
+    },
+    {
+    "query": "O motor síncrono pode funcionar como gerador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Sim, pode funcionar como gerador ou alternador dependendo da energia fornecida e obtida."
+    },
+    {
+    "query": "O que é obtido na saída de um motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Energia mecânica."
+    },
+    {
+    "query": "O que é fornecido ao estator no motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Energia elétrica alternada trifásica."
+    },
+    {
+    "query": "Qual é a relação entre frequência e velocidade nas máquinas síncronas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A velocidade de rotação depende diretamente da frequência da alimentação."
+    },
+    {
+    "query": "O que acontece com a velocidade quando a frequência aumenta?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A velocidade de rotação aumenta."
+    },
+    {
+    "query": "O que é uma máquina elétrica?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Dispositivo que transforma energia mecânica em elétrica, elétrica em mecânica ou transforma tensão e corrente."
+    },
+    {
+    "query": "Como se classificam as máquinas elétricas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Em geradores, motores e transformadores."
+    },
+    {
+    "query": "O que faz um gerador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Transforma energia mecânica em energia elétrica."
+    },
+    {
+    "query": "O que faz um motor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Transforma energia elétrica em energia mecânica."
+    },
+    {
+    "query": "O que faz um transformador?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Transforma tensão e corrente elétrica."
+    },
+    {
+    "query": "O que é o rotor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Parte móvel da máquina elétrica."
+    },
+    {
+    "query": "O que é o estator?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Parte fixa da máquina elétrica."
+    },
+    {
+    "query": "O que é o indutor num motor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "No motor, o indutor é o estator que cria o campo magnético."
+    },
+    {
+    "query": "O que é o induzido?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a parte onde se induz a ação eletromagnética, normalmente o rotor no motor."
+    },
+    {
+    "query": "O que é sincronismo?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É a relação fixa entre velocidade de rotação e frequência nas máquinas síncronas."
+    },
+    {
+    "query": "O que caracteriza uma máquina síncrona?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Velocidade de rotação fixa relacionada rigidamente com a frequência."
+    },
+    {
+    "query": "O que caracteriza uma máquina assíncrona?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A velocidade do rotor não é igual à velocidade do campo girante."
+    },
+    {
+    "query": "O que é deslizamento?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Diferença entre a velocidade do campo girante e a velocidade do rotor."
+    },
+    {
+    "query": "O que acontece se o deslizamento for zero?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Não há movimento relativo e não há indução de corrente no rotor."
+    },
+    {
+    "query": "O que é o motor de indução?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Motor assíncrono trifásico que funciona por indução eletromagnética."
+    },
+    {
+    "query": "Porque se chama motor assíncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Porque o rotor não roda à mesma velocidade do campo girante."
+    },
+    {
+    "query": "O que é o campo girante?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Campo magnético rotativo criado no estator por alimentação trifásica."
+    },
+    {
+    "query": "Qual a função do campo girante?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Induz correntes no rotor e gera movimento de rotação."
+    },
+    {
+    "query": "O que é o rotor em gaiola de esquilo?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Rotor com barras condutoras curto-circuitadas por anéis nas extremidades."
+    },
+    {
+    "query": "Qual a vantagem do rotor em gaiola?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Não possui escovas nem anéis coletores, sendo mais simples e robusto."
+    },
+    {
+    "query": "O que é o rotor bobinado?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Rotor com enrolamento semelhante ao estator e com anéis coletores."
+    },
+    {
+    "query": "Para que serve o rotor bobinado?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Permite controlo de arranque e velocidade através de resistências externas."
+    },
+    {
+    "query": "Como se calcula a velocidade de sincronismo?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "n = 120 f / p, em rpm."
+    },
+    {
+    "query": "O que é a velocidade de sincronismo?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Velocidade do campo girante do estator."
+    },
+    {
+    "query": "Qual a velocidade máxima de um motor de indução a 50 Hz?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "3000 rpm com 2 pólos."
+    },
+    {
+    "query": "O que influencia o deslizamento num motor elétrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Perdas mecânicas e carga aplicada ao motor."
+    },
+    {
+    "query": "O que acontece ao deslizamento de um motor em vazio?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "É muito pequeno."
+    },
+    {
+    "query": "O que acontece ao deslizamento de um motor com carga?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Aumenta com o aumento da carga."
+    },
+    {
+    "query": "Qual o rendimento típico de motores elétricos?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Geralmente superior a 80%."
+    },
+    {
+    "query": "O que são perdas elétricas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Perdas por efeito de Joule nos enrolamentos."
+    },
+    {
+    "query": "O que são perdas magnéticas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Perdas por correntes de Foucault e histerese."
+    },
+    {
+    "query": "Como reduzir perdas magnéticas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Usar materiais ferromagnéticos adequados e laminar os núcleos."
+    },
+    {
+    "query": "O que são perdas mecânicas?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Perdas por atrito e arrastamento do ar."
+    },
+    {
+    "query": "O que é potência útil?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Potência absorvida menos perdas."
+    },
+    {
+    "query": "O que é tensão nominal?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Valor de tensão para o qual a máquina foi projetada."
+    },
+    {
+    "query": "O que é corrente nominal?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Corrente que a máquina pode suportar sem problemas."
+    },
+    {
+    "query": "O que é velocidade nominal?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Velocidade à corrente nominal."
+    },
+    {
+    "query": "O que acontece se o binário motor e resistente não forem iguais?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A máquina acelera ou desacelera."
+    },
+    {
+    "query": "Qual é a principal utilização do motor síncrono?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Tração elétrica, como em comboios."
+    },
+    {
+    "query": "Porque o motor síncrono é usado em tração elétrica?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Porque não tem deslizamento e garante velocidade rigorosa."
+    },
+    {
+    "query": "Como se regula a tensão num alternador com íman permanente?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Usa-se uma ponte rectificadora controlada com comutação dos semicondutores."
+    },
+    {
+    "query": "Porque não se pode regular a excitação num alternador com íman permanente?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Porque não existe bobina de excitação, apenas ímanes permanentes."
+    },
+    {
+    "query": "Como é feita a regulação de potência num rectificador controlado?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Variando o ângulo de disparo dos tirístores."
+    },
+    {
+    "query": "O que acontece quando se aumenta o ângulo de disparo num tirístor?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "A potência transmitida diminui."
+    },
+    {
+    "query": "Quando é que a potência num rectificador controlado é nula?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Quando os tirístores não são disparados."
+    },
+    {
+    "query": "O que são inversores CC/CA?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Conversores que transformam corrente contínua em alternada com frequência variável."
+    },
+    {
+    "query": "Quais são os tipos de inversores referidos?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Inversores de onda quadrada e de modulação de largura de impulsos."
+    },
+    {
+    "query": "Qual a função do controlador num veículo eléctrico?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Converter e gerir energia entre baterias e motor."
+    },
+    {
+    "query": "Como se controla a tensão num regulador CC?",
+    "doc": "ABC_Máquinas_Elétricas.pdf",
+    "resposta": "Variando o duty cycle."
+    },
+    {
+    "query": "Quem fundou a ALFA?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Cavaliere Ugo Stella e Alexandre Darracq."
+    },
+    {
+    "query": "O que significa ALFA?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Anonima Lombarda Fabbrica Automobili."
+    },
+    {
+    "query": "Qual foi o primeiro carro da ALFA?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "O modelo 24 HP de 1910."
+    },
+    {
+    "query": "Quem assumiu a empresa em 1916?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Nicola Romeo."
+    },
+    {
+    "query": "O que aconteceu à ALFA durante a I Guerra Mundial?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Foi convertida em fábrica bélica."
+    },
+    {
+    "query": "Quando passou a chamar-se Alfa Romeo?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Em 1920."
+    },
+    {
+    "query": "Quem substituiu Merosi no design?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Vittorio Jano."
+    },
+    {
+    "query": "Qual modelo deu o título mundial de 1925?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "P2 Grand Prix."
+    },
+    {
+    "query": "Em que ano a Alfa Romeo foi controlada pelo governo italiano?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Em 1933."
+    },
+    {
+    "query": "Quando a FIAT adquiriu a Alfa Romeo?",
+    "doc": "Alfa_Romeo.docx",
+    "resposta": "Em 1986."
+    },
+    {
+    "query": "Quando foram proibidas as touradas em Lisboa?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Em 1836 por decreto de Manuel da Silva Passos."
+    },
+    {
+    "query": "Onde se realizavam touradas no século XVII em Lisboa?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "No Terreiro do Paço."
+    },
+    {
+    "query": "Quando foi construída a praça do Campo Pequeno?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Em 1891."
+    },
+    {
+    "query": "O que era o bando nas touradas antigas?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Uma cavalgada pitoresca que preparava a praça."
+    },
+    {
+    "query": "Quando terminou a praça do Salitre?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Em 1830."
+    },
+    {
+    "query": "Qual era o uso da Praça de Campo de Santana?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Realização de touradas em Lisboa."
+    },
+    {
+    "query": "O que aconteceu à praça do Salitre em 1879?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Foi demolida."
+    },
+    {
+    "query": "Quem construiu a praça do Campo Pequeno?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "António Dias da Silva e Boussard."
+    },
+    {
+    "query": "Qual a lotação prevista do Campo Pequeno?",
+    "doc": "As_Corridas_Touros.txt",
+    "resposta": "Oito mil pessoas."
+    },
+    {
+    "query": "Quais os benefícios do cicloturismo?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Saúde, lazer e melhoria da condição física."
+    },
+    {
+    "query": "Que cuidado deve ter um cicloturista iniciante?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Escolher percursos planos e seguros."
+    },
+    {
+    "query": "Qual a importância do equilíbrio na bicicleta?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "É essencial para a sua condução e desenvolvimento."
+    },
+    {
+    "query": "Como deve ser o vestuário no cicloturismo?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Confortável, com proteção térmica e visibilidade."
+    },
+    {
+    "query": "O que determina a velocidade na bicicleta?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "A relação entre roda pedaleira e roda livre."
+    },
+    {
+    "query": "Qual a função das mudanças na bicicleta?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Alterar a relação de transmissão."
+    },
+    {
+    "query": "Que cuidados noturnos deve ter um ciclista?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Usar luzes e roupa reflectora."
+    },
+    {
+    "query": "Que tipo de bicicleta é recomendado para cicloturismo?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Bicicletas de passeio com mudanças."
+    },
+    {
+    "query": "Porque é importante o aquecimento no ciclismo?",
+    "doc": "A_Bicicleta.txt",
+    "resposta": "Evita lesões musculares e articulares."
+    },
+    {
+    "query": "Quando surgiu a electricidade na história?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Por volta de 600 a.C. com Tales de Mileto."
+    },
+    {
+    "query": "O que é magnetismo segundo a CEI?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Fenómenos associados aos campos magnéticos."
+    },
+    {
+    "query": "Quem inventou a pilha eléctrica?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Alessandro Volta."
+    },
+    {
+    "query": "Que impacto teve Coulomb no estudo da electricidade?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Formulou leis de atracção e repulsão."
+    },
+    {
+    "query": "Quem descobriu fenómenos eléctricos em rãs?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Luigi Galvani."
+    },
+    {
+    "query": "Quem foi Hans Christian Oersted?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Descobriu o eletromagnetismo em 1620."
+    },
+    {
+    "query": "O que descobriu André Marie Ampere?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "A lei da atração de correntes e o eletroíman em 1820."
+    },
+    {
+    "query": "O que fez Michael Faraday?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Descobriu a lei fundamental do eletromagnetismo em 1831."
+    },
+    {
+    "query": "O que são as equações de Maxwell?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Síntese geral do eletromagnetismo desenvolvida por James Clerk Maxwell em 1832."
+    },
+    {
+    "query": "Quem descobriu o eletrão?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Sir Joseph John Thomson em 1897."
+    },
+    {
+    "query": "Qual a contribuição de Lorentz para o eletromagnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Desenvolveu a teoria matemática do eletromagnetismo em 1892."
+    },
+    {
+    "query": "Quem foi Albert Einstein neste contexto?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Publicou em 1905 a teoria da eletrodinâmica dos corpos em movimento."
+    },
+    {
+    "query": "Quais são os princípios da relatividade?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Princípio da relatividade e constância da velocidade da luz."
+    },
+    {
+    "query": "O que descobriu Petrus Peregrinus?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Descoberta do alinhamento dos magnetes naturais em 1269."
+    },
+    {
+    "query": "Qual foi a contribuição de William Gilbert?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Estudou a Terra e as bússolas em 1600."
+    },
+    {
+    "query": "O que estudou René Descartes sobre magnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "A localização dos pólos magnéticos em 1644."
+    },
+    {
+    "query": "O que fez John Michel?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Descobriu a lei das forças entre pólos magnéticos em 1750."
+    },
+    {
+    "query": "Qual é a forma verbal da lei de Faraday?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Sempre que uma força magnética aumenta ou diminui produz eletricidade."
+    },
+    {
+    "query": "O que acontece quando a variação magnética é mais rápida?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Produz-se mais eletricidade."
+    },
+    {
+    "query": "Quem escreveu o tratado de eletricidade e magnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "James Clerk Maxwell."
+    },
+    {
+    "query": "O que caracteriza o eletromagnetismo segundo Oersted?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "A descoberta da relação entre eletricidade e magnetismo."
+    },
+    {
+    "query": "O que é a lei de Ampere?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Lei da atração de correntes elétricas."
+    },
+    {
+    "query": "O que é o eletroíman?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Dispositivo relacionado com correntes elétricas descoberto por Ampere."
+    },
+    {
+    "query": "Quem desenvolveu a síntese do eletromagnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "James Clerk Maxwell."
+    },
+    {
+    "query": "O que estuda a teoria de Lorentz?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "O comportamento de cargas em campos elétricos e magnéticos."
+    },
+    {
+    "query": "Quem introduziu a eletrodinâmica dos corpos em movimento?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Albert Einstein em 1905."
+    },
+    {
+    "query": "Qual a importância de 1620 no eletromagnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Descoberta do eletromagnetismo por Oersted."
+    },
+    {
+    "query": "O que ocorreu em 1831 no eletromagnetismo?",
+    "doc": "Breve_História_Eletromagnetismo.pdf",
+    "resposta": "Faraday descobriu a lei fundamental do eletromagnetismo."
+    },
+    {
+    "query": "Qual é o tema do relatório EU Kids Online 2025?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Usos e experiências de crianças e jovens com inteligência artificial generativa em Portugal."
+    },
+    {
+    "query": "Qual é a percentagem de uso de IA generativa em Portugal?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "85% das crianças e jovens usam IA generativa."
+    },
+    {
+    "query": "Como varia o uso de IA com a idade?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "O uso aumenta com a idade."
+    },
+    {
+    "query": "Qual a percentagem de uso entre 9 e 11 anos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "78% dos jovens de 9 a 11 anos usam IA generativa."
+    },
+    {
+    "query": "Qual ferramenta de IA é mais usada pelas crianças entre os 9 e os 17 anos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "ChatGPT."
+    },
+    {
+    "query": "Para que os jovens usam IA generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Para trabalho escolar, apoio emocional e aconselhamento."
+    },
+    {
+    "query": "Qual é o impacto da IA nos estudos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "É usada principalmente como apoio ao trabalho escolar."
+    },
+    {
+    "query": "Qual a diferença de Portugal em relação à Europa, no uso de IA Generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Portugal apresenta maior uso e diversidade de atividades com IA generativa."
+    },
+    {
+    "query": "Qual o uso de IA para apoio emocional?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Um quarto dos jovens usa para apoio emocional e pessoal."
+    },
+    {
+    "query": "Qual a principal característica da IA segundo jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Rapidez e facilidade de uso."
+    },
+    {
+    "query": "Como a IA afeta o Google?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Muda a forma como os jovens pesquisam informação online."
+    },
+    {
+    "query": "Qual o impacto na Wikipedia?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Substituição parcial por ferramentas de IA generativa."
+    },
+    {
+    "query": "Que riscos estão associados à IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Desinformação, enviesamentos e perda de privacidade."
+    },
+    {
+    "query": "O que é pouco conhecido pelos jovens sobre IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Impactos ambientais, enviesamentos e riscos de desinformação."
+    },
+    {
+    "query": "Qual é o efeito psicológico da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Pode causar insegurança, culpa e ansiedade."
+    },
+    {
+    "query": "Qual o objetivo da literacia em IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Promover conhecimentos e competências sobre uso responsável da IA."
+    },
+    {
+    "query": "Qual a posição da Estratégia Digital Nacional?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Foca inovação, mercado de trabalho e inclusão digital."
+    },
+    {
+    "query": "Qual a posição da Estratégia dos Direitos das Crianças?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Foca proteção, segurança e direitos digitais."
+    },
+    {
+    "query": "Quais são os benefícios da Inteligência Artificial Generativa para crianças e jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Desenhos curriculares específicos e ensino individualizado; recursos de assistência para dificuldades de aprendizagem ou saúde; maior flexibilidade no acesso a serviços."
+    },
+    {
+    "query": "Quais são as principais ameaças associadas à IA Generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Ameaças à liberdade de expressão, direitos cívicos e sociais, enviesamento algorítmico e impactos na saúde mental pelo uso excessivo e filtragem algorítmica."
+    },
+    {
+    "query": "Quais são as duas formas de aprendizagem com IA descritas no documento?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Aprender com IA através de tutores e chatbots; e aprender sobre IA incluindo dimensões técnicas, éticas, enviesamentos e uso de dados."
+    },
+    {
+    "query": "O que inclui o triplo enquadramento da OCDE para literacia em IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Conhecimento, competências e atitudes para uma interação responsável com tecnologias de IA."
+    },
+    {
+    "query": "Qual é a amostra do estudo europeu EU Kids Online?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "25.592 crianças e jovens de 9 a 16 anos em 17 países europeus."
+    },
+    {
+    "query": "Quantos participantes teve o estudo em Portugal?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "2.111 crianças e jovens entre os 9 e os 17 anos."
+    },
+    {
+    "query": "Qual foi o método de recolha de dados do inquérito?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Questionário aplicado em escolas com amostragem estratificada por região, nível de ensino e estatuto institucional."
+    },
+    {
+    "query": "Quanto tempo demorou em média o preenchimento do questionário?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Cerca de 46 minutos em média."
+    },
+    {
+    "query": "Como é definida a Inteligência Artificial Generativa no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Tecnologia que cria conteúdos como texto, imagens ou música quando solicitada e que pode interagir com os utilizadores."
+    },
+    {
+    "query": "Qual a percentagem de jovens que usam IA Generativa em Portugal?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "85% declararam usar IA Generativa."
+    },
+    {
+    "query": "Qual a percentagem de não utilizadores de IA Generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "15% não utilizam IA Generativa."
+    },
+    {
+    "query": "Que diferença existe entre o estudo europeu e o português no uso de IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Portugal apresenta uma taxa de uso 10% superior à média europeia."
+    },
+    {
+    "query": "Qual é o principal grupo etário na amostra portuguesa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "O grupo dos 12-14 anos, com 47% da amostra."
+    },
+    {
+    "query": "Como está distribuído o género na amostra?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "49% rapazes e 51% raparigas."
+    },
+    {
+    "query": "Qual foi a metodologia qualitativa do estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Entrevistas a adolescentes de 13 a 17 anos em 15 países com análise de experiências, riscos e usos da IA."
+    },
+    {
+    "query": "Como foram obtidos os consentimentos no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Foi obtido consentimento informado de pais e participantes antes da recolha de dados."
+    },
+    {
+    "query": "Que aplicações são exemplos de IA Generativa citadas no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "ChatGPT, Gemini, DALL-E e MidJourney."
+    },
+    {
+    "query": "Qual é o principal uso da IA Generativa pelos jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Usos escolares, como resumos e escrita de textos."
+    },
+    {
+    "query": "Quais atividades escolares são mais comuns com IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Fazer resumos, escrever textos e obter explicações para trabalhos escolares."
+    },
+    {
+    "query": "Que percentagem usa IA para fazer resumos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "48% dos jovens usam IA para fazer resumos."
+    },
+    {
+    "query": "Que percentagem usa IA para escrever textos escolares?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "47% usam IA para escrever textos escolares."
+    },
+    {
+    "query": "Quais são as diferenças de uso por idade?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Os jovens mais velhos apresentam maior diversidade de usos da IA."
+    },
+    {
+    "query": "Que fatores influenciam desigualdades no uso da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Idade, género e estatuto socioeconómico."
+    },
+    {
+    "query": "O que é a divisão digital no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Diferenças de acesso, motivação, usos e competências digitais entre grupos."
+    },
+    {
+    "query": "Que limitações materiais afetam o uso da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Memória limitada de smartphones e acesso apenas a dispositivos móveis."
+    },
+    {
+    "query": "Como os jovens começam a usar IA Generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Principalmente por influência de colegas e curiosidade pessoal."
+    },
+    {
+    "query": "Qual é a motivação principal para usar ChatGPT?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Rapidez, clareza e facilidade de obtenção de respostas."
+    },
+    {
+    "query": "Que problemas são identificados no uso da IA em Matemática?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Respostas incorretas e alucinações em cálculos matemáticos."
+    },
+    {
+    "query": "Que limitações linguísticas são referidas na IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Dificuldade em adaptar estilo e pontuação, mantendo linguagem demasiado formal."
+    },
+    {
+    "query": "Como os estudantes usam IA nos trabalhos escolares?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Copiam instruções para o ChatGPT e colam respostas em documentos com ou sem alterações."
+    },
+    {
+    "query": "Que papel tem a IA na criatividade dos jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Ajuda na criação de histórias, imagens e jogos em coautoria com os utilizadores."
+    },
+    {
+    "query": "Como os jovens percebem a interação com IA criativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Como uma interação semelhante a comunicar com uma pessoa."
+    },
+    {
+    "query": "Que aplicações são usadas para escrita criativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Fable AI, Family Ed e outras plataformas de geração de histórias."
+    },
+    {
+    "query": "Qual é o papel da IA na aprendizagem computacional?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Ajuda a formular instruções e desenvolver pensamento computacional."
+    },
+    {
+    "query": "Que jogos e plataformas são mencionados?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Character AI e Roblox são os mais referidos."
+    },
+    {
+    "query": "Qual é a diferença entre ChatGPT e Character AI?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "ChatGPT foca-se em informação e raciocínio, enquanto Character AI é mais emocional e conversacional."
+    },
+    {
+    "query": "Qual é a função do Character AI segundo os jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Plataforma de entretenimento para conversas com personagens virtuais."
+    },
+    {
+    "query": "Quantos países participaram no estudo qualitativo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "15 países participaram no estudo qualitativo."
+    },
+    {
+    "query": "Quantos adolescentes participaram nas entrevistas qualitativas?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "244 adolescentes participaram no estudo qualitativo."
+    },
+    {
+    "query": "Que temas foram abordados nas entrevistas qualitativas?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Uso da IA, competências, direitos, riscos, emoções e futuro da tecnologia."
+    },
+    {
+    "query": "Como são analisados os dados do estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Com análise quantitativa e qualitativa combinadas e codificação comum entre países."
+    },
+    {
+    "query": "Que cuidados éticos foram aplicados?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Consentimento informado, proteção de dados e conformidade com o RGPD."
+    },
+    {
+    "query": "Como foi garantida a privacidade dos participantes?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Uso de pseudónimos e armazenamento separado de dados pessoais."
+    },
+    {
+    "query": "Que tendência existe no uso da IA por condição socioeconómica?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Jovens de estatuto mais baixo apresentam menor uso e mais limitações de acesso."
+    },
+    {
+    "query": "Como se caracteriza a amostra por género nas entrevistas?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Sete rapazes e oito raparigas."
+    },
+    {
+    "query": "Que papel têm os pares no uso da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Os colegas influenciam fortemente a adoção e aprendizagem do uso de IA."
+    },
+    {
+    "query": "Como a IA afeta a aprendizagem escolar?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Facilita tarefas, mas pode promover automatização e menor esforço cognitivo."
+    },
+    {
+    "query": "Que impacto tem a IA na comunicação?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Permite comunicação entre humanos e máquinas como novos parceiros comunicativos."
+    },
+    {
+    "query": "Como os jovens veem a fiabilidade da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Confiam na rapidez e clareza, mas reconhecem erros em algumas áreas como matemática."
+    },
+    {
+    "query": "Que estratégias usam quando o ChatGPT limita mensagens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Mudam para outras plataformas como DeepSeek quando atingem limites."
+    },
+    {
+    "query": "Qual é o papel da escola no uso da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Os professores definem tarefas que os alunos muitas vezes resolvem com apoio de IA."
+    },
+    {
+    "query": "Que plataforma é referida como tendo mais insultos atualmente segundo um entrevistado?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Roblox é referida como uma plataforma onde antes havia menos insultos, mas agora há muitos insultos."
+    },
+    {
+    "query": "O que fazia Henrique na plataforma Roblox?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Criava um jogo há cerca de seis meses para depois o publicar na plataforma e no seu canal de YouTube."
+    },
+    {
+    "query": "Que restrição foi introduzida em finais de 2025 numa plataforma de personagens virtuais?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A plataforma passou a interditar menores de 18 anos de conversar com personagens virtuais."
+    },
+    {
+    "query": "O que aconteceu à interação entre menores e adultos numa plataforma de jogos a partir de janeiro de 2026?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Passou a ser proibida a conversação entre menores e adultos, exceto se existir ligação fora da internet comprovada."
+    },
+    {
+    "query": "Que tipo de conteúdo Francisco consome em plataformas de xadrez?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Joga contra outras pessoas e contra computadores com inteligência artificial para aprender xadrez."
+    },
+    {
+    "query": "Que ferramenta Francisco usa para aprender xadrez?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Utiliza a plataforma Chess.com para jogar e aprender xadrez."
+    },
+    {
+    "query": "Para que Joaquim usou o ChatGPT inicialmente?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Usou para perguntar sobre o aumento do salário mínimo em Portugal e o seu impacto."
+    },
+    {
+    "query": "Que previsão foi dada ao Joaquim sobre o salário mínimo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Foi referido que poderia aumentar gradualmente até cerca de 1200 euros até 2028 ou 2030."
+    },
+    {
+    "query": "Que tipo de relação alguns jovens estabelecem com a IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Uma relação conversacional semelhante a falar com uma pessoa, mas sabendo que não é real."
+    },
+    {
+    "query": "Como Maria descreve a interação com IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Como falar com um personagem que não existe, mas com o qual se sente proximidade."
+    },
+    {
+    "query": "Que vantagem Laura vê na IA em conversas pessoais?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Considera que o robô não tem sentimentos e responde de forma lógica, o que facilita falar de assuntos pessoais."
+    },
+    {
+    "query": "Que receio Isabel expressa sobre a IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que a IA se está a tornar mais parecida com humanos, o que a deixa inquieta."
+    },
+    {
+    "query": "Como Fernando descreve o ChatGPT?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Como uma ferramenta robótica, mais seca, sem sentimentos, ao contrário de uma pessoa."
+    },
+    {
+    "query": "Que opinião Rui tem sobre a IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Considera que a IA foi feita para concordar com humanos e não possui sentimentos reais."
+    },
+    {
+    "query": "O que Miguel defende sobre a IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Defende que a IA deve ser claramente diferente dos humanos e não imitar comportamento humano."
+    },
+    {
+    "query": "O que caracteriza as definições mais comuns de IA entre jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "É vista sobretudo como uma ferramenta ou robô que ajuda e cria conteúdos."
+    },
+    {
+    "query": "Que competências são associadas ao uso de IA generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Pensamento computacional, criatividade, resolução de problemas e capacidade de dar instruções."
+    },
+    {
+    "query": "O que significa 'prompt' segundo Luís?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "É um comando com instruções detalhadas que orienta a IA a produzir melhores resultados."
+    },
+    {
+    "query": "Qual é uma estratégia para melhorar respostas da IA segundo Rui?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Ler o texto e verificar se parece humano, ajustando quando necessário."
+    },
+    {
+    "query": "Que dificuldade é referida no uso de IA por Henrique?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A necessidade de especificar muitos detalhes para obter o resultado desejado."
+    },
+    {
+    "query": "Como alguns jovens verificam a informação da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns usam o Google ou Wikipédia, mas poucos relatam essa verificação."
+    },
+    {
+    "query": "Como Diana identifica informação falsa da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Quando a resposta não corresponde ao que espera ou parece claramente errada."
+    },
+    {
+    "query": "O que Ilda acredita sobre respostas da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Acredita que podem ser escritas por humanos e até enganosas."
+    },
+    {
+    "query": "Como os jovens reagem ao cenário de criação musical com IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Todos dizem que revelariam que a música foi feita com ajuda da IA."
+    },
+    {
+    "query": "O que Maria defende sobre direitos autorais com IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que deve haver atribuição de créditos à IA tal como a outros autores."
+    },
+    {
+    "query": "Que preocupação Rui tem sobre partilha de conteúdos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Considera complicado quando conteúdos são usados para fins comerciais."
+    },
+    {
+    "query": "Qual é uma preocupação comum sobre IA e dependência?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que os jovens fiquem dependentes da IA e percam competências próprias."
+    },
+    {
+    "query": "O que Laura diz sobre o impacto da IA na criatividade?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que as pessoas podem deixar de pensar por si mesmas e perder criatividade."
+    },
+    {
+    "query": "Que preocupação Ana tem sobre uso excessivo de tecnologia?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que pode levar a isolamento social e problemas de saúde mental."
+    },
+    {
+    "query": "Que vantagem Isabel vê na IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Mais rapidez na realização de trabalhos e mais tempo livre."
+    },
+    {
+    "query": "Que risco Isabel associa ao uso da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A perda de raciocínio e aprendizagem própria."
+    },
+    {
+    "query": "Que preocupação sobre privacidade aparece nos jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns não demonstram grande preocupação e confiam na monitorização das empresas."
+    },
+    {
+    "query": "Que posição tem Miguel sobre privacidade na IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Não confia nas plataformas e considera perigoso partilhar informação pessoal."
+    },
+    {
+    "query": "Qual é um receio comum sobre IA e manipulação de conteúdos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A criação de imagens e histórias falsas que podem causar desinformação e ódio."
+    },
+    {
+    "query": "Como Samuel vê o discurso de ódio na IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Acredita que a IA normalmente não produz discurso de ódio sem ser provocada."
+    },
+    {
+    "query": "Que opinião Luís tem sobre comportamento da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A IA evita discurso de ódio a menos que seja explicitamente solicitada."
+    },
+    {
+    "query": "Qual é uma preocupação de Miguel sobre o futuro da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que a IA possa aumentar a manipulação política e informação falsa."
+    },
+    {
+    "query": "Que percentagem de jovens manifesta preocupação com dependência da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Cerca de 46% manifestam preocupação com dependência."
+    },
+    {
+    "query": "Que outra preocupação ambiental é referida no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "O impacto ambiental das tecnologias de inteligência artificial."
+    },
+    {
+    "query": "Qual é a posição dos jovens sobre confidencialidade em IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns sentem confiança e não percebem riscos de privacidade."
+    },
+    {
+    "query": "O que acontece com dados das conversas com IA segundo o texto?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Podem ser usados para treinar modelos futuros de IA."
+    },
+    {
+    "query": "Que diferença existe na preocupação entre rapazes e raparigas?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "As raparigas demonstram mais preocupação com desinformação e impactos negativos."
+    },
+    {
+    "query": "Como alguns jovens interpretam a IA em termos sociais?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Como uma ferramenta útil, mas também com riscos de dependência e manipulação."
+    },
+    {
+    "query": "Que perceção existe sobre IA e criatividade humana?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns acreditam que pode aumentar a criatividade, outros que a pode diminuir."
+    },
+    {
+    "query": "Qual é o papel da IA segundo definições dos jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Facilitar tarefas, ajudar na aprendizagem e gerar conteúdos como texto e imagens."
+    },
+    {
+    "query": "Que ideia aparece sobre IA e sentimentos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A IA é vista como não tendo sentimentos nem consciência humana."
+    },
+    {
+    "query": "Como alguns jovens definem IA generativa?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Como tecnologia que cria conteúdos como texto, imagens e soluções."
+    },
+    {
+    "query": "Que relação alguns jovens têm com a IA em termos emocionais?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns sentem proximidade emocional, outros mantêm distanciamento crítico."
+    },
+    {
+    "query": "Que risco social é apontado sobre conteúdos falsos?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Pode causar ciberbullying, ódio, desinformação e polarização."
+    },
+    {
+    "query": "Que posição geral surge sobre o futuro da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Existe equilíbrio entre receios e expectativas positivas sobre o seu impacto."
+    },
+    {
+    "query": "O que alguns jovens pensam sobre controlo humano da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns receiam que os humanos percam o controlo da tecnologia."
+    },
+    {
+    "query": "Que visão existe sobre uso da IA na escola?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Pode ajudar na criação de trabalhos, mas também ser usada indevidamente em testes."
+    },
+    {
+    "query": "Que crítica é feita à antropomorfização da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Que dificulta compreender os desafios éticos das tecnologias."
+    },
+    {
+    "query": "Quais são os principais receios dos jovens sobre novas tecnologias?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf.pdf",
+    "resposta": "Receios incluem perda de controlo humano, impacto no ambiente e consequências negativas das tecnologias emergentes."
+    },
+    {
+    "query": "Que preocupação existe sobre uso de dados por autoridades?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Cerca de 4 em 10 jovens estão preocupados com o uso de informação pessoal por autoridades e vigilância."
+    },
+    {
+    "query": "Qual é a maior rejeição identificada no estudo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A maior rejeição está ligada à tomada de decisões institucionais ou vocacionais por sistemas automatizados."
+    },
+    {
+    "query": "Como varia a preocupação com perda de controlo?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "É maior entre jovens de meios desfavorecidos, mais novos e raparigas."
+    },
+    {
+    "query": "Quem demonstra mais otimismo em relação à tecnologia?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Os mais novos e os jovens de meios socioeconómicos mais favorecidos."
+    },
+    {
+    "query": "Qual é uma preocupação comum sobre o mercado de trabalho?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A substituição de empregos pela inteligência artificial e a reconfiguração do mercado laboral."
+    },
+    {
+    "query": "O que dizem os jovens sobre o futuro do emprego?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Acreditam que a IA vai aumentar a competição e tornar mais difícil destacar-se no mercado."
+    },
+    {
+    "query": "Que necessidade os jovens identificam para a IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Maior literacia em inteligência artificial e capacitação dos jovens para uso crítico."
+    },
+    {
+    "query": "Que mudança é sugerida para a educação?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Integração da IA no ensino e formação de professores para uso pedagógico das ferramentas."
+    },
+    {
+    "query": "Que medidas são sugeridas para plataformas digitais?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Filtros, alertas, deteção de riscos e mecanismos de denúncia de conteúdos manipulados."
+    },
+    {
+    "query": "Qual é a posição sobre responsabilidade em casos de erro da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Há divisão entre responsabilizar utilizadores, pais e empresas dependendo da situação."
+    },
+    {
+    "query": "Que sugestão ética foi feita por uma jovem?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Criar um selo que indique quando algo foi produzido com ajuda de inteligência artificial."
+    },
+    {
+    "query": "Qual é a posição sobre idade mínima para uso de IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Alguns jovens defendem idade mínima de cerca de 13 anos para utilização."
+    },
+    {
+    "query": "O que dizem sobre regulação da IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Há opiniões divergentes entre maior regulação global e receio de restrição de acesso."
+    },
+    {
+    "query": "Qual é a conclusão geral do relatório?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A IA já está presente na vida dos jovens e exige literacia crítica e regulação adequada."
+    },
+    {
+    "query": "Como os jovens usam IA no quotidiano?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Principalmente para apoio em trabalhos escolares e atividades de aprendizagem."
+    },
+    {
+    "query": "Que fatores influenciam o uso de IA pelos jovens?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Rapidez, facilidade, disponibilidade e confiança na objetividade das ferramentas."
+    },
+    {
+    "query": "Que problema é associado à literacia digital?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "A ausência de literacia crítica no uso de ferramentas de IA."
+    },
+    {
+    "query": "Quem deve proteger as crianças no uso de IA?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf",
+    "resposta": "Governos, escolas, pais, indústria e os próprios jovens."
+    },
+    {
+    "query": "O que é pedido à indústria tecnológica?",
+    "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf.pdf",
+    "resposta": "Criar ferramentas seguras, privadas e adequadas à idade das crianças."
+    },
+    {
+    "query": "Porque é a Itália considerada importante culturalmente?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Porque é berço de fenómenos como o Império Romano, Renascimento e cultura ocidental."
+    },
+    {
+    "query": "Quais são monumentos famosos da Itália?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Torre de Pisa e Coliseu de Roma são exemplos de monumentos icónicos."
+    },
+    {
+    "query": "Que papel teve o Renascimento na Itália?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Foi um período de grandes avanços artísticos iniciado na Itália entre os séculos XIV e XVI."
+    },
+    {
+    "query": "Quais cidades italianas são destacadas no texto?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Roma, Florença, Milão, Turim e Veneza são cidades destacadas."
+    },
+    {
+    "query": "Qual cidade é associada ao Renascimento?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Florença é considerada o coração do Renascimento."
+    },
+    {
+    "query": "Qual a importância de Roma na cultura italiana?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Foi capital do Império Romano e sede da Igreja Católica."
+    },
+    {
+    "query": "Quantos patrimónios da UNESCO a Itália tem?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "A Itália possui cerca de 51 patrimónios da UNESCO."
+    },
+    {
+    "query": "Que áreas artísticas são fortes na Itália?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Arte, arquitetura, música, literatura e cinema."
+    },
+    {
+    "query": "Quem são alguns artistas italianos famosos?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Leonardo da Vinci, Michelangelo e Botticelli."
+    },
+    {
+    "query": "Que importância tem a arquitetura italiana?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Evoluiu do estilo romano ao Renascimento e barroco, influenciando o mundo."
+    },
+    {
+    "query": "Qual é a origem da ópera?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "A ópera teve origem em Itália no período barroco."
+    },
+    {
+    "query": "Quem foi Claudio Monteverdi?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Foi um dos primeiros grandes compositores de ópera barroca."
+    },
+    {
+    "query": "Qual é o desporto mais popular em Itália?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "O futebol é o desporto principal do país."
+    },
+    {
+    "query": "Quantos Mundiais de futebol a Itália ganhou?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "A Itália venceu quatro Campeonatos do Mundo."
+    },
+    {
+    "query": "Que clubes italianos são mencionados?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Milan, Juventus, Roma, Lazio e Inter."
+    },
+    {
+    "query": "Qual a origem da língua italiana?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Deriva do latim e nasceu na região da Toscana."
+    },
+    {
+    "query": "Quem é considerado pai da língua italiana?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Dante Alighieri."
+    },
+    {
+    "query": "Que línguas regionais existem na Itália?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Sardo, napolitano, veneto, friulano e siciliano."
+    },
+    {
+    "query": "Que cidade em Itália é famosa pelos seus canais?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Veneza."
+    },
+    {
+    "query": "Que influência teve o Império Romano?",
+    "doc": "Cultura_Itália.docx",
+    "resposta": "Foi um dos fenómenos fundadores da cultura ocidental."
+    },
+    {
+    "query": "Onde nasceu Manuel Alegre?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Águeda."
+    },
+    {
+    "query": "Qual a data de nascimento de Manuel Alegre?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "12 de maio de 1936."
+    },
+    {
+    "query": "Qual a profissão de Manuel Alegre?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Escritor e político português."
+    },
+    {
+    "query": "Em que ano entrou na Faculdade de Direito de Coimbra?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em 1956."
+    },
+    {
+    "query": "Quando se tornou militante do PCP?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em 1957."
+    },
+    {
+    "query": "Quando abandonou o PCP?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em 1968."
+    },
+    {
+    "query": "Onde foi preso pela PIDE?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em Angola, em 1963."
+    },
+    {
+    "query": "Para onde se exilou em 1964?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Paris e depois Argel."
+    },
+    {
+    "query": "Qual foi a rádio onde trabalhou no exílio?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "A Voz da Liberdade."
+    },
+    {
+    "query": "Quais são os dois primeiros livros de Manuel Alegre?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Praça da Canção e O Canto e as Armas."
+    },
+    {
+    "query": "Quando regressou a Portugal após o exílio?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "A 2 de maio de 1974."
+    },
+    {
+    "query": "Em que partido ingressou em 1968?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Na Ação Socialista Portuguesa."
+    },
+    {
+    "query": "Quantos anos foi deputado?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "34 anos."
+    },
+    {
+    "query": "Em que ano foi candidato a secretário-geral do PS?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em 2004."
+    },
+    {
+    "query": "Em que ano foi candidato presidencial em que teve mais votos que Mário Soares?",
+    "doc": "Manuel Alegre de Melo Duarte.docx",
+    "resposta": "Em 2006."
+    },
+    {
+    "query": "Qual é a tensão nominal dos transformadores de corrente BT da E-REDES?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "400 V."
+    },
+    {
+    "query": "Qual a frequência nominal dos transformadores?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "50 Hz."
+    },
+    {
+    "query": "Qual a classe de exatidão dos transformadores?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "Classe 0.5."
+    },
+    {
+    "query": "Qual a potência de exatidão dos transformadores?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "2.5 VA."
+    },
+    {
+    "query": "Qual o fator de segurança máximo permitido?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "FS ≤ 5."
+    },
+    {
+    "query": "Qual a relação de transformação típica listada?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "100/5, 200/5, 300/5, 500/5, 750/5, 1000/5 e 2000/5 A."
+    },
+    {
+    "query": "Qual o valor mínimo da corrente térmica de curta duração?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "25 kA durante 1 segundo."
+    },
+    {
+    "query": "Qual a sobrecarga permanente admitida (Icth)?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "120% da corrente estipulada."
+    },
+    {
+    "query": "Qual o grau de proteção da caixa de terminais?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "IP 51."
+    },
+    {
+    "query": "Qual a norma de referência para transformadores de corrente?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "IEC 61869-1 e IEC 61869-2."
+    },
+    {
+    "query": "Que tipo de montagem é utilizada?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "Montagem em barramento."
+    },
+    {
+    "query": "Quai são os tipos de núcleo permitidos?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "Núcleo fechado ou núcleo de abrir."
+    },
+    {
+    "query": "Qual o ensaio relativo ao curto-circuito é referido?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "Ensaio de curto-circuito segundo a IEC 61869-2."
+    },
+    {
+    "query": "Qual o objetivo dos ensaios de tipo?",
+    "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf",
+    "resposta": "Verificar a conformidade do produto com a especificação técnica em condições representativas da produção."
+    }
+]
