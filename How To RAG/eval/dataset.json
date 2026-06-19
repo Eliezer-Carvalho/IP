@@ -530,11 +530,6 @@
     "resposta": "Variando o duty cycle."
     },
     {
-    "query": "Quem fundou a ALFA?",
-    "doc": "Alfa_Romeo.docx",
-    "resposta": "Cavaliere Ugo Stella e Alexandre Darracq."
-    },
-    {
     "query": "O que significa ALFA?",
     "doc": "Alfa_Romeo.docx",
     "resposta": "Anonima Lombarda Fabbrica Automobili."
