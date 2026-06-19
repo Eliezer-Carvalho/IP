@@ -24,14 +24,12 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
     ]
 
 '''
-Estas funções têm como objetivo avaliar a métrica Recall@K de um sistema RAG.
-Funciona apenas para sistemas onde o número de documentos ideais é exatamente 1 por chunks.
-O parâmetro K tem de ser antes definido.
+Estas funções têm como objetivo avaliar a métrica HiRate@K de um sistema RAG.
 '''
 
 
 ##### Sparse Retrieval - BM25 Retriever
-def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
+def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset):
 
     eval_chunks = []
     eval_docs = []
@@ -62,13 +60,13 @@ def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
         eval_docs.append (docs_hit)
 
 
-    print (f"Recall@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nRecall@K Docs -> {sum(eval_docs) / len(eval_docs)}")
+    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}")
 
 
 
 
 ##### Dense Retrieval - Embeddings Retriever
-def recall_k_dense_retrieval (dense_retrieval_obj, dataset):
+def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
 
     eval_chunks = []
     eval_docs = []
@@ -100,13 +98,13 @@ def recall_k_dense_retrieval (dense_retrieval_obj, dataset):
         eval_docs.append (docs_hit)
 
 
-    print (f"Recall@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nRecall@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
+    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
 
 
 
 
 ##### Hybrid Retrieval com Reciprocal Rank Fusion
-def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
+def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
     eval_chunks = []
     eval_docs = []
@@ -141,4 +139,4 @@ def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datase
         eval_docs.append (docs_hit)
 
 
-    print (f"Recall@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nRecall@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
+    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
