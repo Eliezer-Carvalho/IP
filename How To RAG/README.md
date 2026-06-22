@@ -1,2 +1,2 @@
 <h3> Eval </h3>
-<p> Métricas de Avaliação e Datasets | Explicar o porquê destas métricas | Recall@K, Precision@K | Docs Eval vs Chunks Eval | Dataset Sintético | MRR@k não faz sentido </p>
+<p> Métricas de Avaliação e Datasets | Explicar o porquê destas métricas | Recall@K, Precision@K | Docs Eval vs Chunks Eval | Dataset Sintético | MRR@k não faz sentido | MRR para Reranking é a única métrica que faz sentido porque o rerank influencia a posição dos chunks finais | Context Recall e Context Precision </p>

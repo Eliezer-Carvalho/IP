@@ -214,3 +214,133 @@ def mrr_ranker_sparse_system (sparse_retrieval_obj, dataset):
         "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
         "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
     }
+
+
+#Mean Reciprocal Rank num Sistema [Dense Retrieval - Reranker]
+def mrr_ranker_dense_system (dense_retrieval_obj, dataset):
+    
+    #Pouco eficiente estar sempre a dar load do modelo mas vamos prosseguir assim
+    path = r"C:\Users\Admin\Desktop\models\Cross Encoder"
+
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_model_tokenization = AutoTokenizer.from_pretrained (path)
+
+    mrr_chunks = []
+    mrr_docs = []
+
+    for dados in dataset:
+
+        query = dados["query"]
+        gold_chunk = dados["chunk_id"]
+        gold_doc = dados["doc"]
+
+        dense_retrieval = dense_retrieval_obj.invoke (query)
+
+        query_reranker = [query] * len (dense_retrieval)
+        chunks = [c.page_content for c in dense_retrieval]
+        docs_names = [d.metadata["title"] for d in dense_retrieval]
+        chunks_ids = [c.metadata["chunk_id"] for c in dense_retrieval]
+
+        pares = list(zip(query_reranker, chunks)) # [query, chunks]
+        #print (pares)
+
+        inputs = cross_encoder_model_tokenization (pares, return_tensors = "pt", padding = True, truncation = True)
+        #print (inputs)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+            #print (logits)
+
+        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
+        rerank = sorted(zip(docs_names, chunks_ids, chunks, logits.tolist()), key = lambda x: x[3], reverse = True)
+
+        final = [(docs, chunks) for docs, chunks, chunks_content, scores in rerank [:5]]
+
+        rr_chunk = 0
+        rr_docs = 0
+
+        for ordem, (doc_name, chunk_id) in enumerate (final, start = 1):
+            
+            if rr_chunk == 0 and chunk_id == gold_chunk:
+                rr_chunk = 1 / ordem
+
+            if rr_docs == 0 and doc_name == gold_doc:
+                rr_docs = 1 / ordem
+
+            if rr_chunk and rr_docs:
+                break
+
+        mrr_chunks.append (rr_chunk)
+        mrr_docs.append (rr_docs)   
+
+    return {
+        "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
+        "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
+    }
+
+
+#Mean Reciprocal Rank num Sistema [Hybrid Retrieval - Reranker]
+def mrr_ranker_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset):
+
+    path = r"C:\Users\Admin\Desktop\models\Cross Encoder"
+
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_model_tokenization = AutoTokenizer.from_pretrained (path)
+
+    mrr_chunks = []
+    mrr_docs = []
+
+    for dados in dataset:
+
+        query = dados["query"]
+        gold_chunk = dados["chunk_id"]
+        gold_doc = dados["doc"]
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+        dense_retrieval = dense_retrieval_obj.invoke (query)
+
+        rrf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
+
+        query_reranker = [query] * len (rrf)
+        chunks = [t[2] for t in rrf]
+        docs_names = [t[0] for t in rrf]
+        chunks_ids = [t[1] for t in rrf]
+
+        pares = list(zip(query_reranker, chunks)) # [query, chunks]
+        #print (pares)
+
+        inputs = cross_encoder_model_tokenization (pares, return_tensors = "pt", padding = True, truncation = True)
+        #print (inputs)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+            #print (logits)
+
+        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
+        rerank = sorted(zip(docs_names, chunks_ids, chunks, logits.tolist()), key = lambda x: x[3], reverse = True)
+
+        final = [(docs, chunks) for docs, chunks, chunks_content, scores in rerank [:5]]
+
+        rr_chunk = 0
+        rr_docs = 0
+
+        for ordem, (doc_name, chunk_id) in enumerate (final, start = 1):
+            
+            if rr_chunk == 0 and chunk_id == gold_chunk:
+                rr_chunk = 1 / ordem
+
+            if rr_docs == 0 and doc_name == gold_doc:
+                rr_docs = 1 / ordem
+
+            if rr_chunk and rr_docs:
+                break
+
+        mrr_chunks.append (rr_chunk)
+        mrr_docs.append (rr_docs)   
+
+    return {
+        "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
+        "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
+    }
