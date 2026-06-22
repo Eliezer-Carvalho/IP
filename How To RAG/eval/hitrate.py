@@ -1,6 +1,13 @@
-#################################### Eliezer Carvalho - 2026 ###########################################
-###### Reciprocal Rank Fusion - método utilizado para juntar Sparse e Dense Retrieval numa avaliação só.
-def Reciprocal_Rank_Fusion (rankings, k = 60):
+######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
+
+#Quando uma Query é enviada pelo utilizador, num sistema RAG híbrido é realizada uma Procura Lexical e uma ou várias Procuras Vetoriais.
+#Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final.
+#https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking
+
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
+def Reciprocal_Rank_Fusion (rankings, k = 60): 
     
     scores = {}
     metadata = {}
@@ -23,22 +30,22 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
         for doc_id, score in ranked
     ]
 
-'''
-Estas funções têm como objetivo avaliar a métrica HiRate@K de um sistema RAG.
-'''
+######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
+#Estas funções têm como objetivo medir a métrica HitRate@K de um sistema RAG Híbrido tendo em conta tanto o documento ideal e o chunk ideal.
+#HitRate@K é uma métrica binária. Retorna 1 caso encontre o documento ou chunk onde está contida a resposta à query. Retorna 0 caso contrário.
 
-##### Sparse Retrieval - BM25 Retriever
-def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset):
+## Sparse Retrieval - BM25 Retriever
+def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset): #Recebe um obj que já tem em conta o K do Sparse Retrieval.
 
     eval_chunks = []
     eval_docs = []
 
     for dados in dataset:
         
-        query = dados["query"]
-        gold_chunk = dados["chunk_id"]
-        gold_doc = dados["doc"]
+        query = dados["query"] #Muda consoante o dataset
+        gold_chunk = dados["chunk_id"] #Muda consoante o dataset
+        gold_doc = dados["doc"] #Muda consoante o dataset
 
         sparse_retrieval = sparse_retrieval_obj.invoke (query)
 
@@ -59,13 +66,13 @@ def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset):
         eval_chunks.append (chunk_hit)
         eval_docs.append (docs_hit)
 
+    return {
+        "HitRate@K Chunk Sparse Retrieval": {sum(eval_chunks) / len(eval_chunks)},
+        "HitRate@K Docs Sparse Retrieval": {sum(eval_docs) / len(eval_docs)}
+    }
 
-    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}")
 
-
-
-
-##### Dense Retrieval - Embeddings Retriever
+## Dense Retrieval - Embeddings Retriever
 def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
 
     eval_chunks = []
@@ -97,13 +104,13 @@ def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
         eval_chunks.append (chunk_hit)
         eval_docs.append (docs_hit)
 
+    return {
+        "HitRate@K Chunk Dense Retrieval": {sum(eval_chunks) / len(eval_chunks)},
+        "HitRate@K Docs Dense Retrieval": {sum(eval_docs) / len(eval_docs)}
+    }
 
-    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
 
-
-
-
-##### Hybrid Retrieval com Reciprocal Rank Fusion
+## Hybrid Retrieval com Reciprocal Rank Fusion
 def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
     eval_chunks = []
@@ -138,5 +145,7 @@ def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
         eval_chunks.append (chunk_hit)
         eval_docs.append (docs_hit)
 
-
-    print (f"HitRate@K Chunk -> {sum(eval_chunks) / len(eval_chunks)}\nHitRate@K Docs -> {sum(eval_docs) / len(eval_docs)}") 
+    return {
+        "HitRate@K Chunk Hybrid Retrieval": {sum(eval_chunks) / len(eval_chunks)},
+        "HitRate@K Docs Hybrid Retrieval": {sum(eval_docs) / len(eval_docs)}
+    }
