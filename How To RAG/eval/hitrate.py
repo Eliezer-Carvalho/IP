@@ -67,8 +67,8 @@ def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset): #Recebe um obj q
         eval_docs.append (docs_hit)
 
     return {
-        "HitRate@K Chunk Sparse Retrieval": {sum(eval_chunks) / len(eval_chunks)},
-        "HitRate@K Docs Sparse Retrieval": {sum(eval_docs) / len(eval_docs)}
+        "HitRate@K Chunk Sparse Retrieval": sum(eval_chunks) / len(eval_chunks),
+        "HitRate@K Docs Sparse Retrieval": sum(eval_docs) / len(eval_docs)
     }
 
 
@@ -105,8 +105,8 @@ def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
         eval_docs.append (docs_hit)
 
     return {
-        "HitRate@K Chunk Dense Retrieval": {sum(eval_chunks) / len(eval_chunks)},
-        "HitRate@K Docs Dense Retrieval": {sum(eval_docs) / len(eval_docs)}
+        "HitRate@K Chunk Dense Retrieval": sum(eval_chunks) / len(eval_chunks),
+        "HitRate@K Docs Dense Retrieval": sum(eval_docs) / len(eval_docs)
     }
 
 
@@ -146,6 +146,6 @@ def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
         eval_docs.append (docs_hit)
 
     return {
-        "HitRate@K Chunk Hybrid Retrieval": {sum(eval_chunks) / len(eval_chunks)},
-        "HitRate@K Docs Hybrid Retrieval": {sum(eval_docs) / len(eval_docs)}
+        "HitRate@K Chunk Hybrid Retrieval": sum(eval_chunks) / len(eval_chunks),
+        "HitRate@K Docs Hybrid Retrieval": sum(eval_docs) / len(eval_docs)
     }

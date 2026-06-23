@@ -64,8 +64,8 @@ def mrr_sparse_retrieval (sparse_retrieval_obj, dataset):
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunk Sparse Retrieval": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Sparse Retrieval": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunk Sparse Retrieval": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Sparse Retrieval": sum(mrr_docs) / len(mrr_docs)
     }
     
         
@@ -101,9 +101,10 @@ def mrr_dense_retrieval (dense_retrieval_obj, dataset):
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunks Dense Retrieval": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Dense Retrieval": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunks Dense Retrieval": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Dense Retrieval": sum(mrr_docs) / len(mrr_docs)
     }
+    
          
 
 ## Hybrid Retrieval com Reciprocal Rank Fusion
@@ -141,8 +142,8 @@ def mrr_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunks Hybrid Retrieval": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Hybrid Retrieval": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunks Hybrid Retrieval": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Hybrid Retrieval": sum(mrr_docs) / len(mrr_docs)
     }
 
 
@@ -211,8 +212,8 @@ def mrr_ranker_sparse_system (sparse_retrieval_obj, dataset):
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunks Rerank": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Rerank": sum(mrr_docs) / len(mrr_docs)
     }
 
 
@@ -275,8 +276,8 @@ def mrr_ranker_dense_system (dense_retrieval_obj, dataset):
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunks Rerank": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Rerank": sum(mrr_docs) / len(mrr_docs)
     }
 
 
@@ -341,6 +342,6 @@ def mrr_ranker_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset
         mrr_docs.append (rr_docs)   
 
     return {
-        "Mean Reciprocal Rank Chunks Rerank": {sum(mrr_chunks) / len(mrr_chunks)},
-        "Mean Reciprocal Rank Docs Rerank": {sum(mrr_docs) / len(mrr_docs)}
+        "Mean Reciprocal Rank Chunks Rerank": sum(mrr_chunks) / len(mrr_chunks),
+        "Mean Reciprocal Rank Docs Rerank": sum(mrr_docs) / len(mrr_docs)
     }
