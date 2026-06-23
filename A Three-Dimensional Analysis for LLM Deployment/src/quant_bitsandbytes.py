@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 
-MODELO_PATH = r"C:\Users\Admin\Desktop\models\Phi-3.5-mini-instruct"
+MODELO_PATH = r"C:\Users\Admin\Desktop\models\Mistral-7B-Instruct-v0.3"
 
 quantization = BitsAndBytesConfig (
     load_in_4bit = True,  #Quantização
@@ -14,5 +14,5 @@ modelo = AutoModelForCausalLM.from_pretrained (MODELO_PATH, device_map = 'auto',
 
 tokenizer = AutoTokenizer.from_pretrained (MODELO_PATH)
 
-modelo.save_pretrained (r"C:\Users\Admin\Desktop\models\Phi-3.5-mini-instruct-Q4")
-tokenizer.save_pretrained (r"C:\Users\Admin\Desktop\models\Phi-3.5-mini-instruct-Q4")
+modelo.save_pretrained (r"C:\Users\Admin\Desktop\models\Mistral-7B-Instruct-v0.3-Q4")
+tokenizer.save_pretrained (r"C:\Users\Admin\Desktop\models\Mistral-7B-Instruct-v0.3-Q4")
