@@ -4,9 +4,6 @@
 #Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final.
 #https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking
 
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import torch
-
 def Reciprocal_Rank_Fusion (rankings, k = 60): 
     
     scores = {}
@@ -29,6 +26,7 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
     return [(metadata[doc_id]["title"], doc_id, metadata[doc_id]["content"], score)
         for doc_id, score in ranked
     ]
+
 
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
