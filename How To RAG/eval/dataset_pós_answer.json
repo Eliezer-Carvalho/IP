@@ -1,0 +1,140 @@
+[
+
+    {
+        "query": "Porque é que o núcleo dos transformadores é normalmente laminado ?",
+        "chunk_id": 62,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Porque é que o motor de indução também é chamado de motor assíncrono ?",
+        "chunk_id": 68,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Como podem ser classificadas as máquinas eléctricas quanto à função que exercem ?",
+        "chunk_id": 71,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Porque é que o motor de indução é também designado de motor assíncrono ?",
+        "chunk_id": 86,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Quais são as duas formas de rotor que podem existir num motor de indução ?",
+        "chunk_id": 88,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "De que fatores depende o deslizamento de um motor de indução ?",
+        "chunk_id": 94,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Que efeitos nocivos pode provocar a elevada corrente durante o arranque direto de um motor de indução ?",
+        "chunk_id": 99,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+    {
+        "query": "Qual era o método de arranque de motores mais comum antes da utilização dos conversores electrónicos ?",
+        "chunk_id": 102,
+        "doc": "ABC_Máquinas_Elétricas.pdf"
+    },
+     {
+        "query": "Qual é o propósito anunciado pela Estratégia Digital Nacional (2025) ao afirmar que pretende colocar as pessoas no centro das iniciativas ?",
+        "chunk_id": 204,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Quais eram os dois objetivos explícitos para o sector educativo incluídos na Estratégia Nacional de Inteligência Artificial aprovada em 2019 ?",
+        "chunk_id": 205,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Quantas crianças e jovens entre os 9 e os 17 anos foram inquiridos no total no estudo nacional ?",
+        "chunk_id": 226,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que explicação foi apresentada aos participantes para definir o conceito de Inteligência Artificial Generativa ?",
+        "chunk_id": 227,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que características sociodemográficas foram consideradas na análise das respostas do inquérito ?",
+        "chunk_id": 228,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que percentagem dos inquiridos declarou usar Inteligência Artificial Generativa para algum tipo de atividade ?",
+        "chunk_id": 240,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Em que tipos de atividades relacionadas com IA Generativa Portugal se destacou acima da média europeia ?",
+        "chunk_id": 251,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que aplicação de Inteligência Artificial Generativa foi utilizada por unanimidade entre os adolescentes ?",
+        "chunk_id": 254,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que limitação do Chat GPT foi identificada por Samuel relativamente a conteúdos de Matemática ?",
+        "chunk_id": 259,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Para que finalidade Miguel utilizava principalmente o Chat GPT nos seus estudos ?",
+        "chunk_id": 264,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Segundo Rui, qual é o principal papel da Inteligência Artificial na escrita criativa ?",
+        "chunk_id": 271,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Qual a diferença entre Chat GPT e Character AI segundo a explicação de Rui sobre tipos de inteligência artificial ?",
+        "chunk_id": 276,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que situação de assédio ocorreu na plataforma Roblox e como foi descrita pela Isabel ?",
+        "chunk_id": 281,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+    {
+        "query": "Que tipos de plataformas de jogos e IA são mencionadas como usadas para aprendizagem de xadrez e qual é o papel da IA no Chess.com segundo o Francisco?",
+        "chunk_id": 282,
+        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+    },
+
+    {
+        "query": "Quais são os ensaios de tipo realizados nos transformadores de corrente de baixa tensão ?",
+        "chunk_id": 408,
+        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+    },
+    {
+        "query": "Que ensaios individuais de série são obrigatórios para todos os transformadores de corrente de baixa tensão ?",
+        "chunk_id": 410,
+        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+    },
+    {
+        "query": "O que são ensaios de receção e qual o seu objetivo nos transformadores de corrente de baixa tensão ?",
+        "chunk_id": 412,
+        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+    },
+    {
+        "query": "Quais são os tipos de transformadores de corrente normalizados e respetivos códigos SAP na E-REDES ?",
+        "chunk_id": 413,
+        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+    },
+    {
+        "query": "Que requisitos de conformidade e documentação devem ser apresentados pelos fornecedores de transformadores de corrente de baixa tensão ?",
+        "chunk_id": 414,
+        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+    }
+
+]
