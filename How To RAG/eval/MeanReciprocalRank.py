@@ -109,6 +109,7 @@ def mrr_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
             
             if chunk_id in gold_chunk:
                 rr_chunk = 1 / ordem
+                break
 
         eval.append (rr_chunk)  
 

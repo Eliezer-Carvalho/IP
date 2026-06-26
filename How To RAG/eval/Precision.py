@@ -52,7 +52,7 @@ def precision_k_sparse_retrieval (sparse_retrieval_obj, dataset):
         eval.append (precision)
 
     return {
-        "Precision@K:": sum (eval) / len (eval)
+        "Precision@K Sparse Retrieval:": sum (eval) / len (eval)
     }
 
 
@@ -72,7 +72,7 @@ def precision_k_dense_retrieval (dense_retrieval_obj, dataset):
 
         equals = len (gold_chunk.intersection (retrieved_ids))
 
-        precision = equals = len (dense_retrieval)
+        precision = equals / len (dense_retrieval)
 
         eval.append (precision)
 
