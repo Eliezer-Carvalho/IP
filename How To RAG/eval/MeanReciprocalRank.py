@@ -35,89 +35,68 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
 ## Sparse Retrieval - BM25 Retriever
 def mrr_sparse_retrieval (sparse_retrieval_obj, dataset):
 
-    mrr_chunks = []
-    mrr_docs = []
+    eval = []
 
     for dados in dataset:
 
         query = dados["query"]
-        gold_chunk = dados["chunk_id"]
-        gold_doc = dados["doc"]
+        gold_chunk = set (dados["chunk_id"])
 
         sparse_retrieval = sparse_retrieval_obj.invoke (query)
 
         rr_chunk = 0
-        rr_docs = 0
 
-        for ordem, doc in enumerate (sparse_retrieval, start = 1):
+        for pos, doc in enumerate (sparse_retrieval, start = 1):
             
-            if rr_chunk == 0 and doc.metadata["chunk_id"] == gold_chunk:
-                rr_chunk = 1 / ordem
-
-            if rr_docs == 0 and doc.metadata["title"] == gold_doc:
-                rr_docs = 1 / ordem
-
-            if rr_chunk and rr_docs:
+            if doc.metadata["chunk_id"] in gold_chunk:
+                rr_chunk = 1 / pos
                 break
 
-        mrr_chunks.append (rr_chunk)
-        mrr_docs.append (rr_docs)   
+        eval.append (rr_chunk)
 
     return {
-        "Mean Reciprocal Rank Chunk Sparse Retrieval": sum(mrr_chunks) / len(mrr_chunks),
-        "Mean Reciprocal Rank Docs Sparse Retrieval": sum(mrr_docs) / len(mrr_docs)
-    }
+        "Mean Reciprocal Rank Sparse Retrieval": sum (eval) / len (eval),
+        }
     
         
 ## Dense Retrieval - Embeddings Retriever
 def mrr_dense_retrieval (dense_retrieval_obj, dataset):
 
-    mrr_chunks = []
-    mrr_docs = []
+    eval = []
 
     for dados in dataset:
 
         query = dados["query"]
-        gold_chunk = dados["chunk_id"]
-        gold_doc = dados["doc"]
+        gold_chunk = set (dados["chunk_id"])
 
         dense_retrieval = dense_retrieval_obj.invoke (query)
 
         rr_chunk = 0
-        rr_docs = 0
 
-        for ordem, doc in enumerate (dense_retrieval, start = 1):
+        for pos, doc in enumerate (dense_retrieval, start = 1):
             
-            if rr_chunk == 0 and doc.metadata["chunk_id"] == gold_chunk:
-                rr_chunk = 1 / ordem
-
-            if rr_docs == 0 and doc.metadata["title"] == gold_doc:
-                rr_docs = 1 / ordem
-
-            if rr_chunk and rr_docs:
+            if doc.metadata["chunk_id"] in gold_chunk:
+                rr_chunk = 1 / pos
                 break
 
-        mrr_chunks.append (rr_chunk)
-        mrr_docs.append (rr_docs)   
+        eval.append (rr_chunk)
 
     return {
-        "Mean Reciprocal Rank Chunks Dense Retrieval": sum(mrr_chunks) / len(mrr_chunks),
-        "Mean Reciprocal Rank Docs Dense Retrieval": sum(mrr_docs) / len(mrr_docs)
-    }
+        "Mean Reciprocal Rank Dense Retrieval": sum (eval) / len (eval),
+        }
     
          
 
 ## Hybrid Retrieval com Reciprocal Rank Fusion
 def mrr_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
-    mrr_chunks = []
-    mrr_docs = []
+    eval = []
 
     for dados in dataset:
 
         query = dados["query"]
-        gold_chunk = dados["chunk_id"]
-        gold_doc = dados["doc"]
+        gold_chunk = set (dados["chunk_id"])
+        
 
         sparse_retrieval = sparse_retrieval_obj.invoke (query)
         dense_retrieval = dense_retrieval_obj.invoke (query)
@@ -125,29 +104,20 @@ def mrr_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
         recrankf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
 
         rr_chunk = 0
-        rr_docs = 0
 
         for ordem, (doc_name, chunk_id, chunk_text, score) in enumerate (recrankf, start = 1):
             
-            if rr_chunk == 0 and chunk_id == gold_chunk:
+            if chunk_id in gold_chunk:
                 rr_chunk = 1 / ordem
 
-            if rr_docs == 0 and doc_name == gold_doc:
-                rr_docs = 1 / ordem
-
-            if rr_chunk and rr_docs:
-                break
-
-        mrr_chunks.append (rr_chunk)
-        mrr_docs.append (rr_docs)   
+        eval.append (rr_chunk)  
 
     return {
-        "Mean Reciprocal Rank Chunks Hybrid Retrieval": sum(mrr_chunks) / len(mrr_chunks),
-        "Mean Reciprocal Rank Docs Hybrid Retrieval": sum(mrr_docs) / len(mrr_docs)
+        "Mean Reciprocal Rank Hybrid Retrieval": sum(eval) / len(eval),
     }
 
 
-######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
+'''######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 #Estas funções têm como objetivo avaliar o sistema RAG final. Retrieval -> Rerank
 #Usa-se a métrica MRR porque o Reranker mexe diretamente com a posição dos chunks antes de ser enviado para o LLM.
 
@@ -157,7 +127,7 @@ import torch
 #Mean Reciprocal Rank num Sistema [Sparse Retrieval - Reranker]
 def mrr_ranker_sparse_system (sparse_retrieval_obj, dataset):
     
-    path = r"C:\Users\Admin\Desktop\models\Cross Encoder"
+    path = 
 
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
     cross_encoder_model_tokenization = AutoTokenizer.from_pretrained (path)
@@ -221,7 +191,7 @@ def mrr_ranker_sparse_system (sparse_retrieval_obj, dataset):
 def mrr_ranker_dense_system (dense_retrieval_obj, dataset):
     
     #Pouco eficiente estar sempre a dar load do modelo mas vamos prosseguir assim
-    path = r"C:\Users\Admin\Desktop\models\Cross Encoder"
+    path = 
 
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
     cross_encoder_model_tokenization = AutoTokenizer.from_pretrained (path)
@@ -284,7 +254,7 @@ def mrr_ranker_dense_system (dense_retrieval_obj, dataset):
 #Mean Reciprocal Rank num Sistema [Hybrid Retrieval - Reranker]
 def mrr_ranker_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
-    path = r"C:\Users\Admin\Desktop\models\Cross Encoder"
+    path = 
 
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
     cross_encoder_model_tokenization = AutoTokenizer.from_pretrained (path)
@@ -344,4 +314,4 @@ def mrr_ranker_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset
     return {
         "Mean Reciprocal Rank Chunks Rerank": sum(mrr_chunks) / len(mrr_chunks),
         "Mean Reciprocal Rank Docs Rerank": sum(mrr_docs) / len(mrr_docs)
-    }
+    }'''

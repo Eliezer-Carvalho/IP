@@ -1,7 +1,8 @@
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
 #Quando uma Query é enviada pelo utilizador, num sistema RAG híbrido é realizada uma Procura Lexical e uma ou várias Procuras Vetoriais.
-#Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final.
+#Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final. 
+#Retirando dups e tendo em conta os scores e se aparece em ambos os retrievals.
 #https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking
 
 def Reciprocal_Rank_Fusion (rankings, k = 60): 
@@ -27,41 +28,36 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
         for doc_id, score in ranked
     ]
 
-
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
-#Estas funções têm como objetivo medir a métrica HitRate@K de um sistema RAG Híbrido tendo em conta tanto o documento ideal e o chunk ideal.
-#HitRate@K é uma métrica binária. Retorna 1 caso encontre o documento ou chunk onde está contida a resposta à query. Retorna 0 caso contrário.
+#Recall@K é uma métrica que permite relacionar o número total de chunks relevantes recuperados pelo Retriver e o número total de chunks relevantes possíveis para cada query. 
 
 ## Sparse Retrieval - BM25 Retriever
-def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset): #Recebe um obj que já tem em conta o K do Sparse Retrieval.
-
-    eval = []
+def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
     
-    for dados in dataset:
-        
-        query = dados["query"] #Muda consoante o dataset
-        gold_chunk = set (dados["chunk_id"]) #Muda consoante o dataset
+    eval = [] #Lista de eval
 
-        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+    for dados in dataset: #Iter do dataset
 
-        retrieved_ids = set (x.metadata["chunk_id"] for x in sparse_retrieval)
+        query = dados ["query"] #Query
+        gold_chunks = set (dados ["chunk_id"]) #Gold Id Chunk
 
-        equals = len (gold_chunk.intersection (retrieved_ids))
+        sparse_retrieval = sparse_retrieval_obj.invoke (query) #Sparse Retrieval para cada query
 
-        if equals > 0:
-            eval.append (1)
-        else:
-            eval.append (0)
+        retrieved_ids = set (x.metadata["chunk_id"] for x in sparse_retrieval) #Iterar sobre os chunks ids return pelo sparse_retrieval
 
-    
+        equals = len (gold_chunks.intersection (retrieved_ids)) #Intersection muito importante porque permite comparar se há equals
+
+        eval.append (equals / len (gold_chunks)) #Recall@K
+
     return {
-        "HitRate@K Sparse Retrieval:": sum (eval) / len (eval)
+        "Recall@K Sparse Retrieval:": sum (eval) / len (eval) 
     }
+ 
 
 
-## Dense Retrieval - Embeddings Retriever
-def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
+## Dense Retrieval - Embeddings Retriver
+def recall_k_dense_retrieval (dense_retrieval_obj, dataset):
 
     eval = []
 
@@ -76,27 +72,23 @@ def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
 
         equals = len (gold_chunk.intersection (retrieved_ids))
 
-        if equals > 0:
-            eval.append (1)
-        else:
-            eval.append (0)
+        eval.append (equals / len (gold_chunk))
 
-    
     return {
-        "HitRate@K Dense Retrieval:": sum (eval) / len (eval)
+        "Recall@K Dense Retrieval:": sum (eval) / len (eval)
     }
 
 
-## Hybrid Retrieval com Reciprocal Rank Fusion
-def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
+## Hybrid Retrieval com Reciprocal Rank Fusion
+def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
+    
     eval = []
 
     for dados in dataset:
 
         query = dados["query"]
         gold_chunk = set (dados["chunk_id"])
-
 
         sparse_retrieval = sparse_retrieval_obj.invoke (query)
         dense_retrieval = dense_retrieval_obj.invoke (query)
@@ -107,13 +99,8 @@ def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
 
         equals = len (gold_chunk.intersection (retrieved_ids))
 
-        if equals > 0:
-            eval.append (1)
-        
-        else:
-            eval.append (0)
-
+        eval.append (equals / len (gold_chunk))
 
     return {
-        "HitRate@K Hybrid Retrieval:": sum (eval) / len (eval)
+        "Recall@K Hybrid Retrieval:": sum (eval) / len (eval)
     }

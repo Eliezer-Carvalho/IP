@@ -27,48 +27,44 @@ def Reciprocal_Rank_Fusion (rankings, k = 60):
         for doc_id, score in ranked
     ]
 
-
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
-#Estas funções têm como objetivo medir a métrica HitRate@K de um sistema RAG Híbrido tendo em conta tanto o documento ideal e o chunk ideal.
-#HitRate@K é uma métrica binária. Retorna 1 caso encontre o documento ou chunk onde está contida a resposta à query. Retorna 0 caso contrário.
+#Precision@K é uma métrica que permite relacionar o número de chunks relevantes no top-k e o número total de chunks recuperados.
 
 ## Sparse Retrieval - BM25 Retriever
-def hitrate_k_sparse_retrieval (sparse_retrieval_obj, dataset): #Recebe um obj que já tem em conta o K do Sparse Retrieval.
-
-    eval = []
-    
-    for dados in dataset:
-        
-        query = dados["query"] #Muda consoante o dataset
-        gold_chunk = set (dados["chunk_id"]) #Muda consoante o dataset
-
-        sparse_retrieval = sparse_retrieval_obj.invoke (query)
-
-        retrieved_ids = set (x.metadata["chunk_id"] for x in sparse_retrieval)
-
-        equals = len (gold_chunk.intersection (retrieved_ids))
-
-        if equals > 0:
-            eval.append (1)
-        else:
-            eval.append (0)
-
-    
-    return {
-        "HitRate@K Sparse Retrieval:": sum (eval) / len (eval)
-    }
-
-
-## Dense Retrieval - Embeddings Retriever
-def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
+def precision_k_sparse_retrieval (sparse_retrieval_obj, dataset):
 
     eval = []
 
     for dados in dataset:
 
         query = dados["query"]
-        gold_chunk = set (dados["chunk_id"])
+        gold_chunks = set (dados["chunk_id"])
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+
+        retrieved_ids = set (x.metadata["chunk_id"] for x in sparse_retrieval)
+
+        equals = len (gold_chunks.intersection (retrieved_ids))
+
+        precision = equals / len (sparse_retrieval)
+
+        eval.append (precision)
+
+    return {
+        "Precision@K:": sum (eval) / len (eval)
+    }
+
+
+## Dense Retrieval - Embeddings Retriever
+def precision_k_dense_retrieval (dense_retrieval_obj, dataset):
+
+    eval = []
+
+    for dados in dataset:
+
+        query = dados ["query"]
+        gold_chunk = set (dados ["chunk_id"])
 
         dense_retrieval = dense_retrieval_obj.invoke (query)
 
@@ -76,27 +72,24 @@ def hitrate_k_dense_retrieval (dense_retrieval_obj, dataset):
 
         equals = len (gold_chunk.intersection (retrieved_ids))
 
-        if equals > 0:
-            eval.append (1)
-        else:
-            eval.append (0)
+        precision = equals = len (dense_retrieval)
 
-    
+        eval.append (precision)
+
     return {
-        "HitRate@K Dense Retrieval:": sum (eval) / len (eval)
+        "Precision@K Dense Retrieval:": sum (eval) / len (eval)
     }
 
 
-## Hybrid Retrieval com Reciprocal Rank Fusion
-def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
+## Hybrid Retrieval - Reciprocal Rank Fusion
+def precision_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
 
     eval = []
 
     for dados in dataset:
 
         query = dados["query"]
-        gold_chunk = set (dados["chunk_id"])
-
+        gold_chunks = set (dados["chunk_id"])
 
         sparse_retrieval = sparse_retrieval_obj.invoke (query)
         dense_retrieval = dense_retrieval_obj.invoke (query)
@@ -105,15 +98,12 @@ def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
 
         retrieved_ids = set (x[1] for x in rrf)
 
-        equals = len (gold_chunk.intersection (retrieved_ids))
+        equals = len (gold_chunks.intersection (retrieved_ids))
 
-        if equals > 0:
-            eval.append (1)
-        
-        else:
-            eval.append (0)
+        precision = equals / len (rrf)
 
+        eval.append (precision)
 
     return {
-        "HitRate@K Hybrid Retrieval:": sum (eval) / len (eval)
+        "Precision@K Hybrid Retrieval:": sum (eval) / len (eval)
     }

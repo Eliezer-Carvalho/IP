@@ -1,392 +1,343 @@
-[ 
+[
     {
-        "query": "Em que tipos de aplicações podem ser utilizados os motores eléctricos ?",
-        "chunk_id": 1,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Em que aplicações do dia-a-dia podemos encontrar máquinas eléctricas como motores, geradores e transformadores ?", 
+        "chunk_id": [1, 2, 3, 4]
     },
+
     {
-        "query": "Que exemplos de equipamentos são mencionados como aplicações comuns dos motores eléctricos ?",
-        "chunk_id": 1,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Porque é que o estudo das máquinas eléctricas é importante para cursos de engenharia ?", 
+        "chunk_id": [5]
     },
+
     {
-        "query": "Onde podem ser encontrados geradores eléctricos, como alternadores e dínamos ?",
-        "chunk_id": 2,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que é necessário compreender para perceber o funcionamento das máquinas eléctricas e quais os primeiros conceitos introduzidos ?", 
+        "chunk_id": [6]
     },
+
     {
-        "query": "Quais são algumas das aplicações domésticas dos transformadores ?",
-        "chunk_id": 2,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Que conteúdos são abordados nos capítulos relativos às características das máquinas eléctricas e aos principais tipos de motores ?", 
+        "chunk_id": [7, 12, 13, 14]
     },
+
     {
-        "query": "Quais são as máquinas eléctricas necessárias para o bom funcionamento de veículos com motor de combustão interna ?",
-        "chunk_id": 3,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que são campos físico (gravítico, eléctrico e magnético) e como é gerado um campo magnético ?", 
+        "chunk_id": [17, 18, 19, 23, 24, 25]
     },
+
     {
-        "query": "Como podem ser visualizadas as linhas de força de um campo magnético criado por um magneto ?",
-        "chunk_id": 26,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quais são as principais características das linhas de força do campo magnético e em que diferem dos campos gravítico e elétrico ?", 
+        "chunk_id": [26]
     },
+
     {
-        "query": "Que regra permite determinar o sentido das linhas de força do campo magnético gerado por uma corrente elétrica num condutor ?",
-        "chunk_id": 29,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Porque é que a extremidade de um íman que aponta para o Norte geográfico não corresponde ao polo Norte magnético do íman ?", 
+        "chunk_id": [26]
     },
+
     {
-        "query": "De que fatores depende a força do campo magnético produzido por uma bobina que é percorrida por uma corrente ?",
-        "chunk_id": 32,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "De que forma a corrente elétrica gera um campo magnético e que experiências demonstram esse fenómeno ?", 
+        "chunk_id": [27, 28, 29]
     },
+
+
     {
-        "query": "O que é o fenómeno da auto-indução numa bobina ?",
-        "chunk_id": 33,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Porque se utilizam espiras e bobinas na geração de campo magnético e de que fatores depende a sua intensidade ?",
+        "chunk_id": [30, 31, 32]
     },
+
+
     {
-        "query": "Qual é o princípio físico em que se baseia o funcionamento de um transformador ?",
-        "chunk_id": 38,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que é o fenómeno da auto-indução numa bobina e quais os efeitos da força contra-eletromotriz em circuitos elétricos ?",
+        "chunk_id": [33, 34, 35, 36]
     },
+
     {
-        "query": "Qual é o princípio de funcionamento de um transformador ?",
-        "chunk_id": 55,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como funciona a geração de corrente alternada numa espira em rotação dentro de um campo magnético ?", 
+        "chunk_id": [47, 48, 49, 50, 51]
     },
+
     {
-        "query": "O que representa a razão de transformação de um transformador ?",
-        "chunk_id": 58,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como se obtém corrente contínua a partir de uma corrente alternada num gerador (dínamo) ?", 
+        "chunk_id": [52, 53, 54]
     },
+
     {
-        "query": "Porque é que o núcleo dos transformadores é normalmente laminado ?",
-        "chunk_id": 62,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que é um transformador e como funciona a relação entre primário e secundário em termos de tensão e corrente ?", 
+        "chunk_id": [55, 56, 57, 58, 59, 60]
     },
+
     {
-        "query": "Porque é que o motor de indução também é chamado de motor assíncrono ?",
-        "chunk_id": 68,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Que papel tem o núcleo ferromagnético num transformador e porque é que ele é laminado ?", 
+        "chunk_id": [61, 62]
     },
+
     {
-        "query": "Como podem ser classificadas as máquinas eléctricas quanto à função que exercem ?",
-        "chunk_id": 71,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como se classifica uma máquina elétrica e qual a diferença entre motor síncrono e assíncrono ?", 
+        "chunk_id": [67, 68, 69, 70, 71]
     },
+
     {
-        "query": "Porque é que o motor de indução é também designado de motor assíncrono ?",
-        "chunk_id": 86,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quais são as perdas existentes nas máquinas elétricas e como podem ser reduzidas para melhorar o seu rendimento ?", 
+        "chunk_id": [75, 76]
     },
+
     {
-        "query": "Quais são as duas formas de rotor que podem existir num motor de indução ?",
-        "chunk_id": 88,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que são características nominais de uma máquina elétrica e quais os principais parâmetros considerados ?", 
+        "chunk_id": [77]
     },
+
     {
-        "query": "De que fatores depende o deslizamento de um motor de indução ?",
-        "chunk_id": 94,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como funciona um motor de corrente contínua e qual o papel do comutador no seu funcionamento ?", 
+        "chunk_id": [78, 79, 80]
     },
+
     {
-        "query": "Que efeitos nocivos pode provocar a elevada corrente durante o arranque direto de um motor de indução ?",
-        "chunk_id": 99,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como varia a velocidade de um motor DC com a carga e como pode ser controlada ?", 
+        "chunk_id": [80, 81, 82, 83]
     },
+
     {
-        "query": "Qual era o método de arranque de motores mais comum antes da utilização dos conversores electrónicos ?",
-        "chunk_id": 102,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que é o motor de indução, porque é chamado assíncrono e como funciona o conceito de campo girante ?", 
+        "chunk_id": [86, 87]
     },
+
     {
-        "query": "Que desvantagem apresenta o método de controlo de velocidade por variação do número de pólos do estator ?",
-        "chunk_id": 104,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quais são os principais métodos de arranque de motores de indução e quais as suas vantagens e desvantagens ?", 
+        "chunk_id": [101, 102]
     },
+
     {
-        "query": "Porque é necessário complementar a travagem regenerativa com travagem mecânica na fase final da desaceleração ?",
-        "chunk_id": 109,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como pode ser feito o controlo de velocidade de motores de indução e qual o papel dos conversores eletrónicos nesse controlo ?", 
+        "chunk_id": [103, 104, 105, 106, 107]
     },
+
     {
-        "query": "Que tipo de motor é utilizado no automóvel eléctrico EV1 da General Motors ?",
-        "chunk_id": 111,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que é a travagem regenerativa num motor de indução e como funciona a recuperação de energia ?", 
+        "chunk_id": [108, 109]
     },
+
     {
-        "query": "Qual é a principal característica que faz com que um díodo seja considerado um dispositivo não controlado ?",
-        "chunk_id": 116,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quais são as principais vantagens dos motores de indução na tração elétrica de veículos ?", 
+        "chunk_id": [110, 111, 112]
     },
+
     {
-        "query": "Quantos elementos semicondutores são necessários para rectificar um sistema trifásico de onda completa ?",
-        "chunk_id": 128,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "O que são conversores eletrónicos de potência e quais os principais tipos e vantagens face aos sistemas eletromecânicos ?", 
+        "chunk_id": [113, 114, 115]
     },
+
     {
-        "query": "Quais são as duas principais limitações dos rectificadores não controlados ?",
-        "chunk_id": 132,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quais são as principais diferenças entre a rectificação de onda completa e a rectificação de meia onda em termos de funcionamento e utilização de semicondutores ?",
+        "chunk_id": [127, 129, 131]
     },
+
     {
-        "query": "O que acontece à potência transmitida quando se aumenta o ângulo de disparo dos tirístores num rectificador controlado ?",
-        "chunk_id": 136,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Quantos elementos semicondutores são necessários para a rectificação monofásica e trifásica nos casos de onda completa e meia onda ?",
+        "chunk_id": [128, 129]
     },
+
     {
-        "query": "Qual é a principal vantagem dos inversores com Modulação de Largura de Impulsos (MLI) em relação aos inversores de onda quadrada ?",
-        "chunk_id": 141,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Como funciona um rectificador totalmente controlado e de que forma o ângulo de disparo dos tirístores influencia a potência de saída ?",
+        "chunk_id": [133, 135, 136, 137]
     },
+
     {
-        "query": "Como é controlada a potência transmitida num regulador CC (chopper) ?",
-        "chunk_id": 147,
-        "doc": "ABC_Máquinas_Elétricas.pdf"
+        "query": "Qual a diferença entre inversores de onda quadrada e inversores MLI e qual a vantagem da filtragem nos sinais MLI ?",
+        "chunk_id": [140, 141, 142, 143]
     },
+
     {
-        "query": "Quantas crianças e jovens participaram no inquérito nacional que serviu de base a este relatório sobre IA Generativa em Portugal ?",
-        "chunk_id": 156,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como funciona um regulador CC (chopper) e qual a sua aplicação no controlo de motores em veículos eléctricos como o Toyota RAV4-EV ?",
+        "chunk_id": [146, 147, 148, 149]
     },
+
     {
-        "query": "Qual é a percentagem de crianças e jovens em Portugal que reportam utilizar ferramentas de IA Generativa ?",
-        "chunk_id": 164,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são os principais resultados do estudo sobre o uso de Inteligência Artificial Generativa por crianças e jovens em Portugal ?",
+        "chunk_id": [162, 164, 165, 166, 167, 168]
     },
+
     {
-        "query": "Que proporção dos inquiridos utiliza a IA Generativa para apoio emocional e pessoal ?",
-        "chunk_id": 166,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que recomendações são feitas para a educação no que diz respeito à literacia em Inteligência Artificial Generativa ?",
+        "chunk_id": [169, 170, 171, 172]
     },
+
     {
-        "query": "Segundo as recomendações do relatório, porque deve ser promovida uma literacia para a inteligência artificial generativa desde cedo ?",
-        "chunk_id": 171,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que recomendações são apresentadas para políticas públicas e governação relacionadas com a Inteligência Artificial e jovens em Portugal ?",
+        "chunk_id": [173, 174, 175]
     },
+
     {
-        "query": "Quem cunhou a expressão 'Inteligência Artificial' e que conceito a antecedeu segundo o relatório ?",
-        "chunk_id": 188,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como é definida a Inteligência Artificial segundo a OCDE ?",
+        "chunk_id": [185]
     },
+
     {
-        "query": "Qual é a principal característica que distingue a quarta fase da Inteligência Artificial das fases anteriores ?",
-        "chunk_id": 192,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as duas definições de Inteligência Artificial apresentadas e qual a diferença entre elas ?",
+        "chunk_id": [186, 187]
     },
+
     {
-        "query": "Quais são os riscos associados à Inteligência Artificial Generativa além das oportunidades tecnológicas ?",
-        "chunk_id": 195,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como evoluiu a Inteligência Artificial ao longo das quatro fases ?",
+        "chunk_id": [188, 189, 190, 191, 192]
     },
+
     {
-        "query": "Quais são algumas das responsabilidades dos Estados-membros previstas pelo Regulamento Europeu dos Serviços Digitais relativamente à Inteligência Artificial ?",
-        "chunk_id": 197,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as principais oportunidades e riscos associados à Inteligência Artificial generativa ?",
+        "chunk_id": [193, 194, 195]
     },
+
     {
-        "query": "Segundo o Regulamento Europeu dos Serviços Digitais, que garantias devem as plataformas e motores de pesquisa oferecer a crianças e jovens ?",
-        "chunk_id": 199,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são os principais objetivos e medidas do contexto europeu de regulação da Inteligência Artificial ?",
+        "chunk_id": [196, 197, 198, 199, 200]
     },
+
     {
-        "query": "Qual é o objetivo do Regulamento Europeu da Inteligência Artificial (AI Act) relativamente à inovação e aos direitos dos cidadãos ?",
-        "chunk_id": 200,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que impactos ambientais e sociais tem a Inteligência Artificial ?",
+        "chunk_id": [195, 198]
     },
+    
     {
-        "query": "Quantos países assinaram, em 2025, a declaração de apoio a uma Inteligência Artificial inclusiva, sustentável e responsável na III Cimeira Mundial sobre Inteligência Artificial ?",
-        "chunk_id": 201,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que acontecimentos internacionais recentes estão relacionados com a regulação e discussão da Inteligência Artificial ?",
+        "chunk_id": [201]
     },
+
     {
-        "query": "Que limitação dos inquéritos nacionais em Portugal impede a caracterização representativa e evolutiva das práticas digitais dos adolescentes ?",
-        "chunk_id": 202,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as principais limitações dos dados estatísticos sobre o uso digital de crianças e jovens em Portugal ?",
+        "chunk_id": [202]
     },
+
     {
-        "query": "Quais são as duas políticas públicas recentemente aprovadas pelo governo que consideram os mais novos no contexto digital ?",
-        "chunk_id": 203,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as diferenças entre a Estratégia Digital Nacional e a Estratégia dos Direitos das Crianças e Jovens no que toca à Inteligência Artificial ?",
+        "chunk_id": [203, 204, 206, 207, 208, 214]
     },
+
     {
-        "query": "Qual é o propósito anunciado pela Estratégia Digital Nacional (2025) ao afirmar que pretende colocar as pessoas no centro das iniciativas ?",
-        "chunk_id": 204,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que objetivos e medidas estão previstos nas políticas públicas portuguesas para a segurança digital e uso da Inteligência Artificial por jovens ?",
+        "chunk_id": [209, 210, 211, 212, 213]
     },
+
     {
-        "query": "Quais eram os dois objetivos explícitos para o sector educativo incluídos na Estratégia Nacional de Inteligência Artificial aprovada em 2019 ?",
-        "chunk_id": 205,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como é abordada a literacia para Inteligência Artificial e quais são os seus benefícios e ameaças ?",
+        "chunk_id": [215, 216, 217, 218]
     },
+
     {
-        "query": "Quantas crianças e jovens entre os 9 e os 17 anos foram inquiridos no total no estudo nacional ?",
-        "chunk_id": 226,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são os principais dados sobre a amostra do estudo e como foi realizada a recolha de dados sobre IA generativa em crianças e jovens ?",
+        "chunk_id": [226, 227, 228, 229]
     },
+
     {
-        "query": "Que explicação foi apresentada aos participantes para definir o conceito de Inteligência Artificial Generativa ?",
-        "chunk_id": 227,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como é definida a Inteligência Artificial Generativa no contexto do questionário aplicado aos participantes ?",
+        "chunk_id": [227]
     },
+
     {
-        "query": "Que características sociodemográficas foram consideradas na análise das respostas do inquérito ?",
-        "chunk_id": 228,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Qual é a distribuição da amostra por género e idade e como foram organizados os participantes do estudo ?",
+        "chunk_id": [229]
     },
+
     {
-        "query": "Que percentagem dos inquiridos declarou usar Inteligência Artificial Generativa para algum tipo de atividade ?",
-        "chunk_id": 240,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como foi conduzido o estudo qualitativo com adolescentes sobre Inteligência Artificial Generativa em Portugal ?",
+        "chunk_id": [230, 231, 232, 233, 234]
     },
+
     {
-        "query": "Em que tipos de atividades relacionadas com IA Generativa Portugal se destacou acima da média europeia ?",
-        "chunk_id": 251,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as características sociodemográficas dos participantes e como se manifesta a divisão digital no acesso à IA generativa ?",
+        "chunk_id": [235, 236, 237, 239, 240, 247, 248, 249, 250]
     },
+
     {
-        "query": "Que aplicação de Inteligência Artificial Generativa foi utilizada por unanimidade entre os adolescentes ?",
-        "chunk_id": 254,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são os principais usos da inteligência artificial generativa por crianças e jovens em Portugal e como estes se comparam com a média europeia, incluindo diferenças por idade e estatuto socioeconómico ?",
+        "chunk_id": [251, 252]
     },
+
     {
-        "query": "Que limitação do Chat GPT foi identificada por Samuel relativamente a conteúdos de Matemática ?",
-        "chunk_id": 259,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "De que forma os estudantes utilizam ferramentas de IA generativa para tarefas escolares e trabalhos de casa, e quais são os principais exemplos de uso, limitações e erros identificados nestes processos ?",
+        "chunk_id": [257, 258, 259, 260, 261, 262, 264]
     },
+
     {
-        "query": "Para que finalidade Miguel utilizava principalmente o Chat GPT nos seus estudos ?",
-        "chunk_id": 264,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como é que crianças e jovens utilizam a inteligência artificial generativa em atividades criativas e de storytelling, e de que forma descrevem a interação com estas ferramentas e o seu papel na criatividade ?",
+        "chunk_id": [265, 266, 267, 268, 269, 270, 271, 272, 273]
     },
+
     {
-        "query": "Segundo Rui, qual é o principal papel da Inteligência Artificial na escrita criativa ?",
-        "chunk_id": 271,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as aplicações de inteligência artificial mais usadas por crianças e jovens em Portugal e qual é o papel do ChatGPT em comparação com outras plataformas ?",
+        "chunk_id": [254, 255, 256]
     },
+
     {
-        "query": "Qual a diferença entre Chat GPT e Character AI segundo a explicação de Rui sobre tipos de inteligência artificial ?",
-        "chunk_id": 276,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como são utilizados o Character AI e o Roblox entre jovens, e que diferenças e possíveis preocupações são referidas em relação ao seu uso em comparação com outras ferramentas de IA ?",
+        "chunk_id": [274, 275]
     },
+
     {
-        "query": "Que situação de assédio ocorreu na plataforma Roblox e como foi descrita pela Isabel ?",
-        "chunk_id": 281,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as diferenças entre o ChatGPT e o Character AI em termos de raciocínio, criatividade e objetivo de utilização ?",
+        "chunk_id": [276]
     },
+
     {
-        "query": "Que tipos de plataformas de jogos e IA são mencionadas como usadas para aprendizagem de xadrez e qual é o papel da IA no Chess.com segundo o Francisco?",
-        "chunk_id": 282,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que experiências negativas e usos de segurança foram relatados pelos jovens em plataformas como Roblox, incluindo casos de assédio e preocupações com moderação ?",
+        "chunk_id": [277, 278, 279, 280, 281, 282]
     },
+
     {
-        "query": "Qual a diferença entre usos emocionais e instrumentais da IA generativa nas relações descritas pelos adolescentes ?",
-        "chunk_id": 286,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como os jovens interpretam respostas da IA generativa a perguntas vagas, incluindo exemplos de erros ou alucinações em temas como o aumento do salário em Portugal ?",
+        "chunk_id": [283, 284, 285]
     },
+
     {
-        "query": "Como os adolescentes definem espontaneamente Inteligência Artificial Generativa nas entrevistas ?",
-        "chunk_id": 295,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como os jovens descrevem a relação emocional e social com a inteligência artificial generativa, incluindo antropomorfização, confiança, medo e diferenças entre humanos e IA ?",
+        "chunk_id": [286, 287, 288, 289, 290, 291, 292, 293]
     },
+
     {
-        "query": "Como é que os entrevistados definem a Inteligência Artificial Generativa e quais os seus aspetos positivos e negativos ?",
-        "chunk_id": 301,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como os adolescentes definem a inteligência artificial generativa e que conceitos, funções e competências associam a estas tecnologias ?",
+        "chunk_id": [295, 296, 297, 298, 299, 300]
     },
+
     {
-        "query": "Como é definida a Inteligência Artificial Generativa por Miguel (17 anos) ?",
-        "chunk_id": 303,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Como é que os adolescentes definem a inteligência artificial generativa e de que forma a entendem como uma ferramenta com impacto positivo e negativo no contexto escolar e social ?",
+        "chunk_id": [301, 302, 303, 304, 305, 306]
     },
+    
     {
-        "query": "O que é o conceito de prompt e como é utilizado na interação com a Inteligência Artificial Generativa ?",
-        "chunk_id": 308,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que diferenças existem nas definições de inteligência artificial generativa entre diferentes idades e contextos socioeconómicos dos adolescentes ?",
+        "chunk_id": [305, 306]
     },
+
     {
-        "query": "Que dificuldades e estratégias são referidas pelos adolescentes na verificação da correção das respostas da IA ?",
-        "chunk_id": 311,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que competências digitais e cognitivas os adolescentes desenvolvem ao utilizar inteligência artificial generativa, incluindo prompt engineering, verificação de respostas e avaliação da qualidade das respostas ?",
+        "chunk_id": [307, 308, 309, 310, 311, 312]
     },
+
     {
-        "query": "Qual a opinião dos entrevistados sobre direitos de autor quando usam Inteligência Artificial para criar conteúdos como música ?",
-        "chunk_id": 315,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são as atitudes dos adolescentes em relação a direitos de autor e atribuição de créditos no uso de conteúdos criados com inteligência artificial generativa ?",
+        "chunk_id": [313, 314, 315]
     },
+
     {
-        "query": "Quais são os efeitos positivos e negativos do uso da Inteligência Artificial Generativa no desempenho escolar ?",
-        "chunk_id": 326,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Que preocupações e riscos são identificados pelos adolescentes relativamente à inteligência artificial generativa, incluindo desinformação, manipulação, dependência e impactos sociais e psicológicos ?",
+        "chunk_id": [316, 317, 318, 319, 320, 321, 322, 323, 324, 325]
     },
+
     {
-        "query": "Que preocupações existem sobre a privacidade e segurança no uso de ferramentas de Inteligência Artificial Generativa ?",
-        "chunk_id": 327,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Qual é o objetivo principal do documento em relação aos transformadores de corrente de baixa tensão ?",
+        "chunk_id": [374]
     },
+
     {
-        "query": "Como os adolescentes utilizam a Inteligência Artificial Generativa para desabafar ou pedir conselhos ?",
-        "chunk_id": 329,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais normas internacionais os transformadores de corrente devem cumprir ?",
+        "chunk_id": [384]
     },
+
     {
-        "query": "Quais são as perceções dos adolescentes sobre os riscos de partilhar informações pessoais com assistentes de Inteligência Artificial ?",
-        "chunk_id": 333,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
+        "query": "Quais são os requisitos da corrente térmica de curta duração (Ith) e como se relaciona com a corrente dinâmica (Idyn) ?",
+        "chunk_id": [395, 396]
     },
+
     {
-        "query": "Que propostas fazem os adolescentes para melhorar e regular o uso da Inteligência Artificial Generativa ?",
-        "chunk_id": 344,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Quem é considerado responsável quando algo corre mal no uso da Inteligência Artificial Generativa ?",
-        "chunk_id": 351,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Como varia a atribuição de responsabilidade entre empresa, utilizador e pais em situações de falha de sistemas de Inteligência Artificial ?",
-        "chunk_id": 352,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Que proposta de sinalização ética foi sugerida para conteúdos criados com ajuda de Inteligência Artificial Generativa ?",
-        "chunk_id": 353,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Quais são os receios de Joaquim sobre a regulação governamental da Inteligência Artificial Generativa ?",
-        "chunk_id": 354,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Que tipo de regulação global sobre Inteligência Artificial Generativa é defendida por Miguel ?",
-        "chunk_id": 355,
-        "doc": "Crianças_e_jovens_(9-17)_e_Inteligência_Artificial_Generativa_em_Portugal.pdf"
-    },
-    {
-        "query": "Quais são os ensaios de tipo realizados nos transformadores de corrente de baixa tensão ?",
-        "chunk_id": 408,
-        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
-    },
-    {
-        "query": "Que ensaios individuais de série são obrigatórios para todos os transformadores de corrente de baixa tensão ?",
-        "chunk_id": 410,
-        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
-    },
-    {
-        "query": "O que são ensaios de receção e qual o seu objetivo nos transformadores de corrente de baixa tensão ?",
-        "chunk_id": 412,
-        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
-    },
-    {
-        "query": "Quais são os tipos de transformadores de corrente normalizados e respetivos códigos SAP na E-REDES ?",
-        "chunk_id": 413,
-        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
-    },
-    {
-        "query": "Que requisitos de conformidade e documentação devem ser apresentados pelos fornecedores de transformadores de corrente de baixa tensão ?",
-        "chunk_id": 414,
-        "doc": "TRANSFORMADORES_DE_CORRENTE_DE_BAIXA_TENSÃO_E-REDES.pdf"
+        "query": "Quais são as características dos terminais secundários, incluindo selagem, proteção e secção dos condutores ?",
+        "chunk_id": [396, 397]
     }
 ]
