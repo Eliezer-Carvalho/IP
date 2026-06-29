@@ -117,3 +117,148 @@ def hitrate_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
     return {
         "HitRate@K Hybrid Retrieval:": sum (eval) / len (eval)
     }
+
+
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
+####
+def hitrate_k_sparse_system (sparse_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+
+        query = dados ["query"]
+        gold_chunk = set (dados ["chunk_id"])
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+
+        query_reranker = [query] * len (sparse_retrieval)
+        chunks = (c.page_content for c in sparse_retrieval)
+        chunks_ids = (c.metadata["chunk_id"] for c in sparse_retrieval)
+
+        pares = list(zip(query_reranker, chunks))
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+
+        rerank = sorted (zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_chunk.intersection (retrieved_ids))
+
+        if equals > 0:
+            eval.append (1)
+        else:
+            eval.append (0)
+
+    
+    return  {
+        f"(Sparse Retrieval + Reranker) HitRate@{k}:": sum (eval) / len (eval)
+    }
+
+
+####
+def hitrate_k_dense_system (dense_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+
+        query = dados ["query"]
+        gold_chunk = set (dados ["chunk_id"])
+
+        dense_retrieval = dense_retrieval_obj.invoke (query)
+
+        query_reranker = [query] * len (dense_retrieval)
+        chunks = (c.page_content for c in dense_retrieval)
+        chunks_ids = (c.metadata["chunk_id"] for c in dense_retrieval)
+
+        pares = list(zip(query_reranker, chunks))
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+
+        rerank = sorted (zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_chunk.intersection (retrieved_ids))
+
+        if equals > 0:
+            eval.append (1)
+        else:
+            eval.append (0)
+
+    
+    return  {
+        f"(Dense Retrieval + Reranker) HitRate@{k}:": sum (eval) / len (eval)
+    }
+
+
+
+####
+def hitrate_k_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+
+        query = dados ["query"]
+        gold_chunk = set (dados ["chunk_id"])
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+        dense_retrieval = dense_retrieval_obj.invoke (query)
+
+        rrf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
+
+        query_reranker = [query] * len (rrf)
+        chunks = (c[2] for c in rrf)
+        chunks_ids = (c[1] for c in rrf)
+
+        pares = list(zip(query_reranker, chunks))
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+
+        rerank = sorted (zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_chunk.intersection (retrieved_ids))
+
+        if equals > 0:
+            eval.append (1)
+        else:
+            eval.append (0)
+
+    
+    return  {
+        f"(Dense Retrieval + Reranker) HitRate@{k}:": sum (eval) / len (eval)
+    }

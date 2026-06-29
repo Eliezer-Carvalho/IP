@@ -42,7 +42,7 @@ def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
         query = dados ["query"] #Query
         gold_chunks = set (dados ["chunk_id"]) #Gold Id Chunk
 
-        sparse_retrieval = sparse_retrieval_obj.invoke (query) #Sparse Retrieval para cada query
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
 
         retrieved_ids = set (x.metadata["chunk_id"] for x in sparse_retrieval) #Iterar sobre os chunks ids return pelo sparse_retrieval
 
@@ -103,4 +103,150 @@ def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datase
 
     return {
         "Recall@K Hybrid Retrieval:": sum (eval) / len (eval)
+    }
+
+
+
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
+#####################################################
+def recall_reranker_sparse_system (sparse_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+        
+        query = dados ["query"]
+        gold_ids = set (dados ["chunk_id"])
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+
+        query_reranker = [query] * len (sparse_retrieval)
+        chunks = [c.page_content for c in sparse_retrieval]
+        chunks_ids = [c.metadata["chunk_id"] for c in sparse_retrieval]
+
+        pares = list(zip(query_reranker, chunks)) # [query, chunks]
+        #print (pares)
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+        #print (inputs)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+            #print (logits)
+
+        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
+        rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_ids.intersection (retrieved_ids))
+
+        eval.append (equals / len (gold_ids))
+
+    return {
+        f"(Sparse Retrieval + Reranker) Recall@{k}:": sum (eval) / len (eval)
+    }
+
+
+#################
+def recall_reranker_dense_system (dense_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+        
+        query = dados ["query"]
+        gold_ids = set (dados ["chunk_id"])
+
+        sparse_retrieval = dense_retrieval_obj.invoke (query)
+
+        query_reranker = [query] * len (sparse_retrieval)
+        chunks = [c.page_content for c in sparse_retrieval]
+        chunks_ids = [c.metadata["chunk_id"] for c in sparse_retrieval]
+
+        pares = list(zip(query_reranker, chunks)) # [query, chunks]
+        #print (pares)
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+        #print (inputs)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+            #print (logits)
+
+        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
+        rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_ids.intersection (retrieved_ids))
+
+        eval.append (equals / len (gold_ids))
+
+    return {
+        f"(Dense Retrieval + Reranker) Recall@{k}:": sum (eval) / len (eval)
+    }
+
+
+######
+def recall_rerank_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset, path: str, k: int):
+
+    cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+
+    eval = []
+
+    for dados in dataset:
+        
+        query = dados ["query"]
+        gold_ids = set (dados ["chunk_id"])
+
+        sparse_retrieval = sparse_retrieval_obj.invoke (query)
+        dense_retrieval = dense_retrieval_obj.invoke (query)
+
+        rrf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
+
+
+        query_reranker = [query] * len (rrf)
+        chunks = [c[2] for c in rrf]
+        chunks_ids = [c[1] for c in rrf]
+
+        pares = list(zip(query_reranker, chunks)) # [query, chunks]
+        #print (pares)
+
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+        #print (inputs)
+
+        cross_encoder_model.eval()
+        with torch.no_grad():
+            logits = cross_encoder_model (**inputs).logits
+            #print (logits)
+
+        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
+        rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
+
+        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+
+        retrieved_ids = set (final)
+
+        equals = len (gold_ids.intersection (retrieved_ids))
+
+        eval.append (equals / len (gold_ids))
+
+    return {
+        f"(Hybrid Retrieval + Reranker) Recall@{k}:": sum (eval) / len (eval)
     }

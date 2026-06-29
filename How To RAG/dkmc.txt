@@ -1,0 +1,20 @@
+Parsing Sintático (Syntactic Parsing)
+Parsing Semântico
+Parsing Estrutural
+Parsing Baseado em Layout
+Parsing por OCR
+Parsing Inteligente (LLM Parsing)
+
+
+
+Fixed-size Chunking
+Sentence Chunking
+Paragraph Chunking
+Section Chunking
+Semantic Chunking
+Recursive Chunking
+Sliding Window Chunking
+Token Chunking
+Layout-aware Chunking
+Hierarchical Chunking
+
