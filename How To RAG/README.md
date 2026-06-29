@@ -22,3 +22,6 @@
 <h3> Recall@K / Precision@K são métricas “clássicas” de IR (Information Retrieval) </h3>
 
 <h3> Eval a Nivel de Chunks e Não Docs pela sua redudância e por a info de uma query poder estar em vários chunks </h3>
+
+<h3> 29/06 </h3>
+<p> Problema nas métricas de RRF.. corrigir para top_k, rrf dá return de um número variado, não único! </p>
