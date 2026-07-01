@@ -25,4 +25,10 @@
 
 https://arxiv.org/pdf/2005.11401
 
+<h1> Synthetic Data </h1>
 
+https://arxiv.org/pdf/2005.14165 <br>
+https://arxiv.org/pdf/2201.11903 <br>
+https://arxiv.org/pdf/2203.11171 <br>
+https://arxiv.org/pdf/2205.11916 <br>
+https://arxiv.org/pdf/2402.03620 
