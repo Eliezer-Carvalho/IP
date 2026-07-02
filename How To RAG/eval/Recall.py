@@ -1,39 +1,41 @@
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
 #Quando uma Query é enviada pelo utilizador, num sistema RAG híbrido é realizada uma Procura Lexical e uma ou várias Procuras Vetoriais.
-#Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final. 
-#Retirando dups e tendo em conta os scores e se aparece em ambos os retrievals.
+#Cada mecanismo gera a sua própria lista ordenada de resultados. É por norma utilizado o algoritmo Reciprocal Rank Fusion (RRF) para mergir estas listas numa única classificação final.
 #https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking
 
-def Reciprocal_Rank_Fusion (rankings, k = 60): 
+def Reciprocal_Rank_Fusion (rankings, k = 60): #60 é um default value #Consultar doc -> https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf
     
-    scores = {}
-    metadata = {}
+    scores = {} #dict para save scores
+    metadata = {} #dict para preservar os metadados
 
-    for ranking in rankings:
-        for rank, doc in enumerate(ranking):
+    for ranking in rankings: #iter sobre os resultados dos retrievals
+        for rank, doc in enumerate(ranking): #rank carrega a pos dos docs e doc carrega os dados
 
-            doc_id = doc.metadata["chunk_id"]
+            doc_id = doc.metadata["chunk_id"] #atribuição dos chunks_ids
 
-            scores[doc_id] = scores.get(doc_id, 0) + 1 / (k + rank + 1)
+            scores[doc_id] = scores.get(doc_id, 0) + 1 / (k + rank + 1) #aplicação da fórmula e saved no dict scores
 
+            ###Preservar os dados
             metadata[doc_id] = {
                 "title": doc.metadata.get("title"),
                 "content": doc.page_content
             }
+            ####
 
-    ranked = sorted(scores.items(), key = lambda x: x[1], reverse = True)
+    ranked = sorted(scores.items(), key = lambda x: x[1], reverse = True) #Ordenar pelos scores
 
-    return [(metadata[doc_id]["title"], doc_id, metadata[doc_id]["content"], score)
+    return [(metadata[doc_id]["title"], doc_id, metadata[doc_id]["content"], score) #Return final com scores, posições e dados importantes
         for doc_id, score in ranked
     ]
 
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
+#Estas funções têm como objetivo medir a métrica Precision@K de um sistema RAG tendo em conta o chunk ideal.
 #Recall@K é uma métrica que permite relacionar o número total de chunks relevantes recuperados pelo Retriver e o número total de chunks relevantes possíveis para cada query. 
 
 ## Sparse Retrieval - BM25 Retriever
-def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
+def recall_sparse_retrieval (sparse_retrieval_obj, dataset):
     
     eval = [] #Lista de eval
 
@@ -55,9 +57,8 @@ def recall_k_sparse_retrieval (sparse_retrieval_obj, dataset):
     }
  
 
-
 ## Dense Retrieval - Embeddings Retriver
-def recall_k_dense_retrieval (dense_retrieval_obj, dataset):
+def recall_dense_retrieval (dense_retrieval_obj, dataset):
 
     eval = []
 
@@ -79,9 +80,8 @@ def recall_k_dense_retrieval (dense_retrieval_obj, dataset):
     }
 
 
-
 ## Hybrid Retrieval com Reciprocal Rank Fusion
-def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset):
+def recall_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, dataset, k: int):
     
     eval = []
 
@@ -95,6 +95,8 @@ def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datase
 
         rrf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
 
+        rrf = rrf [:k]
+
         retrieved_ids = set (x[1] for x in rrf)
 
         equals = len (gold_chunk.intersection (retrieved_ids))
@@ -106,18 +108,20 @@ def recall_k_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datase
     }
 
 
+######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
-#####################################################
-def recall_reranker_sparse_system (sparse_retrieval_obj, dataset, path: str, k: int):
+## Full RAG System usando Sparse Retrieval + Reranker
+def recall_sparse_system (sparse_retrieval_obj, dataset, path: str, k: int):
 
     cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
 
     eval = []
 
+    cross_encoder_model.eval()
     for dados in dataset:
         
         query = dados ["query"]
@@ -135,15 +139,13 @@ def recall_reranker_sparse_system (sparse_retrieval_obj, dataset, path: str, k: 
         inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
         #print (inputs)
 
-        cross_encoder_model.eval()
         with torch.no_grad():
             logits = cross_encoder_model (**inputs).logits
             #print (logits)
 
-        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
         rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
 
-        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+        final = [chunk_id for chunk_id, _, _ in rerank [:k]]
 
         retrieved_ids = set (final)
 
@@ -156,24 +158,25 @@ def recall_reranker_sparse_system (sparse_retrieval_obj, dataset, path: str, k: 
     }
 
 
-#################
-def recall_reranker_dense_system (dense_retrieval_obj, dataset, path: str, k: int):
+## Full RAG System usando Dense Retrieval + Reranker
+def recall_dense_system (dense_retrieval_obj, dataset, path: str, k: int):
 
     cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
 
     eval = []
 
+    cross_encoder_model.eval()
     for dados in dataset:
         
         query = dados ["query"]
         gold_ids = set (dados ["chunk_id"])
 
-        sparse_retrieval = dense_retrieval_obj.invoke (query)
+        dense_retrieval = dense_retrieval_obj.invoke (query)
 
-        query_reranker = [query] * len (sparse_retrieval)
-        chunks = [c.page_content for c in sparse_retrieval]
-        chunks_ids = [c.metadata["chunk_id"] for c in sparse_retrieval]
+        query_reranker = [query] * len (dense_retrieval)
+        chunks = [c.page_content for c in dense_retrieval]
+        chunks_ids = [c.metadata["chunk_id"] for c in dense_retrieval]
 
         pares = list(zip(query_reranker, chunks)) # [query, chunks]
         #print (pares)
@@ -181,15 +184,13 @@ def recall_reranker_dense_system (dense_retrieval_obj, dataset, path: str, k: in
         inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
         #print (inputs)
 
-        cross_encoder_model.eval()
         with torch.no_grad():
             logits = cross_encoder_model (**inputs).logits
             #print (logits)
 
-        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
         rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
 
-        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+        final = [chunk_id for chunk_id, _, _ in rerank [:k]]
 
         retrieved_ids = set (final)
 
@@ -202,14 +203,15 @@ def recall_reranker_dense_system (dense_retrieval_obj, dataset, path: str, k: in
     }
 
 
-######
-def recall_rerank_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset, path: str, k: int):
+## Full RAG System usando Hybrid Retrieval + Reranker
+def recall_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset, path: str, k: int):
 
     cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
     cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
 
     eval = []
 
+    cross_encoder_model.eval()
     for dados in dataset:
         
         query = dados ["query"]
@@ -219,7 +221,6 @@ def recall_rerank_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, data
         dense_retrieval = dense_retrieval_obj.invoke (query)
 
         rrf = Reciprocal_Rank_Fusion ([sparse_retrieval, dense_retrieval])
-
 
         query_reranker = [query] * len (rrf)
         chunks = [c[2] for c in rrf]
@@ -231,15 +232,13 @@ def recall_rerank_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, data
         inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
         #print (inputs)
 
-        cross_encoder_model.eval()
         with torch.no_grad():
             logits = cross_encoder_model (**inputs).logits
             #print (logits)
 
-        #Organiza os logits com os chunks correspondentes #Muita Atenção! Para calcular HitRate e MRR com as funções criadas é necessário estar no mesmo formato do output do RRF.
         rerank = sorted(zip(chunks_ids, chunks, logits.tolist()), key = lambda x: x[2], reverse = True)
 
-        final = [(chunks) for chunks, chunks_content, scores in rerank [:k]]
+        final = [chunk_id for chunk_id, _, _ in rerank [:k]]
 
         retrieved_ids = set (final)
 
