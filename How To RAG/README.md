@@ -23,5 +23,13 @@
 
 <h3> Eval a Nivel de Chunks e Não Docs pela sua redudância e por a info de uma query poder estar em vários chunks </h3>
 
-<h3> 29/06 </h3>
-<p> Problema nas métricas de RRF.. corrigir para top_k, rrf dá return de um número variado, não único! </p>
+https://arxiv.org/pdf/2005.11401
+
+<h1> Synthetic Data </h1>
+
+https://arxiv.org/pdf/2005.14165 <br>
+https://arxiv.org/pdf/2201.11903 <br>
+https://arxiv.org/pdf/2203.11171 <br>
+https://arxiv.org/pdf/2205.11916 <br>
+https://arxiv.org/pdf/2402.03620  <br>
+https://www.youtube.com/watch?v=ysPbXH0LpIE&t=237s 
