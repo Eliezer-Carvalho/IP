@@ -36,3 +36,7 @@ https://www.youtube.com/watch?v=ysPbXH0LpIE&t=237s <br>
 https://arxiv.org/pdf/2508.18929 <br>
 https://arxiv.org/pdf/2411.16594 <br>
 
+
+<h1> Analisar isto para RAG </h1>
+https://arxiv.org/pdf/2606.03264 <br>
+
