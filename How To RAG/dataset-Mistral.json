@@ -1,0 +1,157 @@
+[
+    {
+        "query": "Que tipos de máquinas elétricas existem ?", 
+        "chunk_id": 1
+    }, 
+    {
+        "query": "Em que áreas as máquinas elétricas são utilizadas ?", 
+        "chunk_id": 3
+    }, 
+    {
+        "query": "Qual é a importância da compreensão dos princípios do electromagnetismo para o estudo das máquinas elétricas ?", 
+        "chunk_id": 6
+    }, 
+    {
+        "query": "Qual é o princípio de funcionamento dos geradores ?", 
+        "chunk_id": 2
+    }, 
+    {
+        "query": "Qual é o princípio de funcionamento dos transformadores ?", 
+        "chunk_id": 2
+    }, 
+    {
+        "query": "Qual é o princípio de funcionamento dos motores elétricos ?", 
+        "chunk_id": 7
+    }, 
+    {
+        "query": "Qual é o princípio de funcionamento dos conversores electrónicos de potência ?", 
+        "chunk_id": 8
+    },    
+    {
+        "query": "Que é um campo?", 
+        "chunk_id": 16
+    }, 
+    {
+        "query": "Qual é a definição de campo gravítico?", 
+        "chunk_id": 17
+    }, 
+    {
+        "query": "Qual é a definição de campo eléctrico?", 
+        "chunk_id": 18
+    }, 
+    {
+        "query": "Qual é a definição de campo magnético?", 
+        "chunk_id": 23
+    }, 
+    {
+        "query": "Como é criado um campo magnético por corrente eléctrica?", 
+        "chunk_id": 13
+    }, 
+    {
+        "query": "Como é criado um campo magnético por um ímã permanente?", 
+        "chunk_id": 24
+    }, 
+    {
+        "query": "Qual é a relação entre o sentido da corrente eléctrica e o sentido do campo magnético?", 
+        "chunk_id": 26
+    }, 
+    {
+        "query": "Qual é a relação entre o sentido da corrente eléctrica e o sentido das linhas de força do campo magnético?", 
+        "chunk_id": 29
+    }, 
+    {
+        "query": "Qual é o fenómeno que ocorre quando a corrente através de uma bobina varia no tempo?", 
+        "chunk_id": 33
+    }, 
+    {
+        "query": "Qual é o fenómeno que ocorre quando um condutor se move dentro de um campo magnético?", 
+        "chunk_id": 45
+    }, 
+    {
+        "query": "Qual é a relação entre a variação da corrente e a força electromotriz induzida?", 
+        "chunk_id": 33
+    }, 
+    {
+        "query": "Qual é a relação entre a variação do fluxo magnético e a força electromotriz induzida?", 
+        "chunk_id": 38
+    }, 
+    {
+        "query": "Qual é a relação entre o número de espiras de uma bobina e a força electromotriz induzida?", 
+        "chunk_id": 33
+    },
+    {
+        "query": "Qual é a relação entre a tensão e a corrente no transformador?", 
+        "chunk_id": 57
+    }, 
+    {
+        "query": "Qual é a relação entre a razão de transformação e a relação entre o número de espiras dos enrolamentos primário e secundário?", 
+        "chunk_id": 58
+    }, 
+    {
+        "query": "Qual é a relação entre a tensão e a corrente no transformador de acordo com a lei de Faraday?", 
+        "chunk_id": 59
+    }, 
+    {
+        "query": "Qual é a relação entre a tensão e a corrente no transformador de acordo com a figura 27?", 
+        "chunk_id": 60
+    }, 
+    {
+        "query": "Qual é a relação entre a tensão e a corrente no transformador de acordo com a relação entre o isolamento e a secção do condutor utilizado, dependendo do enrolamento?", 
+        "chunk_id": 60
+    }
+    {
+        "query": "Qual é a função do núcleo em um transformador?", 
+        "chunk_id": 61
+    }, 
+    {
+        "query": "O que é a Regra da Mão Esquerda de Fleming?", 
+        "chunk_id": 43
+    }, 
+    {
+        "query": "Qual é a diferença entre um motor de corrente contínua e um motor de indução?", 
+        "chunk_id": 42
+    }, 
+    {
+        "query": "Qual é a relação entre a frequência da tensão de alimentação e a velocidade de rotação de uma máquina síncrona?", 
+        "chunk_id": 74
+    }, 
+    {
+        "query": "Qual é a diferença entre um gerador e um motor?", 
+        "chunk_id": 71
+    },
+    {
+        "query": "Qual é o princípio de funcionamento de um motor de indução?", 
+        "chunk_id": 76
+    }, 
+    {
+        "query": "Qual é a função dos anéis colectores e escovas no motor de indução?", 
+        "chunk_id": 89
+    }, 
+    {
+        "query": "Qual é a diferença entre um motor de indução com rotor em curto-circuito e um motor de indução com rotor bobinado?", 
+        "chunk_id": 90
+    },
+    {
+        "query": "Qual é a função do campo girante no motor de indução?", 
+        "chunk_id": 87
+    }, {"query": "Qual é a função do estator e do rotor em um motor de indução?", "chunk_id": 88}] }
+[{"query": "Que é um motor de indução de rotor em curto-circuito?", "chunk_id": 91}, {"query": "Qual é a velocidade de sincronismo de um motor de indução?", "chunk_id": 91}, {"query": "Qual é a expressão para calcular a velocidade de sincronismo de um motor de indução?", "chunk_id": 91}, {"query": "Qual é a velocidade de rotação do rotor num motor de indução quando ele gira síncrono com o campo?", "chunk_id": 91}, {"query": "Qual é a expressão para calcular a velocidade de rotação do rotor num motor de indução quando ele gira síncrono com o campo?", "chunk_id": 91}, {"query": "Qual é a expressão para calcular a velocidade de rotação do rotor num motor de indução quando ele gira síncrono com o campo?", "chunk_id": 91}, {"query": "Qual é o efeito do deslizamento num motor de indução?", "chunk_id": 94}, {"query": "Qual é a expressão para calcular o deslizamento num motor de indução?", "chunk_id": 94}, {"query": "Qual é a relação entre o deslizamento num motor de indução e o rendimento do motor?", "chunk_id": 96}, {"query": "Qual é a expressão para calcular o binário num motor de indução à plena carga?", "chunk_id": 98}, {"query": "Qual é a unidade do binário num motor de indução à plena carga?", "chunk_id": 98}, {"query": "Qual é a expressão para calcular a potência num motor de indução à plena carga?", "chunk_id": 98}, {"query": "Qual é o efeito do arranque directo num motor de indução?", "chunk_id": 72}, {"query": "Qual é o efeito do excesso de corrente
+[{"query": "Que dispositivos semicondutores de potência são utilizados nos conversores electrónicos de potência?", "chunk_id": 114}, {"query": "Qual a função dos díodos em ponte nos conversores electrónicos de potência?", "chunk_id": 117}, {"query": "Qual a função dos díodos em proteção de circuitos?", "chunk_id": 118}, {"query": "Qual a função dos díodos em regulação de tensão?", "chunk_id": 119}, {"query": "Qual a função dos díodos emissores de luz?", "chunk_id": 120}] }
+[{"query": "Que dispositivos semicondutores são utilizados nos conversores electrónicos de potência?", "chunk_id": 124}, {"query": "Qual a diferença entre rectificação de onda completa e rectificação de meia onda?", "chunk_id": 127}, {"query": "Qual a limitação dos rectificadores não controlados?", "chunk_id": 132}, {"query": "Qual a vantagem da rectificação de meia onda?", "chunk_id": 131}, {"query": "Qual a diferença entre rectificadores controlados e rectificadores não controlados?", "chunk_id": 133}] }
+[{"query": "Que tipo de regulador é utilizado no Toyota RAV4-EV?", "chunk_id": 149}, {"query": "Qual a função do controlador no sistema de controlo de um motor de indução?", "chunk_id": 145}, {"query": "Qual a diferença entre um regulador CC e um regulador CA?", "chunk_id": 150}, {"query": "Qual a vantagem de um sinal MLI em relação a um sinal quadrado?", "chunk_id": 141}, {"query": "Qual a função do controlador de velocidade de motor CA em um veículo eléctrico?", "chunk_id": 144}]}
+[{"query": "Que ferramentas de Inteligência Artificial Generativa são usadas pelas crianças e jovens em Portugal?", "chunk_id": 160}, {"query": "Qual a prevalência do uso de ferramentas de IA Generativa entre crianças e jovens em Portugal?", "chunk_id": 161}, {"query": "Qual a diversidade e intensidade de atividades de IA Generativa realizadas por crianças e jovens em Portugal?", "chunk_id": 162}, {"query": "Qual a relação entre a idade e o uso de ferramentas de IA Generativa por crianças e jovens em Portugal?", "chunk_id": 163}, {"query": "Qual a relação entre a maturidade e o uso de ferramentas de IA Generativa por crianças e jovens em Portugal?", "chunk_id": 164}, {"query": "Qual a relação entre a personalidade individual e o uso de ferramentas de IA Generativa por crianças e jovens em Portugal?", "chunk_id": 165}] }
+[{"query": "Qual é a prevalência da utilização de IA Generativa por crianças e jovens em Portugal?", "chunk_id": 166}, { "query": "Qual é a opinião dos adolescentes sobre a IA Generativa?", "chunk_id": 174}, { "query": "Qual é a importância da literacia para a inteligência artificial generativa?", "chunk_id": 171}, { "query": "Qual é a importância da equidade na educação com a IA Generativa?", "chunk_id": 170}, { "query": "Qual é a importância da intervenção política e social na segurança digital das crianças e jovens?", "chunk_id": 174}] }
+[{"query": "Quem foi o responsável pela atualização e desenvolvimento do questionário europeu sobre inteligência artificial e jovens?", "chunk_id": 181}, { "query": "Quais as entidades que financiaram a participação de Portugal neste estudo europeu?", "chunk_id": 182}, { "query": "Quem foi agradecido na realização deste estudo?", "chunk_id": 183}, { "query": "Quem participou na leitura e comentários a versões anteriores deste relatório?", "chunk_id": 184}, { "query": "Quem foi responsável pela transcrição em inglês dos testemunhos?", "chunk_id": 184}, { "query": "Quem foi agradecido pela confiança e entusiasmo postos nesta missão?", "chunk_id": 184}, { "query": "Quem foi agradecido pela facilitação dos contactos com as escolas e pela identificação do centro onde fomos ouvir testemunhos de jovens utilizadores destas ferramentas?", "chunk_id": 184}, { "query": "Quem foi agradecido pela realização do trabalho de campo em condições particularmente adversas de calendários escolares?", "chunk_id": 184}, { "query": "Quem foi agradecido à Equipa de Recursos e Tecnologias Educativas da Direção Geral de Educação?", "chunk_id": 184}, { "query": "Quem foi agradecido pelo entusiasmo com que fomos recebidas?", "chunk_id": 184}, { "query": "Quem foi agradecido pelo Programa Escolhas, do Instituto Português do Desporto e Juventude?", "chunk_id": 184}, { "query": "Quem foi agradecido pela identificação do centro onde f
+[{"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial?", "chunk_id": 196}, {"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial em relação à proteção dos cidadãos em matéria de saúde, segurança e direitos fundamentais?", "chunk_id": 200}, {"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial em relação à proteção ambiental?", "chunk_id": 198}, {"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial em relação à educação e aos alunos?", "chunk_id": 204}, {"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial em relação à cidadania ativa das crianças e dos jovens?", "chunk_id": 208}, {"query": "Que orientações encontramos no contexto europeu e nacional para a Inteligência Artificial em relação à segurança digital das crianças e dos jovens?", "chunk_id": 210}] }
+[{"query": "Qual é a estratégia essencial para capacitar pais, educadores e profissionais de saúde a gerir o tempo de ecrã de forma informada?", "chunk_id": 211}, {"query": "Qual é a importância do envolvimento parental na utilização segura de ecrãs por crianças e jovens?", "chunk_id": 211}, {"query": "Qual é a linha de ação transversal nas suas linhas de ação para a utilização segura de ecrãs por crianças e jovens?", "chunk_id": 211}, {"query": "Qual é a importância do envolvimento parental na utilização segura de ecrãs de acordo com o documento?", "chunk_id": 211}, {"query": "Qual é a linha de ação que destaca o envolvimento parental na utilização segura de ecrãs de acordo com o documento?", "chunk_id": 211}] }
+[{"query": "Qual a definição de Inteligência Artificial Generativa?", "chunk_id": 227}, {"query": "Quantos participantes foram entrevistados no estudo qualitativo?", "chunk_id": 230}, {"query": "Qual a idade média dos participantes do estudo qualitativo?", "chunk_id": 234}, {"query": "Qual a distribuição dos participantes do estudo qualitativo em termos de meio socioeconómico?", "chunk_id": 234}, {"query": "Qual a idade dos participantes mais novos do estudo qualitativo?", "chunk_id": 234}, {"query": "Qual a idade dos participantes mais velhos do estudo qualitativo?", "chunk_id": 234}] }
+[{"query": "Qual a motivação inicial para os adolescentes para começar a usar o Chat GPT?", "chunk_id": 242}, {"query": "Qual a idade média dos entrevistados?", "chunk_id": 241}, {"query": "Qual a língua que os entrevistados utilizam nas suas interações com as aplicações de IA?", "chunk_id": 253}, {"query": "Qual a diferença entre os usos de IA generativa por crianças e jovens em Portugal e na Europa em geral?", "chunk_id": 251}, {"query": "Qual a posição de Portugal na comparação europeia em relação aos usos de IA generativa?", "chunk_id": 251}] }
+[{"query": "Que atividades criativas as crianças e jovens de 9 a 17 anos realizam com ferramentas de IA generativa?", "chunk_id": 265}, {"query": "Qual a função da IA generativa nas atividades criativas realizadas por crianças e jovens de 9 a 17 anos?", "chunk_id": 266}, {"query": "Qual o papel da IA generativa na produção de histórias, imagens e jogos por crianças e jovens de 9 a 17 anos?", "chunk_id": 267}, {"query": "Como as crianças e jovens de 9 a 17 anos utilizam a IA generativa para criar histórias?", "chunk_id": 268}, {"query": "Qual a interação entre as crianças e jovens de 9 a 17 anos e a IA generativa na criação de histórias?", "chunk_id": 269}]}
+[{"query": "Qual é a diferença entre o Character AI e o Chat GPT?", "chunk_id": 271}, {"query": "Qual é a função principal do Character AI?", "chunk_id": 276}, {"query": "Qual é a diferença entre o uso de Character AI e o uso de Chat GPT?", "chunk_id": 275}, {"query": "Qual é a diferença entre o Character AI e outras plataformas de jogos online?", "chunk_id": 279}, {"query": "Qual é a função principal da plataforma Roblox?", "chunk_id": 274}] }
+[{"query": "O que é Inteligência Artificial Generativa?", "chunk_id": 295}, {"query": "Como as crianças e jovens entendem a Inteligência Artificial Generativa?", "chunk_id": 296}, {"query": "Qual é a definição espontânea de Inteligência Artificial Generativa?", "chunk_id": 295}, {"query": "Como as crianças e jovens definem a Inteligência Artificial Generativa?", "chunk_id": 296}, {"query": "Qual é a função da Inteligência Artificial Generativa?", "chunk_id": 297}, {"query": "Como as crianças e jovens descrevem a função da Inteligência Artificial Generativa?", "chunk_id": 297}, {"query": "Como as crianças e jovens descrevem a Inteligência Artificial?", "chunk_id": 296}, {"query": "Como as crianças e jovens descrevem a função da Inteligência Artificial?", "chunk_id": 297}] }
+[{"query": "Que é a inteligência artificial generativa?", "chunk_id": 301}, {"query": "Qual é a função da inteligência artificial generativa?", "chunk_id": 302}, {"query": "O que faz a inteligência artificial generativa?", "chunk_id": 303}, {"query": "Qual é a base orgânica da inteligência artificial generativa?", "chunk_id": 304}, {"query": "Qual é a ação da inteligência artificial generativa?", "chunk_id": 305}, {"query": "Qual é a substância da inteligência artificial generativa?", "chunk_id": 306}, {"query": "Qual é a posição social dos entrevistados em relação à inteligência artificial generativa?", "chunk_id": 307}, {"query": "Qual é a competência associada ao pensamento computacional na inteligência artificial generativa?", "chunk_id": 308}, {"query": "Qual é a dimensão da inteligência artificial generativa que foi evidenciada nas demonstrações?", "chunk_id": 309}, {"query": "Qual é o desafio de seguir o processo de engenharia computacional na inteligência artificial generativa?", "chunk_id": 310}, {"query": "Como verificar se as respostas geradas pela inteligência artificial estão corretas?", "chunk_id": 311}, {"query": "Qual é a atitude dos entrevistados em relação aos direitos autorais na inteligência artificial generativa?", "chunk_id": 312}, {"query": "Qual é o cenário sobre direitos autorais suscitou atitudes éticas e de responsabilidade?", "chunk_id": 313}, {"query": "Qual é a atitude dos entrevistados em relação à divulgação pública (ou venda) dos trabalhos gerados pela inteligência artificial?", "chunk_id": 314}, {"query": "Qual é
+[{"query": "Qual é a preocupação dos entrevistados com a criação de imagens e histórias falsas com a utilização de tecnologias?", "chunk_id": 316}, {"query": "Qual é a diferença de preocupação com a criação de imagens e histórias falsas entre raparigas e rapazes?", "chunk_id": 317}, {"query": "Qual é a tendência da preocupação com a criação de imagens e histórias falsas com a utilização de tecnologias em função da idade?", "chunk_id": 318}, {"query": "Qual é a tendência da preocupação com a criação de imagens e histórias falsas com a utilização de tecnologias em função do género?", "chunk_id": 319}, {"query": "Qual é a tendência da preocupação com a criação de imagens e histórias falsas com a utilização de tecnologias em função da socioeconomia?", "chunk_id": 320}, {"query": "Qual é a opinião dos entrevistados sobre a capacidade da ferramenta de produzir discursos de ódio?", "chunk_id": 321}, {"query": "Qual é a opinião dos entrevistados sobre a possibilidade de manipulação política com a utilização de tecnologias?", "chunk_id": 322}, {"query": "Qual é a preocupação dos entrevistados com a dependência em relação às novas tecnologias?", "chunk_id": 323}, {"query": "Qual é a opinião dos entrevistados sobre a dependência de pessoas em relação às novas tecnologias?", "chunk_id": 324}, {"query": "Qual é a opinião dos entrevistados sobre o poder da tecnologia em mudar a percepção de pessoas?", "chunk_id": 325}, {"query": "Qual é a opini
+[{"query": "Quais as preocupações dos entrevistados sobre a Inteligência Artificial?", "chunk_id": 335}, {"query": "Qual a opinião dos entrevistados sobre a perda de controlo humano da tecnologia?", "chunk_id": 336}, {"query": "Qual a opinião dos entrevistados sobre o impacto da Inteligência Artificial na reconfiguração laboral e desemprego?", "chunk_id": 341}, {"query": "Qual a opinião dos entrevistados sobre a necessidade de acesso a literacia para a própria Inteligência Artificial para todos, incluindo os jovens?", "chunk_id": 345}, {"query": "Qual a opinião dos entrevistados sobre a necessidade de capacitação dos jovens para uma intervenção criativa na Inteligência Artificial?", "chunk_id": 345}] }
+[{"query": "Quais são as principais preocupações dos adolescentes em relação ao uso da IA?", "chunk_id": 346}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de um ambiente digital mais regulado para o uso de ferramentas de IA?", "chunk_id": 346}, {"query": "Quais são as medidas previstas no Regulamento Europeu para melhorar a segurança das plataformas de IA?", "chunk_id": 346}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de alertas, notificações, filtros ou deteção imediata para evitar situações de risco nas plataformas de IA?", "chunk_id": 347}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de avisos sobre os riscos de uso da IA?", "chunk_id": 348}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de restrições aos usuários e às plataformas de IA?", "chunk_id": 349}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de um limite etário mínimo para o uso de IA?", "chunk_id": 350}, {"query": "Quem deve ser responsável se algo der mal ao usar a IA?", "chunk_id": 351}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de uma lei que regule o uso de IA?", "chunk_id": 353}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de uma intervenção regulatória no sentido da regulação da IA?", "chunk_id": 355}, {"query": "Qual é a opinião dos adolescentes sobre a necessidade de uma reavaliação de como é que o país opera com a IA
+[{"query": "Que recomendações são feitas para a indústria em relação aos produtos de IA para crianças e jovens?", "chunk_id": 362}, {"query": "Que papel devem ter os governos nacionais e instituições transnacionais na regulação da IA para crianças e jovens?", "chunk_id": 361}, {"query": "Que papel devem ter os professores na educação de IA para crianças e jovens?", "chunk_id": 362}, {"query": "Que papel devem ter os pais na utilização de IA por crianças e jovens?", "chunk_id": 363}, {"query": "Que papel devem ter os meios de comunicação na representação da IA para crianças e jovens?", "chunk_id": 364}] }
+{"data": [{"query": "Que tipos de máquinas elétricas existem?", "chunk_id": [1, 2]}, {"query": "Qual o funcionamento dos geradores?", "chunk_id": [6, 10, 12, 13]}, {"query": "Qual o funcionamento dos transformadores?", "chunk_id": [2, 3, 11]}, {"query": "Qual o funcionamento dos motores elétricos?", "chunk_id": [4, 7, 14, 15]}, {"query": "Qual o funcionamento dos conversores electrónicos de potência?", "chunk_id": [8, 9]}]}
