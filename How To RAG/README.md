@@ -39,4 +39,5 @@ https://arxiv.org/pdf/2411.16594 <br>
 
 <h1> Analisar isto para RAG </h1>
 https://arxiv.org/pdf/2606.03264 <br>
+https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb <br>
 
