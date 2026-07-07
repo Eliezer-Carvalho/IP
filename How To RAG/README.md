@@ -35,6 +35,8 @@ https://arxiv.org/pdf/2402.03620  <br>
 https://www.youtube.com/watch?v=ysPbXH0LpIE&t=237s <br>
 https://arxiv.org/pdf/2508.18929 <br>
 https://arxiv.org/pdf/2411.16594 <br>
+https://deepeval.com/docs/synthetic-data-generation-introduction <br>
+
 
 
 <h1> Analisar isto para RAG </h1>
