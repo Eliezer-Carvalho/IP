@@ -26,3 +26,5 @@ https://www.ahmadosman.com/blog/do-not-use-llama-cpp-or-ollama-on-multi-gpus-set
 <br>
   
 teste
+
+https://huggingnews.com/ <br>
