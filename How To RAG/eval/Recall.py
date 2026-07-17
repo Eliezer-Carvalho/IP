@@ -31,7 +31,7 @@ def Reciprocal_Rank_Fusion (rankings, k = 60): #60 é um default value #Consulta
 
 ######################################################################################## Eliezer Carvalho - 2026 ##################################################################################################
 
-#Estas funções têm como objetivo medir a métrica Precision@K de um sistema RAG tendo em conta o chunk ideal.
+#Estas funções têm como objetivo medir a métrica Recall@K de um sistema RAG tendo em conta o chunk ideal.
 #Recall@K é uma métrica que permite relacionar o número total de chunks relevantes recuperados pelo Retriver e o número total de chunks relevantes possíveis para cada query. 
 
 ## Sparse Retrieval - BM25 Retriever
