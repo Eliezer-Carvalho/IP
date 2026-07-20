@@ -120,6 +120,9 @@ def precision_hybrid_retrieval (sparse_retrieval_obj, dense_retrieval_obj, datas
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 ## Full RAG System usando Sparse Retrieval + Reranker
 def precision_sparse_system (sparse_retrieval_obj, dataset, path: str, k: int):
 
@@ -218,7 +221,7 @@ def precision_dense_system (dense_retrieval_obj, dataset, path: str, k: int):
 def precision_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset, path: str, k: int):
 
     cross_encoder_tokenizer = AutoTokenizer.from_pretrained (path)
-    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path)
+    cross_encoder_model = AutoModelForSequenceClassification.from_pretrained (path, device_map = device)
 
     eval = []
 
@@ -240,7 +243,7 @@ def precision_hybrid_system (sparse_retrieval_obj, dense_retrieval_obj, dataset,
         pares = list(zip(query_reranker, chunks)) # [query, chunks]
         #print (pares)
 
-        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True)
+        inputs = cross_encoder_tokenizer (pares, return_tensors = "pt", padding = True, truncation = True).to(device)
         #print (inputs)
 
         with torch.no_grad():
