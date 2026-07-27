@@ -1,0 +1,1 @@
+"C:\Users\Admin\Desktop\whisper\audio_2.wav"
