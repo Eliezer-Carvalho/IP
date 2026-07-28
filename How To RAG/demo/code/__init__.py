@@ -1,0 +1,1 @@
+### Init diz ao python que deve considerar esta pasta como um package (um módulo que pode conter outros módulos)!

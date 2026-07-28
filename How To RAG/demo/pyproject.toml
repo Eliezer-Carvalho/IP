@@ -1,0 +1,32 @@
+[project]
+name = "demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.14.0",
+    "bitsandbytes>=0.49.2",
+    "faiss-cpu>=1.14.3",
+    "langchain>=0.3.30",
+    "langchain-community>=0.3.27",
+    "langchain-core>=0.3.86",
+    "langchain-huggingface>=0.3.1",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=5.6.0",
+    "streamlit>=1.59.2",
+    "torch>=2.11.0",
+    "torchaudio>=2.11.0",
+    "torchvision>=0.26.0",
+    "transformers>=5.14.1",
+    "unstructured[pdf]>=0.18.32",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+torchaudio = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
