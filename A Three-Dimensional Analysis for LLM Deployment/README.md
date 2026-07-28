@@ -11,6 +11,8 @@
 <a href = "https://arxiv.org/abs/1911.02150"> Fast Transformer Decoding: One Write-Head is All You Need </a> <br>
 <a href = "https://arxiv.org/abs/2305.13245"> GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints </a> <br>
 <a href = "https://arxiv.org/abs/2309.06180"> Efficient Memory Management for Large Language Model Serving with PagedAttention </a> <br>
+<a href = "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf"> Kimi K3: Open Frontier Intelligence  </a> <br>
+
 
 <h1> Stack </h1>
 <p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval, uv, torch </p>
