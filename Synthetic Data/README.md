@@ -6,6 +6,9 @@ Apresento esta abordagem que apresenta como podemos criar dados para X tarefas.
 <a href = "https://arxiv.org/abs/2602.04261"> Data Agents: Levels, State of the Art, and Open Problems </a> <br>
 <a href = "https://openreview.net/pdf?id=NALsdGEPhB"> Reasoning-Driven Synthetic Data Generation and Evaluation </a> <br>
 <a href = "https://arxiv.org/abs/2404.07503v2"> Best Practices and Lessons Learned on Synthetic Data </a> <br>
+<a href = "https://arxiv.org/pdf/2508.18929"> Diverse And Private Synthetic Datasets Generation for RAGevaluation: A multi-agent framework </a> <br>
+<a href = "https://arxiv.org/pdf/2411.16594"> From Generation to Judgment: Opportunities and Challenges of LLM-as-a-judge </a> <br>
+<a href = "https://deepeval.com/docs/synthetic-data-generation-introduction"> Introduction to Synthetic Data Generation </a>
 
 <h1> Stack </h1>
 <p> transformers, pandas, outlines, torch </p>
