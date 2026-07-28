@@ -1,33 +1,17 @@
-<p> Esta fase surgiu como uma análise a três dimensões em relação à hospedagem de LLM's </p>
-
-<h1> Conclusões Importantes </h1>
-<h2> KV Cache Matters </h2>
-
-<p> Importante ter em conta o KV Cache </p> 
-<p> Perceber como funciona e o que é </p> 
-<p> Problema do KV Cache dos modelos <br>
+<h1> Conclusões </h1>
 <ul>
-  <li> Flash Attention </li>
-  <li> Multi Query Attention (Fast Transformer Decoding: One Write-Head is All You Need) </li>
-  <li> Grouped Query Attention </li>
-  <li> Paged Attention </li>
-  <li> Sliding Window Attention </li>
-  <li> Compressão de KV Cache </li>
+  <li> KV Cache Matters </li>
+  <li> Quantization Matters </li>
+  <li> Prefill é Compute Bound | Decode é Memory Bound </li>
 </ul>
 
-<h2> Quantization Matters </h2>
+<h1> Papers Interessantes </h1>
+<a href = "https://arxiv.org/abs/1412.1602"> End-to-end Continuous Speech Recognition using Attention-based Recurrent NN: First Results </a> <br>
+<a href = "https://arxiv.org/abs/2205.14135"> FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness </a> <br>
+<a href = "https://arxiv.org/abs/1911.02150"> Fast Transformer Decoding: One Write-Head is All You Need </a> <br>
+<a href = "https://arxiv.org/abs/2305.13245"> GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints </a> <br>
+<a href = "https://arxiv.org/abs/2309.06180"> Efficient Memory Management for Large Language Model Serving with PagedAttention </a> <br>
 
-<h2> Prefill --> Compute-Bound e o Decode --> Memory-Bound </h2>
+<h1> Stack </h1>
+<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval, uv, torch </p>
 
-<h2> Modelos Base vs Instruct </h2>
-
-<h2> Stack </h2>
-<p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval, uv </p>
-
-<h2> Fórmulas usadas </h2>
-
-<p> N_Tokens / Tempo Médio </p>
-
-<h2> Cenas Interessantes </h2>
-
-<p> Attention apresentada (End-to-end Continuous Speech Recognition using Attention-based Recurrent NN: First Results) </p>
