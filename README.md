@@ -10,6 +10,6 @@ Como fornecer um bom contexto a um modelo ? Porque devemos ter atenção ao cont
 
 Os dados são o novo petróleo, saber criá-los é muito importante.
 
-<h1> <a href = ""> How To RAG </a> </h1>
+<h1> <a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/How%20To%20RAG/How%20To%20RAG.pdf"> How To RAG </a> </h1>
 
 RAG e as suas abordagens. Porque é importante e como implementar.
