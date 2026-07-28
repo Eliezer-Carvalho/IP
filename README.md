@@ -1,30 +1,15 @@
-<h1> Links Interessantes </h1>
+<a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/A%20Three-Dimensional%20Analysis%20for%20LLM%20Deployment/A%20Three-Dimensional%20Analysis%20for%20LLM%20Deployment.pdf"> <h1> A Three-Dimensional Analysis for LLM Deployment </h1> </a>
 
-https://amanxai.com/2026/04/04/how-to-dockerize-an-ai-agent/ <br> 
-https://rentry.co/samplers <br>
-https://www.openresearch.sh/compute <br>
-https://arxiv.org/pdf/2510.09244 <br>
-https://arxiv.org/pdf/2106.10165 <br>
+Apresento uma abordagem para a análise da hospedagem de Large Language Models.
 
-https://arxiv.org/pdf/1301.3781 <br>
-https://arxiv.org/pdf/1412.6980 <br>
-https://arxiv.org/pdf/1502.03167 <br>
-https://arxiv.org/pdf/1512.03385 <br>
-https://arxiv.org/pdf/1603.02754 <br>
-https://arxiv.org/pdf/1406.2661 <br>
-https://arxiv.org/pdf/1810.04805 <br>
-https://arxiv.org/pdf/1810.04805 <br>
+<a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/Context%20Engineering/Context%20Engineering.pdf"> <h1> Context Engineering </h1> </a>
 
-https://arxiv.org/pdf/2606.25996 <br> 
+Como fornecer um bom contexto a um modelo ? Porque devemos ter atenção ao contexto ? 
 
-<a href = "https://paperswithcode.co/"> MUITO BOM! </a> <br>
-https://mlc.ai/modern-gpu-programming-for-mlsys/ <br>
-https://arxiv.org/pdf/2606.23670 <br>
-https://arxiv.org/pdf/2401.07013v2 <br>
-https://arxiv.org/pdf/2606.27226 <br>
-https://www.ahmadosman.com/blog/do-not-use-llama-cpp-or-ollama-on-multi-gpus-setups-use-vllm-or-exllamav2/ <br>
-<br>
-  
-teste
+<a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/Synthetic%20Data/Synthetic%20Data.pdf"> <h1> Synthetic Data </h1> </a>
 
-https://huggingnews.com/ <br>
+Os dados são o novo petróleo, saber criá-los é muito importante.
+
+<a href = ""> <h1> How To RAG </h1> </a>
+
+RAG e as suas abordagens. Porque é importante e como implementar.
