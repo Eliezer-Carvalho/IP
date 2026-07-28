@@ -9,3 +9,6 @@ O modelo tem de ter a capacidade de perceber o seu contexto e o <b> que deve e n
 <a href = "https://arxiv.org/pdf/2201.11903"> Chain-of-Thought Prompting Elicits Reasoning in Large Language Models </a> <br>
 <a href = "https://arxiv.org/pdf/2203.11171"> SELF-CONSISTENCY IMPROVES CHAIN OF THOUGHT REASONING IN LANGUAGE MODELS </a> <br>
 <a href = "https://arxiv.org/pdf/2205.11916"> Large Language Models are Zero-Shot Reasoners </a>
+
+<h1> Stack </h1>
+<p> transformers, torch, outlines, </p>
