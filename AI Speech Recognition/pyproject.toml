@@ -3,12 +3,25 @@ name = "whisper"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "accelerate>=1.14.0",
+    "datasets>=2.19.1",
     "ipykernel>=7.3.0",
-    "librosa>=0.11.0",
     "streamlit>=1.60.0",
+    "torch>=2.13.0",
     "torchaudio>=2.11.0",
     "transformers>=5.14.1",
 ]
+
+[tool.uv.sources]
+torchvision = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu126"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
