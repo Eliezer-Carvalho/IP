@@ -12,11 +12,10 @@ from Assobio.whisper import WHISPER_AI
 WHISPER = WHISPER_AI() # Criar a Instância
 #################
 
-
 WHISPER.LOAD_MODEL()
 
 
-with gr.Blocks() as App:
+with gr.Blocks(title = "Assobio V1") as App:
 
     with gr.Tab ("Assobio"):
 
@@ -32,27 +31,34 @@ with gr.Blocks() as App:
             #####################################################
 
         ###################################
-        gr.Markdown ("<p> <b> Assobio </b> é um projeto realizado no âmbito do estágio curricular do curso Robótica e Inteligência Artificial. </p>")
+        gr.Markdown (
+        """
+        <p> <b> Assobio </b> é uma aplicação desenvolvida no âmbito do estágio curricular do curso de Robótica e Inteligência Artificial. 
+        O projeto visa o desenvolvimento de uma plataforma para transcrição automática e análise inteligente de conteúdos áudio, 
+        integrando modelos de Automatic Speech Recognition (ASR) e Small Language Models (SLMs) disponibilizados através de uma interface web interativa. </p>
+        """
+        )
         gr.Markdown ("<hr>")
         ###################################
 
         #gr.Audio ()
         ###########################################
-        x = gr.File (file_count = "directory", file_types = ["audio"], height = 175)
+        AUDIOS_PATH = gr.File (file_count = "multiple", file_types = ["audio"], height = 175, label = "WAV Files")
 
-        buton = gr.Button ("Transcrever Áudio")
+        button = gr.Button ("Transcrever Áudio")
 
         y = gr.Markdown ()
-        buton.click (fn = WHISPER.INFERENCE, inputs = x, outputs = y)
+        button.click (fn = WHISPER.INFERENCE, inputs = AUDIOS_PATH, outputs = y)
         ###########################################
         
     #audio = gr.Audio()
 
 
 
-tema = gr.themes.Base() #gr.themes.Default() gr.themes.Soft() gr.themes.Monochrome() gr.themes.Glass() gr.themes.Base()
+tema = gr.themes.Default(primary_hue = gr.themes.colors.red, secondary_hue = gr.themes.colors.pink, font = [gr.themes.GoogleFont("Inconsolata"), "Arial", "sans-serif"]) #gr.themes.Default() gr.themes.Soft() gr.themes.Monochrome() gr.themes.Glass() gr.themes.Base()
 App.launch (
     theme = tema, 
+    # N funciona ?? favicon_path = "v1\logos\IP_LogomarcaPrincipal_RGB-Cor.jpg",
     css = 
     """
     
