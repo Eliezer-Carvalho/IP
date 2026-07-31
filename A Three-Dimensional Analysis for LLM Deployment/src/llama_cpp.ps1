@@ -11,7 +11,7 @@ llama-quantize "file_path" "path_para_guardar_e_nome" q4_k_S
 llama-cli -m "file_path"
 
 #servidor estilo openai
-llama-server -m "filepath"
+llama-server -m "filepath" #https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md?utm_source=chatgpt.com
   --host #Endereço  
   --port #Porta HTTP
   -c #Contexto
