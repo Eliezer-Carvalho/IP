@@ -15,7 +15,7 @@ llama-quantize "C:\Users\Admin\Desktop\models\amalia-llmAMALIA-9B-0626-DPO\GGUF\
 llama-cli -m "file_path"
 
 #servidor estilo openai
-llama-server -m "filepath" #https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md?utm_source=chatgpt.com
+llama-server -m "filepath" #https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
   --host #Endereço  
   --port #Porta HTTP
   -c #Contexto
