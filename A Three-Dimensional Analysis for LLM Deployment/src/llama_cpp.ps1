@@ -12,5 +12,15 @@ llama-cli -m "file_path"
 
 #servidor estilo openai
 llama-server -m "filepath"
-
+  --host #Endereço  
+  --port #Porta HTTP
+  -c #Contexto
+  -ngl #GPU Layers
+  -t #Número de Threads da CPU
+  -b #Batch Size
+  -ub #Micro Batch Size
+  --flash-attn #Flash Attention se suportado
+  --jinja #Ativa Chat Template
+  --no-webui #Desativa interface WEB
+  --verbose #Logs detalhados
 
