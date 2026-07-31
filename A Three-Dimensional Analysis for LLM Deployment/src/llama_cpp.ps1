@@ -1,5 +1,7 @@
 #converter hf para gguf
 convert_hf_to_gguf.py "file_path" --outfile x.gguf
+python .\convert_hf_to_gguf.py "C:\Users\Admin\Desktop\models\amalia-llmAMALIA-9B-0626-DPO\Original" --outfile "C:\Users\Admin\Desktop\models\amalia-llmAMALIA-9B-0626-DPO\GGUF\amalia-bf16.gguf" --outtype bf16
+
 
 #métricas de benchmark
 llama-bench -m "file_path" -p 2000 -b 1024 -ngl 0 -n 50 -o json
