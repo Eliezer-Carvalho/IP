@@ -12,4 +12,4 @@ Os dados são o novo petróleo, saber criá-los é muito importante.
 
 <h1> <a href = ""> How To RAG </a> </h1>
 
-RAG e as suas abordagens. Porque é importante e como implementar.
+RAG e as suas abordagens. Porque é importante e técnicas de implementação.
