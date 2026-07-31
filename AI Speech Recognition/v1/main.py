@@ -1,6 +1,6 @@
 import gradio as gr
 
-from Assobio.stats import GPU_NAME, GPU_MEM_ALLOCADA, GPU_MEM_RESERVADA
+from Assobio.stats import GPU_NAME, GPU_MEM_ALLOCADA, GPU_MEM_RESERVADA, CPU_NAME, CPU_MEM_TOTAL, CPU_MEM_USADA
 from Assobio.whisper import WHISPER_AI
 
 ###################################################################################################
@@ -12,7 +12,7 @@ from Assobio.whisper import WHISPER_AI
 WHISPER = WHISPER_AI() # Criar a Instância
 #################
 
-WHISPER.LOAD_MODEL()
+#WHISPER.LOAD_MODEL()
 
 
 with gr.Blocks(title = "Assobio V1") as App:
@@ -28,6 +28,12 @@ with gr.Blocks(title = "Assobio V1") as App:
             gr.Markdown (value = GPU_NAME) #https://gradio-two.vercel.app/main/docs/gradio/markdown
             gr.Markdown (value = GPU_MEM_ALLOCADA, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
             gr.Markdown (value = GPU_MEM_RESERVADA, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+
+            gr.Markdown ("<hr>")
+
+            gr.Markdown (value = CPU_NAME)
+            gr.Markdown (value = CPU_MEM_TOTAL, every = 1)
+            gr.Markdown (value = CPU_MEM_USADA, every = 1)
             #####################################################
 
         ###################################
@@ -47,8 +53,8 @@ with gr.Blocks(title = "Assobio V1") as App:
 
         button = gr.Button ("Transcrever Áudio")
 
-        y = gr.Markdown ()
-        button.click (fn = WHISPER.INFERENCE, inputs = AUDIOS_PATH, outputs = y)
+        y = gr.Textbox ()
+        button.click (fn = WHISPER.ASSOBIO, inputs = AUDIOS_PATH, outputs = y)
         ###########################################
         
     #audio = gr.Audio()
