@@ -5,12 +5,17 @@ import torch
 import traceback #ERROS
 from dataclasses import dataclass
 
+from Assobio.router import Model_Routing
+
 
 # https://realpython.com/python3-object-oriented-programming/
 '''
 Classes para objetos que mantêm estado (modelo, processador, configuração).
 Funções para utilitários independentes (estatísticas da GPU, conversões, carregamento de áudio, etc.).
 '''
+
+ROUTER = Model_Routing ()
+
 
 class WHISPER_AI:
 
@@ -66,17 +71,26 @@ class WHISPER_AI:
                         "num_beams": 5
                     },
                     )
-                print (TRANSCRITO) #{'text': 'x'}
+                #print (TRANSCRITO) #{'text': 'x'}
                 ##################################
 
                 ROUTING = len(TRANSCRITO["text"].split()) # Número de Palavras ou Número de Caractéres ? 
                 TEXTO = str(TRANSCRITO["text"])
 
-                #if ROUTING > 100:
+                print (ROUTING)
+                print (TEXTO)
+                torch.cuda.empty_cache ()
+                
 
+                if ROUTING > 100:
+                    MODEL = ROUTER.LOAD_MODEL_GPU ()
+                    print (MODEL)
 
+                else: 
+                    MODEL = ROUTER.LOAD_MODEL_CPU ()
+                    print (MODEL)
 
-                torch.cuda.empty_cache()
+                #torch.cuda.empty_cache()
 
             except Exception:
                 traceback.print_exc()

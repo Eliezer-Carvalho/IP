@@ -1,0 +1,22 @@
+MODELS:
+
+  QWEN 2.5 0.5B:
+    path: C:\Users\Admin\Desktop\models\Language Models\Qwen 2.5 0.5B\Qwen 2.5 0.5B.gguf
+    inference: llama.cpp
+    context: 2080
+    ngl: 0
+    device: cpu
+
+  Microsoft Phi 3.5 Q4.0:
+    path: C:\Users\Admin\Desktop\models\Language Models\Microsoft Phi 3.5 Q4.0\Microsoft Phi 3.5 Q4.0.gguf
+    inference: llama.cpp
+    context: 2080
+    ngl: 0
+    device: cpu
+
+  Bonsai 27B Q1.0:
+    path: C:\Users\Admin\Desktop\models\Language Models\Bonsai 27B Q1.0\Bonsai 27B Q1.0.gguf
+    inference: llama.cpp
+    context: 2080
+    ngl: 0
+    device: cpu

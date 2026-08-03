@@ -1,0 +1,16 @@
+MODELS:
+
+  Mistral 7B Q4.0:
+    path: C:\Users\Admin\Desktop\models\Language Models\Mistral 7B Q4
+    inference: transformers
+    device: cuda
+
+  Microsoft Phi 4 Q4.0:
+    path: C:\Users\Admin\Desktop\models\Language Models\Microsoft Phi 4 Q4
+    inference: transformers
+    device: cuda
+
+  Amália 9B DPO Q8:
+    path: C:\Users\Admin\Desktop\models\Language Models\Amália 9B DPO Q8
+    inference: transformers
+    device: cuda

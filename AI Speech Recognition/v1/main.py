@@ -1,18 +1,22 @@
 import gradio as gr
+import time
 
-from Assobio.stats import GPU_NAME, GPU_MEM_ALLOCADA, GPU_MEM_RESERVADA, CPU_NAME, CPU_MEM_TOTAL, CPU_MEM_USADA
+
+from Assobio.stats import Statistics_Monitor
 from Assobio.whisper import WHISPER_AI
-
+from Assobio.router import Model_Routing
 ###################################################################################################
 
 
 
 
 #################
-WHISPER = WHISPER_AI() # Criar a Instância
+MONITOR = Statistics_Monitor ()
+WHISPER = WHISPER_AI () # Criar a Instância
+TESTE = Model_Routing ()
 #################
 
-#WHISPER.LOAD_MODEL()
+WHISPER.LOAD_MODEL()
 
 
 with gr.Blocks(title = "Assobio V1") as App:
@@ -25,22 +29,29 @@ with gr.Blocks(title = "Assobio V1") as App:
             gr.Markdown ("<hr>")
 
             #####################################################
-            gr.Markdown (value = GPU_NAME) #https://gradio-two.vercel.app/main/docs/gradio/markdown
-            gr.Markdown (value = GPU_MEM_ALLOCADA, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
-            gr.Markdown (value = GPU_MEM_RESERVADA, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = MONITOR.GPU_NAME) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = MONITOR.GPU_MEMORY, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = MONITOR.GPU_UTILIZATION, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = MONITOR.GPU_TEMP, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = MONITOR.GPU_POWER, every = 1)
+            gr.Markdown (value = MONITOR.GPU_ENERGY, every = 1)
 
             gr.Markdown ("<hr>")
 
-            gr.Markdown (value = CPU_NAME)
-            gr.Markdown (value = CPU_MEM_TOTAL, every = 1)
-            gr.Markdown (value = CPU_MEM_USADA, every = 1)
+            gr.Markdown (value = MONITOR.CPU_NAME)
+            gr.Markdown (value = MONITOR.CPU_MEM_TOTAL, every = 1)
+            gr.Markdown (value = MONITOR.CPU_MEM_USADA, every = 1)
+            gr.Markdown (value = MONITOR.CPU_UTIL, every = 1)
             #####################################################
+
+
+
 
         ###################################
         gr.Markdown (
         """
         <p> <b> Assobio </b> é uma aplicação desenvolvida no âmbito do estágio curricular do curso de Robótica e Inteligência Artificial. 
-        O projeto visa o desenvolvimento de uma plataforma para transcrição automática e análise inteligente de conteúdos áudio, 
+        O projeto tem como objetivo o desenvolvimento de uma plataforma para transcrição automática e análise inteligente de conteúdos áudio, 
         integrando modelos de Automatic Speech Recognition (ASR) e Small Language Models (SLMs) disponibilizados através de uma interface web interativa. </p>
         """
         )
@@ -57,6 +68,11 @@ with gr.Blocks(title = "Assobio V1") as App:
         button.click (fn = WHISPER.ASSOBIO, inputs = AUDIOS_PATH, outputs = y)
         ###########################################
         
+########
+        button2 = gr.Button ("Fechar Server")
+        sd = print ("Server Fechado")
+        button2.click (fn = TESTE.TESTE, outputs = sd)
+
     #audio = gr.Audio()
 
 
