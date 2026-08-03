@@ -1,8 +1,13 @@
 from pynvml import *
 import psutil
-import torch
 import time
 
+"""
+Esta classe serve para monitorizar estatísticas em relação aos recursos computacionais.
+
+GPU -> pynvml #https://developer.nvidia.com/management-library-nvml
+CPU -> psutil #https://psutil.readthedocs.io/stable/
+"""
 
 class Statistics_Monitor:
 
@@ -15,6 +20,9 @@ class Statistics_Monitor:
         self.time = time.time()
 
 
+    """
+    GPU STATS
+    """
     def GPU_NAME (self):
 
         NAME = nvmlDeviceGetName (self.Handle)
@@ -43,7 +51,7 @@ class Statistics_Monitor:
 
     def GPU_POWER (self):
 
-        ENERGIA = nvmlDeviceGetPowerUsage (self.Handle) / 1000 # Conversão para Watts
+        ENERGIA = nvmlDeviceGetPowerUsage (self.Handle) / 1000 # Conversão para Watts # Isto corresponde a potência dissipada, diferente de energia
         return f"<h3>Potência Consumida pela GPU: {ENERGIA:.2f} W</h3>"
 
 
@@ -57,13 +65,31 @@ class Statistics_Monitor:
         self.Energy_Wh += ENERGIA * decorrido / 3600 
 
         self.time = tempo_fim # Porque temos que ir atualizando o intervalo de tempo, se não calcula sempre no mesmo
-        ########################################################
 
+        """
+        Nesta variável seguinte calculamos o custo da Energia, o valor usado é descritivo de acordo com o que aparece na Internet. Não é um valor final!!!
+        O valor tem que ser dado em kWh por isso convertemos W para kWh (/1000) e depois multiplicamos pelo valor.
+        """
         valor = self.Energy_Wh / 1000 * 0.20 #Conversão para kWh * valor médio da energia em pt    
+
 
         return f"<h3>Energia: {self.Energy_Wh:.4f} Wh</h3>\n<h3>Valor em Energia Gasto: {valor:.10f}€</h3>"
 
-#############################################################################################################################
+        """
+        END GPU STATS
+        """
+
+
+##########################################################################################################################################################################
+##########################################################################################################################################################################
+##########################################################################################################################################################################
+##########################################################################################################################################################################
+##########################################################################################################################################################################
+    
+    """
+    CPU STATS
+    """
+
     def CPU_NAME (self):
 
         return f"<h3>CPU: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz</h3>"
@@ -86,31 +112,13 @@ class Statistics_Monitor:
 
         return f"<h3>% da Utilização da CPU: {CPU_UTIL}</h3>"
 
-
-
-"""
-monitor = Statistics_Monitor()
-
-x = monitor.GPU_NAME()
-
-print (x)
-
-y = monitor.Close_Handle()
-"""
+    """
+    END GPU STATS
+    """
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+############################################################ CÓDIGO ANTIGO
 
 """
 def GPU_NAME ():

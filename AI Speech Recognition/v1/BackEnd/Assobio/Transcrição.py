@@ -3,10 +3,6 @@ from transformers import pipeline
 from transformers.audio_utils import load_audio
 import torch
 import traceback #ERROS
-from dataclasses import dataclass
-
-from Assobio.router import Model_Routing
-
 
 # https://realpython.com/python3-object-oriented-programming/
 '''
@@ -14,10 +10,12 @@ Classes para objetos que mantêm estado (modelo, processador, configuração).
 Funções para utilitários independentes (estatísticas da GPU, conversões, carregamento de áudio, etc.).
 '''
 
-ROUTER = Model_Routing ()
+"""
+Esta classe é encarregada por carregar o modelo Whisper (inesc-id/WhisperLv3-PT-All | https://huggingface.co/inesc-id/WhisperLv3-PT-All/tree/main) na meória GPU.
+Também serve para realizar a Transcrição de Áudio.
+"""
 
-
-class WHISPER_AI:
+class Whisper:
 
     def __init__ (self): # self usado para partilhar variáveis entre classes
         
@@ -26,9 +24,7 @@ class WHISPER_AI:
         self.PROCESSADOR_SPEECH = None
         self.MODELO_SPEECH = None
         self.SETUP = None
-        ################################
-        self.SLM_MODEL = None
-        self.SLM_TOKENIZER = None
+
 
     def LOAD_MODEL (self): 
 
@@ -51,15 +47,18 @@ class WHISPER_AI:
                     ignore_warning = True,
                     )
 
+
         except Exception:
             traceback.print_exc()
 
 
 
+    def TRANSCRIPTION (self, path):
 
-    def ASSOBIO (self, path):
+        for idx, PATH in enumerate(path):
 
-        for PATH in path:
+            yield f"Áudio Número {idx}" #yield é como um return mas que não termina a função. GOAT Stuff
+            
             try:
 
                 WAV = load_audio (PATH, sampling_rate = self.PROCESSADOR_SPEECH.feature_extractor.sampling_rate)
@@ -71,58 +70,46 @@ class WHISPER_AI:
                         "num_beams": 5
                     },
                     )
+
+                #yield f"Áudio Número {idx} Transcrito"
                 #print (TRANSCRITO) #{'text': 'x'}
                 ##################################
 
                 ROUTING = len(TRANSCRITO["text"].split()) # Número de Palavras ou Número de Caractéres ? 
                 TEXTO = str(TRANSCRITO["text"])
+                #print (ROUTING)
+                #print (TEXTO)
 
-                print (ROUTING)
-                print (TEXTO)
                 torch.cuda.empty_cache ()
-                
 
-                if ROUTING > 100:
-                    MODEL = ROUTER.LOAD_MODEL_GPU ()
-                    print (MODEL)
-
-                else: 
-                    MODEL = ROUTER.LOAD_MODEL_CPU ()
-                    print (MODEL)
-
-                #torch.cuda.empty_cache()
+                return ROUTING, TEXTO
 
             except Exception:
                 traceback.print_exc()
-
-
-
-
-
-
-        #print (trans)
-        #return "\n\n".join (trans) # Para retornar string, em vez de lista
-
-
-
-
-            
-
             
 
 
 
+############################################################ CÓDIGO ANTIGO
 
 
+"""
+    def MODEL_ROUTING_LOADING (self):
+            
+            if self.ROUTING > 100:
+                self.MODEL_NAME, self.MODELO, self.TOKENIZER = ROUTER.LOAD_MODEL_GPU ()
+                yield f"Modelo Atríbuido: {MODEL_NAME}"
+
+            else: 
+                MODEL_NAME = ROUTER.LOAD_MODEL_CPU ()
+                yield f"Modelo Atríbuido: {self.MODEL_NAME}"
+
+                #torch.cuda.empty_cache()
 
 
+    def INFER (self):
 
-
-
-
-
-
-'''
+    
             try:
         
                 AUDIO = load_audio (PATH, sampling_rate = self.PROCESSADOR.feature_extractor.sampling_rate) 
@@ -145,4 +132,4 @@ class WHISPER_AI:
                     
             except Exception as e:
                 print (e)
-'''
+"""
