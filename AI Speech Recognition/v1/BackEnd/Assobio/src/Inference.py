@@ -1,6 +1,7 @@
 from openai import OpenAI #https://developers.openai.com/api/reference/python
 import torch
 
+import time
 from transformers import GenerationConfig
 
 
@@ -15,11 +16,11 @@ class Inference:
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
-    def INFERENCE_GPU (self, modelo, tokenizer, context, prompt):
+    def INFERENCE_GPU (self, modelo, tokenizer, context, prompt, transcrição):
 
         mensagens = [
             {"role": "system", "content": context},
-            {"role": "user", "content": prompt}
+            {"role": "user", "content": f"{prompt}\n Transcrição: {transcrição}"}
         ]
 
         tokens = tokenizer.apply_chat_template (mensagens, tokenize = True, add_generation_prompt = True, return_tensors = "pt").to(self.device)
@@ -39,11 +40,11 @@ class Inference:
         return tokenizer.decode (logits[0][tokens["input_ids"].shape[1]:], skip_special_tokens = True)
 
 
-    def INFERENCE_CPU (context, prompt):
+    def INFERENCE_CPU (self, context, prompt, transcrição):
 
         mensagens = [
             {"role": "system", "content": context},
-            {"role": "user", "content": prompt}
+            {"role": "user", "content": f"{prompt}\n Transcrição: {transcrição}"}
         ]
 
 
@@ -54,7 +55,14 @@ class Inference:
         API = OpenAI (base_url = "http://127.0.0.1:8080", api_key = "IP2026")
 
 
-        return API.chat_completions.create (
+        time.sleep (3)
+
+        output = API.chat.completions.create (
+            model = "x",
             messages = mensagens
         )
+
+        print (output)
+
+        return output.choices[0].message.content
    

@@ -49,7 +49,7 @@ class Model_Routing:
             traceback.print_exc()
 
 
-        return SELECTED, MODELO, TOKENIZER
+        return (SELECTED, MODELO, TOKENIZER)
 
 
     def LOAD_MODEL_CPU (self):
@@ -70,7 +70,7 @@ class Model_Routing:
             self.SERVER = Popen ([
                 r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
                 "-m", self.CONFIG_CPU["MODELS"][SELECTED]["path"],
-                "-c", "3200",
+                "-c", "480",
                 "-ngl", "0",
                 "--no-jinja",
                 "--no-webui",

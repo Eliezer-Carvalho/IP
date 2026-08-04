@@ -11,9 +11,3 @@ MODELS:
     inference: llama.cpp
     context: 3200
     device: cpu
-
-  Bonsai 27B Q1.0:
-    path: C:\Users\Admin\Desktop\models\Language Models\Bonsai 27B Q1.0\Bonsai 27B Q1.0.gguf
-    inference: llama.cpp
-    context: 3200
-    device: cpu

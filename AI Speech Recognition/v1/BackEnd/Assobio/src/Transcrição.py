@@ -48,44 +48,43 @@ class Whisper:
                     )
 
 
-        except Exception:
+        except Exception as e:
             traceback.print_exc()
 
 
 
     def TRANSCRIPTION (self, path):
 
-        for idx, PATH in enumerate(path):
+            #yield f"Áudio Número {idx}" #yield é como um return mas que não termina a função. GOAT Stuff
 
-            yield f"Áudio Número {idx}" #yield é como um return mas que não termina a função. GOAT Stuff
-            
-            try:
+        try:
 
-                WAV = load_audio (PATH, sampling_rate = self.PROCESSADOR_SPEECH.feature_extractor.sampling_rate)
+            WAV = load_audio (path, sampling_rate = 16000)
 
-                TRANSCRITO = self.SETUP (
-                    WAV, 
-                    chunk_length_s = 30,
-                    generate_kwargs = {
-                        "num_beams": 5
-                    },
-                    )
+            TRANSCRITO = self.SETUP (
+                WAV, 
+                chunk_length_s = 30,
+                generate_kwargs = {
+                    "num_beams": 5
+                },
+                )
 
-                #yield f"Áudio Número {idx} Transcrito"
-                #print (TRANSCRITO) #{'text': 'x'}
-                ##################################
+            #yield f"Áudio Número {idx} Transcrito"
+            #print (TRANSCRITO) #{'text': 'x'}
+            ##################################
 
-                ROUTING = len(TRANSCRITO["text"].split()) # Número de Palavras ou Número de Caractéres ? 
-                TEXTO = str(TRANSCRITO["text"])
-                #print (ROUTING)
-                #print (TEXTO)
+            ROUTING = len(TRANSCRITO["text"].split()) # Número de Palavras ou Número de Caractéres ? 
+            TEXTO = str(TRANSCRITO["text"])
+            #print (ROUTING)
+            #print (TEXTO)
 
-                torch.cuda.empty_cache ()
+            torch.cuda.empty_cache ()
 
-                return ROUTING, TEXTO
+            return (ROUTING, TEXTO)
 
-            except Exception:
-                traceback.print_exc()
+        except Exception as e:
+            traceback.print_exc()
+
             
 
 
