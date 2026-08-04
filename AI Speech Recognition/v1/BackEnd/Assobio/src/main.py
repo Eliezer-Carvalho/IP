@@ -3,6 +3,10 @@ from .Model_Routing import Model_Routing
 from .Inference import Inference
 from .Database import SQL_FUNCTS
 
+"""
+Esta função junta todas as Classes criadas numa e assim no FrontEnd basta rodar esta função para o sistema funcionar como um todo.
+É a melhor abordagem e por isso o nome de "main.py" porque representa a principal função do sistema.
+"""
 
 WHISPER = Whisper ()
 ROUTING = Model_Routing ()
@@ -40,4 +44,3 @@ def SOURCE (path, contexto, prompt): # Aqui passo a instância já criada no Mai
 
 
     yield "Guardado na Base de Dados!"
-            

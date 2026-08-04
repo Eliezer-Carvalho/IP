@@ -5,8 +5,6 @@ import torch
 import traceback
 from subprocess import Popen #https://coderivers.org/blog/python-popen-subprocess/
 
-
-
 """
 Esta classe é a implementação de um Model Routing para o lado dos Modelos de Linguagem Natural.
 O Model Routing seleciona entre 6 modelos. De início a unica ponderação é o número de palavras da transcrição. Ou seja, quanto maior for a transcrição, mais potente o modelo carregado será.
@@ -62,7 +60,7 @@ class Model_Routing:
 
         """
         O motor de inferências llama.cpp tem as usas bases fundamentadas em Linux, o que torna o uso em Python no Windows uma grande dor de cabeça.
-        Desta maneira, o sistema uso a CLI para iniciar um server com llama.cpp com o modelo selecionado carregado.
+        Desta maneira, o sistema usa a CLI para iniciar um server com llama.cpp com o modelo selecionado carregado.
         Mais tarde para comunicarmos usamos uma API.
         """
         try:

@@ -1,7 +1,9 @@
 import sqlite3
 import datetime
 
-
+"""
+C:\Users\Admin\Desktop\ip\AI Speech Recognition\v1\BackEnd\Assobio\db\SQL.md
+"""
 """
 ########### Criação da DataBase ###########
 
@@ -26,13 +28,25 @@ CONECTOR.commit ()
 """
 
 
+"""
+Esta classe tem dentro de si alguns métodos (funções) que permitem Adicionar e Visualizar a DataBase
+
+"""
+
 class SQL_FUNCTS:
 
-    def __init__ (self):
-    
-        self.PATH = "v1\BackEnd\Assobio\db\BaseDadosAssobio.db"
+    def __init__ (self): 
 
+        """
+        Método Construtor
+        """
+        self.PATH = "v1\BackEnd\Assobio\db\BaseDadosAssobio.db" # Caminho para a DB
 
+###############################################################################################################
+
+    """
+    Método para adicionar dados, quando o modelo de Linguagem realizar a Auditoria.
+    """
     def ADD_DATA (self, audio, transcrição, auditoria, modelo):
 
         CONECTOR = sqlite3.connect (self.PATH)
@@ -55,7 +69,131 @@ class SQL_FUNCTS:
         CONECTOR.commit () #Commit
         CONECTOR.close () #Close Conector 
 
+###############################################################################################################
 
+    """
+    Método para descobrir quantas linhas existem na DataBase.
+    Importante para enviar a informação ao FrontEnd
+    """
+    def IDX_SQL (self):
+
+        CONECTOR = sqlite3.connect (self.PATH)
+
+        CURSOR = CONECTOR.cursor ()
+
+        IDX_MAX = CURSOR.execute (
+            """
+            SELECT id FROM Assobio
+            """
+        )
+
+
+        list = [idx[0] for idx in IDX_MAX.fetchall()] # Dropdown aceita um lista por isso temos de converter
+
+        CONECTOR.close ()
+
+        return list
+
+###############################################################################################################
+
+    """
+    Método para visualizar o SQL no FrontEnd.
+    Recebe o id que corresponde ao idx selecionado pelo frontend e depois distribui a informação por variáveis
+    """
+    def VIEW_SQL (self, id):
+
+        CONECTOR = sqlite3.connect (self.PATH)
+
+        CURSOR = CONECTOR.cursor ()
+
+        CURSOR.execute (
+            """ 
+            SELECT * 
+            FROM Assobio
+            WHERE id = ?
+            """,
+            (id,)
+            )
+
+        LOG = CURSOR.fetchone() #fetchone | fetchall
+
+        DATA = LOG[1]
+        AUDIO = LOG[2]
+        TRANS = LOG[3]
+        AUDITORIA = LOG[4]
+        MODEL = LOG[5]
+        AVAL = LOG[6]
+
+        CONECTOR.close ()
+
+        return DATA, AUDIO, TRANS, AUDITORIA, MODEL, AVAL # Para retornar todos 
+
+###############################################################################################################
+
+    """
+    Método que permite ao utilizar alterar o valor de avaliação da base de dados.
+    """
+    def UPDATE_AVAL_SQL (self, aval, id):
+
+        CONECTOR = sqlite3.connect (self.PATH)
+
+        CURSOR = CONECTOR.cursor ()
+
+        CURSOR.execute (
+            """
+            UPDATE Assobio
+            SET score = ?
+            WHERE id = ?
+            """,
+            (aval, id,)
+        )
+
+        CONECTOR.commit ()
+        CONECTOR.close ()
+
+###############################################################################################################
+
+
+"""
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
+########################################### Código Solto ###################################################### 
+"""
+
+"""
+CONECTOR = sqlite3.connect ("v1\BackEnd\Assobio\db\BaseDadosAssobio.db")
+
+CURSOR = CONECTOR.cursor ()
+
+CURSOR.execute (
+    
+    SELECT * 
+    FROM Assobio
+    WHERE id = ?
+    (1,)
+)
+
+print (CURSOR.fetchone()[5])
+""",
+
+"""
+CONECTOR = sqlite3.connect ("v1\BackEnd\Assobio\db\BaseDadosAssobio.db")
+
+CURSOR = CONECTOR.cursor ()
+
+IDX_MAX = CURSOR.execute (
+
+    SELECT id FROM Assobio
+
+)
+
+
+print (IDX_MAX.fetchall())
+
+"""
 """
 CONECTOR = sqlite3.connect ("v1\BackEnd\Assobio\db\BaseDadosAssobio.db")
 
