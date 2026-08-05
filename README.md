@@ -16,4 +16,4 @@ RAG e as suas abordagens. Porque é importante e técnicas de implementação.
 
 <h1> <a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/Automatic%20Speech%20Recognition.pdf"> Automatic Speech Recognition </a> </h1>
 
-Análise e estudo de modelos ASR. Construção do sistema <b> Assobio</b>. 
+Análise e estudo de modelos ASR. Construção do sistema <b> <a href = "https://github.com/Eliezer-Carvalho/IP/tree/master/Automatic%20Speech%20Recognition/v1"> Assobio</b></a>. 
