@@ -65,7 +65,7 @@ class Model_Routing:
         """
         try:
 
-            self.SERVER = Popen ([
+            SERVER = Popen ([
                 r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
                 "-m", self.CONFIG_CPU["MODELS"][SELECTED]["path"],
                 "-c", "480",
@@ -78,7 +78,7 @@ class Model_Routing:
             traceback.print_exc()
 
 
-        return SELECTED
+        return SELECTED, SERVER
 
 
 

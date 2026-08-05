@@ -8,6 +8,7 @@ from BackEnd.Assobio.src.Database import SQL_FUNCTS
 from BackEnd.Assobio.src.main import SOURCE
 ###################################################################################################
 
+
 """
 Frontend principal. Usado Gradio que abstrai muita complexidade e torna mais rápido o processo
 """
@@ -102,8 +103,9 @@ with gr.Blocks(title = "Assobio V1") as App:
         PROMPT = gr.TextArea (placeholder = TXT_MSG.msg_prompt, interactive = True, type = "text", autofocus = True, lines = 1, max_lines = 10)
 
         #Botão para Rodar Tudo
+        logs = gr.TextArea ("Logs", max_lines = 1) # Funciona para aparecer os Logs da main funct
         button = gr.Button ("RUN")
-        TRANSCRIÇÃO = button.click (fn = SOURCE, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT])
+        TRANSCRIÇÃO = button.click (fn = SOURCE, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT], outputs = logs)
     
 ##################################################################################################################################################################################################################################################################
 ##################################################################################################################################################################################################################################################################
@@ -118,7 +120,7 @@ with gr.Blocks(title = "Assobio V1") as App:
         """
 
         #Seleção de ID para visualizar os dados de X id
-        ID = gr.Dropdown (label = "Selecionar ID", choices = DB.IDX_SQL(), every = 1)
+        ID = gr.Dropdown (label = "Selecionar ID", choices = DB.IDX_SQL())
 
         #################################
         DATA = gr.Textbox (label = "Data")
@@ -126,10 +128,12 @@ with gr.Blocks(title = "Assobio V1") as App:
         TRANS = gr.TextArea (lines = 2, max_lines = 10, label = "Transcrição")
         AUDITORIA = gr.TextArea (label = "Auditoria do Modelo de Linguagem", lines = 5, max_lines = 10)
         MODEL = gr.TextArea (label = "Modelo que Realizou a Auditoria", max_lines = 1)
-        AVAL = gr.TextArea (submit_btn = True, label = "Por favor, avalie a auditoria do Modelo!", max_lines = 1)
+        AVAL = gr.TextArea (submit_btn = True, label = "Por favor, avalie a auditoria do Modelo!", max_lines = 1, max_length = 5)
         #################################
 
-        ID.change (fn = DB.VIEW_SQL, inputs = ID, outputs = [DATA, AUDIO, TRANS, AUDITORIA, MODEL, AVAL])
+        INFO = ID.change (fn = DB.VIEW_SQL, inputs = ID, outputs = [DATA, AUDIO, TRANS, AUDITORIA, MODEL, AVAL])
+        INFO.then (fn = lambda: gr.update (choices = DB.IDX_SQL ()), outputs = ID) # Para alterar o idx após run
+
         AVAL.change (fn = DB.UPDATE_AVAL_SQL, inputs = [AVAL, ID])
 
 

@@ -15,6 +15,13 @@ class Inference:
 
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
+        """
+        Comunicação via API com a biblioteca OpenAI! Não, não é apenas para modelos da OpenAI, é uma library multifacetada para todo o tipo de modelos.
+        No constructor porque só quero estabelecer a ligação uma vez!
+        """
+        
+        self.API = OpenAI (base_url = "http://127.0.0.1:8080", api_key = "IP2026")
+
 
     def INFERENCE_GPU (self, modelo, tokenizer, context, prompt, transcrição):
 
@@ -60,16 +67,9 @@ class Inference:
         ]
 
 
-        """
-        Comunicação via API com a biblioteca OpenAI! Não, não é apenas para modelos da OpenAI, é uma library multifacetada para todo o tipo de modelos.
-        """
-
-        API = OpenAI (base_url = "http://127.0.0.1:8080", api_key = "IP2026")
-
-
         time.sleep (3) #time.sleep para dar delay no código, estava-me a dar alguns erros ao carregar tudo muito rápido
 
-        output = API.chat.completions.create (
+        output = self.API.chat.completions.create (
             model = "x",
             messages = mensagens
         )

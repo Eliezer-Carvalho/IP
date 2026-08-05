@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 
 """
-C:\Users\Admin\Desktop\ip\AI Speech Recognition\v1\BackEnd\Assobio\db\SQL.md
+v1 BackEnd Assobio db SQL.md
 """
 """
 ########### Criação da DataBase ###########

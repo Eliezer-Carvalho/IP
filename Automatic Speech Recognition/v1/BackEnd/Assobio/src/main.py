@@ -1,3 +1,7 @@
+import torch
+import gc
+from subprocess import Popen
+
 from .Transcrição import Whisper
 from .Model_Routing import Model_Routing
 from .Inference import Inference
@@ -14,6 +18,9 @@ INFERENCE = Inference ()
 DB = SQL_FUNCTS ()
 
 
+#WHISPER.LOAD_MODEL ()
+
+
 def SOURCE (path, contexto, prompt): # Aqui passo a instância já criada no Main porque essa é que dá load do Model Whisper
 
     WHISPER.LOAD_MODEL ()
@@ -26,21 +33,60 @@ def SOURCE (path, contexto, prompt): # Aqui passo a instância já criada no Mai
         
         ALPHA, TRANS = WHISPER.TRANSCRIPTION (CAMINHO)
 
+        yield "Transcrição Concluída"
+
+        """
+        Limpeza de MEM after Transcrição
+        """
+        torch.cuda.empty_cache ()
+        #torch.cuda.reset_max_memory_allocated ()
+        gc.collect()
+
+
         if ALPHA > 100:
 
             SELECTED, MODEL, TOKENIZER = ROUTING.LOAD_MODEL_GPU ()
 
+            yield f"Modelo {SELECTED} Carregado na GPU"
+            yield "Realizando Inferência..."
+
             TEXTO = INFERENCE.INFERENCE_GPU (MODEL, TOKENIZER, contexto, prompt, TRANS)
 
+            yield "Inferência Concluída!"
+
             SAVE = DB.ADD_DATA (CAMINHO, TRANS, TEXTO, SELECTED)
+
+            yield "Guardado na Base de Dados!!"
+
+            """
+            Limpeza de MEM
+            """
+            torch.cuda.empty_cache ()
+            gc.collect ()
+            del SELECTED, MODEL, TOKENIZER, TEXTO
+
 
         else: 
 
-            SELECTED = ROUTING.LOAD_MODEL_CPU ()
+            SELECTED, SERVER = ROUTING.LOAD_MODEL_CPU ()
+
+            yield f"Modelo {SELECTED} Carregado na CPU"
+            yield "Realizando Inferência..."
 
             TEXTO = INFERENCE.INFERENCE_CPU (contexto, prompt, TRANS)
 
+            yield "Inferência Concluída!"
+
             SAVE = DB.ADD_DATA (CAMINHO, TRANS, TEXTO, SELECTED)
 
+            yield "Guardado na Base de Dados!!"
 
-    yield "Guardado na Base de Dados!"
+            """
+            Limpeza de MEM
+            """
+            SERVER.terminate ()
+            gc.collect ()
+            del SELECTED, SERVER, TEXTO
+
+
+        del ALPHA, TRANS

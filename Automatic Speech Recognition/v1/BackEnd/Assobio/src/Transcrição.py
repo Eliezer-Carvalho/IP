@@ -28,28 +28,30 @@ class Whisper:
 
     def LOAD_MODEL (self): 
 
-        try:
-        
-            self.PROCESSADOR_SPEECH = AutoProcessor.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit") #Tokenizer
-            self.MODELO_SPEECH = AutoModelForSpeechSeq2Seq.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit", device_map = self.device)
+        if self.PROCESSADOR_SPEECH is None: # Excelente condição para melhorar memória management, se o modelo já estiver loaded, salta
 
-            """
-            SETUP porque para áudios mais longos, o modelo Whisper corta os áudios de em blocos de 30 segundos.
-            Só com SETUP dá para acionar essa possibilidade.
+            try:
+            
+                self.PROCESSADOR_SPEECH = AutoProcessor.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit") #Tokenizer
+                self.MODELO_SPEECH = AutoModelForSpeechSeq2Seq.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit", device_map = self.device)
 
-            """
+                """
+                SETUP porque para áudios mais longos, o modelo Whisper corta os áudios de em blocos de 30 segundos.
+                Só com SETUP dá para acionar essa possibilidade.
 
-            self.SETUP = pipeline (
-                    "automatic-speech-recognition", 
-                    model = self.MODELO_SPEECH, 
-                    tokenizer = self.PROCESSADOR_SPEECH.tokenizer, 
-                    feature_extractor = self.PROCESSADOR_SPEECH.feature_extractor,
-                    ignore_warning = True,
-                    )
+                """
+
+                self.SETUP = pipeline (
+                        "automatic-speech-recognition", 
+                        model = self.MODELO_SPEECH, 
+                        tokenizer = self.PROCESSADOR_SPEECH.tokenizer, 
+                        feature_extractor = self.PROCESSADOR_SPEECH.feature_extractor,
+                        ignore_warning = True,
+                        )
 
 
-        except Exception as e:
-            traceback.print_exc()
+            except Exception as e:
+                traceback.print_exc()
 
 
 
@@ -78,7 +80,7 @@ class Whisper:
             #print (ROUTING)
             #print (TEXTO)
 
-            torch.cuda.empty_cache ()
+            #torch.cuda.empty_cache ()
 
             return (ROUTING, TEXTO)
 
