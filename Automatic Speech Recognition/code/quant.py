@@ -16,9 +16,46 @@ try:
     MODELO_SPEECH = AutoModelForSpeechSeq2Seq.from_pretrained (MODELO_NAME, device_map = device, quantization_config = quantization)
 
 
-    PROCESSADOR.save_pretrained (r"C:\Users\Admin\Desktop\models\SPEECH AI\SpeechAI")
-    MODELO_SPEECH.save_pretrained (r"C:\Users\Admin\Desktop\models\SPEECH AI\SpeechAI")
+    PROCESSADOR.save_pretrained ("")
+    MODELO_SPEECH.save_pretrained ("")
 
 
 except Exception as e:
     print (e)
+
+
+#####Having fun
+
+"""
+import torch
+import torch.nn as nn
+
+
+tensor = torch.randn (4, 4) #matriz, tensor de 1 dimensão 
+
+Q = nn.Linear (4, 2)
+K = nn.Linear (4, 2)
+V = nn.Linear (4, 2)
+
+Q = Q (tensor)
+K = K (tensor)
+V = V (tensor)
+
+
+ATTENTION = Q @ K.T
+
+#### masked attention
+#### softmax
+#### + V
+#### proj para multi head 
+
+
+
+print (tensor)
+print (Q)
+print (K)
+print (V)
+
+print (ATTENTION)
+
+"""
