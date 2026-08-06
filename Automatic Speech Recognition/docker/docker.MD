@@ -30,7 +30,6 @@ Consiste num processo Linux que contêm filesystem próprio, rede própria, util
 
 
 <table>
-    <tbody>
         <tr>
             <th> Virtual Machine </th>
             <th> Docker </th>
@@ -60,7 +59,6 @@ Consiste num processo Linux que contêm filesystem próprio, rede própria, util
             <td> Mais Consumo </td>
             <td> Muito Leve </td>
         </tr>
-    </tbody>
 </table>
     
 
