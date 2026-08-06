@@ -30,36 +30,37 @@ Consiste num processo Linux que contêm filesystem próprio, rede própria, util
 
 
 <table>
-    <tr>
-        <th> Virtual Machine </th>
-        <th> Docker </th>
-    </tr>
-
-    <tr>
-        <td> Sistema Operativo Completo </td>
-        <td> Apenas Aplicação </td>
-    </tr>
-
-    <tr>
-        <td> GB de Tamanho </td>
-        <td> MB de Tamanho </td>
-    </tr>
-
-    <tr>
-        <td> Arranque em Minutos </td>
-        <td> Arranque em Segundos </td>
-    </tr>
-
-    <tr>
-        <td> Mais Isolamento </td>
-        <td> Menos Isolamento </td>
-    </tr>
+    <tbody>
+        <tr>
+            <th> Virtual Machine </th>
+            <th> Docker </th>
+        </tr>
     
-    <tr>
-        <td> Mais Consumo </td>
-        <td> Muito Leve </td>
-    </tr>
-
+        <tr>
+            <td> Sistema Operativo Completo </td>
+            <td> Apenas Aplicação </td>
+        </tr>
+    
+        <tr>
+            <td> GB de Tamanho </td>
+            <td> MB de Tamanho </td>
+        </tr>
+    
+        <tr>
+            <td> Arranque em Minutos </td>
+            <td> Arranque em Segundos </td>
+        </tr>
+    
+        <tr>
+            <td> Mais Isolamento </td>
+            <td> Menos Isolamento </td>
+        </tr>
+        
+        <tr>
+            <td> Mais Consumo </td>
+            <td> Muito Leve </td>
+        </tr>
+    </tbody>
 </table>
     
 
