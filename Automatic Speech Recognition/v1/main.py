@@ -137,11 +137,18 @@ with gr.Blocks(title = "Assobio V1") as App:
         AVAL.change (fn = DB.UPDATE_AVAL_SQL, inputs = [AVAL, ID])
 
 
+"""
+tema = gr.themes.Default (
+    spacing_size = "sm",
+    text_size = "sm",
+    font = [gr.themes.GoogleFont("Inconsolata"), "Arial", "sans-serif"]
+    ) #gr.themes.Default() gr.themes.Soft() gr.themes.Monochrome() gr.themes.Glass() gr.themes.Base()
+"""
 
 
-tema = gr.themes.Default (font = [gr.themes.GoogleFont("Inconsolata"), "Arial", "sans-serif"]) #gr.themes.Default() gr.themes.Soft() gr.themes.Monochrome() gr.themes.Glass() gr.themes.Base()
+
 App.launch (
-    theme = tema, 
+    #theme = tema, 
     # N funciona ?? favicon_path = "v1\logos\IP_LogomarcaPrincipal_RGB-Cor.jpg",
     css = 
     """
