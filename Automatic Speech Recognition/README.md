@@ -4,7 +4,8 @@
 
 <h1> Papers Interessantes </h1>
 
-https://arxiv.org/pdf/2402.08846 -> Paper aplicado no modelo <a href = "https://huggingface.co/amalia-llm/AMALIA-SFT-FALA"> AMALIA-SFT-FALA </a>
+https://arxiv.org/pdf/2402.08846 -> Paper aplicado no modelo <a href = "https://huggingface.co/amalia-llm/AMALIA-SFT-FALA"> AMALIA-SFT-FALA </a> <br>
+https://arxiv.org/abs/2510.12827v1 
 
 <h1> Stack </h1>
 

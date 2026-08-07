@@ -30,36 +30,35 @@ Consiste num processo Linux que contêm filesystem próprio, rede própria, util
 
 
 <table>
-    <tr>
-        <th> Virtual Machine </th>
-        <th> Docker </th>
-    <tr>
-
-    <tr>
-        <td> Sistema Operativo Completo </td>
-        <td> Apenas Aplicação </td>
-    <tr>
-
-    <tr>
-        <td> GB de Tamanho </td>
-        <td> MB de Tamanho </td>
-    <tr>
-
-    <tr>
-        <td> Arranque em Minutos </td>
-        <td> Arranque em Segundos </td>
-    <tr>
-
-    <tr>
-        <td> Mais Isolamento </td>
-        <td> Menos Isolamento </td>
-    <tr>
+        <tr>
+            <th> Virtual Machine </th>
+            <th> Docker </th>
+        </tr>
     
-    <tr>
-        <td> Mais Consumo </td>
-        <td> Muito Leve </td>
-    <tr>
-
+        <tr>
+            <td> Sistema Operativo Completo </td>
+            <td> Apenas Aplicação </td>
+        </tr>
+    
+        <tr>
+            <td> GB de Tamanho </td>
+            <td> MB de Tamanho </td>
+        </tr>
+    
+        <tr>
+            <td> Arranque em Minutos </td>
+            <td> Arranque em Segundos </td>
+        </tr>
+    
+        <tr>
+            <td> Mais Isolamento </td>
+            <td> Menos Isolamento </td>
+        </tr>
+        
+        <tr>
+            <td> Mais Consumo </td>
+            <td> Muito Leve </td>
+        </tr>
 </table>
     
 
@@ -86,7 +85,7 @@ O Docker File é a receita, e o bolo é o que chamamos de Imagem.
         <th> COPY </th>
         <th> RUN </th>
         <th> CMD </th>
-    <tr>
+    </tr>
 
     <tr>
         <td> Seleciona a Imagem Base </td>
@@ -94,7 +93,7 @@ O Docker File é a receita, e o bolo é o que chamamos de Imagem.
         <td> Copia ficheiros do Computador para a Imagem </td>
         <td> Executa comandos </td>
         <td> Comando executado quando o container inicia </td>
-    <tr>
+    </tr>
 </table>
 
 
@@ -118,7 +117,7 @@ O Docker File é a receita, e o bolo é o que chamamos de Imagem.
         <th> Parar </th>
         <th> Remover container </th>
         <th> Remover imagem </th>
-    <tr>
+    </tr>
 
 
 
