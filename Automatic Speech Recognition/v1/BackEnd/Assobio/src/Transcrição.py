@@ -1,5 +1,4 @@
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor
-from transformers import pipeline
 from transformers.audio_utils import load_audio
 import torch
 import traceback #ERROS
@@ -23,8 +22,7 @@ class Whisper:
         ################################
         self.PROCESSADOR_SPEECH = None
         self.MODELO_SPEECH = None
-        self.SETUP = None
-
+    
 
     def LOAD_MODEL (self): 
 
@@ -32,23 +30,8 @@ class Whisper:
 
             try:
             
-                self.PROCESSADOR_SPEECH = AutoProcessor.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit") #Tokenizer
-                self.MODELO_SPEECH = AutoModelForSpeechSeq2Seq.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit", device_map = self.device)
-
-                """
-                SETUP porque para áudios mais longos, o modelo Whisper corta os áudios de em blocos de 30 segundos.
-                Só com SETUP dá para acionar essa possibilidade.
-
-                """
-
-                self.SETUP = pipeline (
-                        "automatic-speech-recognition", 
-                        model = self.MODELO_SPEECH, 
-                        tokenizer = self.PROCESSADOR_SPEECH.tokenizer, 
-                        feature_extractor = self.PROCESSADOR_SPEECH.feature_extractor,
-                        ignore_warning = True,
-                        )
-
+                self.PROCESSADOR_SPEECH = AutoProcessor.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 8Bit") #Tokenizer
+                self.MODELO_SPEECH = AutoModelForSpeechSeq2Seq.from_pretrained (r"C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit", device_map = self.device, dtype = torch.float16)
 
             except Exception as e:
                 traceback.print_exc()
@@ -63,20 +46,29 @@ class Whisper:
 
             WAV = load_audio (path, sampling_rate = 16000)
 
-            TRANSCRITO = self.SETUP (
-                WAV, 
-                chunk_length_s = 30,
-                generate_kwargs = {
-                    "num_beams": 5
-                },
-                )
+            """ Prefill 
+            NOVA VERSÃO - Mais controlo do sistema, e aplicação de Truncation para áudios > 30s.
+            """
+            inputs = self.PROCESSADOR_SPEECH (WAV, sampling_rate = self.PROCESSADOR_SPEECH.feature_extractor.sampling_rate, return_tensors = "pt", truncation = False)
+
+            inputs = inputs["input_features"].to (self.device, dtype = torch.float16)
+
+
+            """ Inferência 
+            NOVA VERSÃO - Mais controlo sobre a inferência, uso de Beam Decoding para remover Greedy Decoding.
+            #https://huggingface.co/blog/mlabonne/decoding-strategies
+            """
+
+            outputs = self.MODELO_SPEECH.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt", num_beams = 10) #beams, número de opções que o modelo tem para selecionar
+
+            TRANSCRITO = self.PROCESSADOR_SPEECH.decode (outputs)
 
             #yield f"Áudio Número {idx} Transcrito"
             #print (TRANSCRITO) #{'text': 'x'}
             ##################################
 
-            ROUTING = len(TRANSCRITO["text"].split()) # Número de Palavras ou Número de Caractéres ? 
-            TEXTO = str(TRANSCRITO["text"])
+            ROUTING = len(str(TRANSCRITO).split()) # Número de Palavras ou Número de Caractéres ? 
+            TEXTO = str(TRANSCRITO)
             #print (ROUTING)
             #print (TEXTO)
 
