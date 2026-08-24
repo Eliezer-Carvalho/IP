@@ -32,20 +32,8 @@ class Inference:
 
         tokens = tokenizer.apply_chat_template (mensagens, tokenize = True, add_generation_prompt = True, return_tensors = "pt").to(self.device)
 
-        """
-        Uso de GenerationConfig, permite modificar de maneira fácil e simples a geração
-        """
-        generation_config = GenerationConfig (
-                max_new_tokens = 480,
-                temperature = 0.2,
-                top_p = 0.9,
-                do_sample = False,      # Respostas mais determinísticas
-                eos_token_id = tokenizer.eos_token_id,
-                pad_token_id = tokenizer.eos_token_id
-            )
-
         with torch.inference_mode():
-            logits = modelo.generate (**tokens, generation_config = generation_config)
+            logits = modelo.generate (**tokens, max_new_tokens = 150)
 
         """
         Aqui temos de ter atenção porque os logits retornam o prompt mais a resposta.
@@ -67,7 +55,7 @@ class Inference:
         ]
 
 
-        time.sleep (3) #time.sleep para dar delay no código, estava-me a dar alguns erros ao carregar tudo muito rápido
+        time.sleep (2) #time.sleep para dar delay no código, estava-me a dar alguns erros ao carregar tudo muito rápido
 
         output = self.API.chat.completions.create (
             model = "x",

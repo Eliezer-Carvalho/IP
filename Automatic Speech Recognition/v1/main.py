@@ -25,7 +25,7 @@ class TXT_MSG:
     """
 
     msg_context: str = """
-    És um sistema de Inteligência Artificial, deves avaliar a Transcrição proveviente dos Áudios de acordo com estas métricas: Divertido, Importante, Linguagem.
+    És um sistema de Inteligência Artificial, deves avaliar a Transcrição proveniente dos Áudios de acordo com estas métricas: Divertido, Importante, Linguagem.
     Cada métrica deve ser avaliada de 0 a 10.
 
     Deves:

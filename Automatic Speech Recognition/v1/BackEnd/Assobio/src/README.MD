@@ -13,3 +13,18 @@ Após o Roteamento ter terminado, envia-se a informação para a Inferência que
 <h1> Database.py </h1>
 
 Responsável por guardar os dados e também por fornecer dados para o Front End.
+
+<h1> Main.py </h1>
+
+Responsável por ligar todas estes ficheiros num só. <br>
+O sistema funciona da seguinte maneira: <br>
+
+```mermaid
+flowchart LR
+    WHISPER.LOAD_MODEL[Load ASR Model]
+    --> WHISPER.TRANSCRIPTION[Transcrição do Áudio]
+    --> MODEL.ROUTING[Model Routing]
+    --> ROUTING.LOAD_MODEL[Carregamento do SLM]
+    --> INFERENCE.INFERENCE[Inferência do SLM]
+    --> DB.ADD_DATA[Guardar na Base de Dados]
+    DB.ADD_DATA --> |Áudio a Áudio| WHISPER.TRANSCRIPTION

@@ -68,7 +68,7 @@ class Model_Routing:
             SERVER = Popen ([
                 r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
                 "-m", self.CONFIG_CPU["MODELS"][SELECTED]["path"],
-                "-c", "480",
+                "-c", "150",
                 "-ngl", "0",
                 "--no-jinja",
                 "--no-webui",

@@ -61,10 +61,10 @@ def SOURCE (path, contexto, prompt): # Aqui passo a instância já criada no Mai
             """
             Limpeza de MEM
             """
-            torch.cuda.empty_cache ()
-            gc.collect ()
             del SELECTED, MODEL, TOKENIZER, TEXTO
-
+            gc.collect ()
+            torch.cuda.empty_cache ()
+            
 
         else: 
 
