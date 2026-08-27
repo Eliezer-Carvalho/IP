@@ -18,8 +18,9 @@ class AuditoriaSLM:
 
         self.API = OpenAI (base_url = "http://127.0.0.1:8080", api_key = "IP")
 
-        with open (r"v2\Backend\Assobio - Auditoria\__config__.yaml", "r", encoding = "utf-8") as f:
+        with open (r"v2\Backend\AssobioAuditoria\__config__.yaml", "r", encoding = "utf-8") as f:
             self.CONFIG = yaml.safe_load (f)
+
 
     def LOAD_MODELO_GPU (self):
 
@@ -28,7 +29,8 @@ class AuditoriaSLM:
         self.TOKENIZER = AutoTokenizer.from_pretrained (self.CONFIG["SLM_GPU"][MODELO_SELECIONADO]["path"])
         self.MODELO = AutoModelForCausalLM.from_pretrained (self.CONFIG["SLM_GPU"][MODELO_SELECIONADO]["path"], device_map = self.device, dtype = torch.float16)
 
-        return MODELO_SELECIONADO
+        return MODELO_SELECIONADO, self.TOKENIZER, self.MODELO
+
 
     def INFER_GPU (self, contexto, prompt, transcrição):
 
@@ -40,7 +42,7 @@ class AuditoriaSLM:
         tokens = self.TOKENIZER.apply_chat_template (mensagens, tokenize = True, add_generation_prompt = True, return_tensors = "pt").to(self.device)
 
         with torch.inference_mode():
-            logits = self.MODELO.generate (**tokens, max_new_tokens = 640)
+            logits = self.MODELO.generate (**tokens, max_new_tokens = 80)
 
         """
         Aqui temos de ter atenção porque os logits retornam o prompt mais a resposta.
@@ -61,9 +63,8 @@ class AuditoriaSLM:
         ##https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
         SERVER = Popen ([
                 r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
-                "-m", self.CONFIG_CPU["SLM_CPU"][MODELO_SELECIONADO]["path"],
+                "-m", self.CONFIG["SLM_CPU"][MODELO_SELECIONADO]["path"],
                 "-ngl", "0",
-                "--no-jinja",
                 "--no-webui",            
         ])
 
@@ -80,12 +81,12 @@ class AuditoriaSLM:
         ]
 
 
-        time.sleep (1) #time.sleep para dar delay no código, estava-me a dar alguns erros ao carregar tudo muito rápido
+        time.sleep (3) #time.sleep para dar delay no código, estava-me a dar alguns erros ao carregar tudo muito rápido
 
         output = self.API.chat.completions.create (
             model = "x",
             messages = mensagens,
-            max_tokens = 640
+            max_tokens = 80
         )
 
         #print (output)

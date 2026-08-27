@@ -1,0 +1,20 @@
+SLM_GPU:
+
+  Mistral 7B Q4.0:
+
+    path: C:\Users\Admin\Desktop\models\Language Models\Mistral 7B Q4
+    hf: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
+    params: 7B
+
+  Microsoft Phi 4 Q4.0:
+
+    path: C:\Users\Admin\Desktop\models\Language Models\Microsoft Phi 4 Q4
+    hf: https://huggingface.co/microsoft/phi-4
+    params: 14B
+
+  Amália 9B DPO Q8:
+
+    path: C:\Users\Admin\Desktop\models\Language Models\Amália 9B DPO Q8
+    hf: https://huggingface.co/amalia-llm/AMALIA-9B-0626-DPO
+    params: 9B
+    

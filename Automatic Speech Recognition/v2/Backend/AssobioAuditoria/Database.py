@@ -8,12 +8,11 @@ class SQL_FUNCTS:
 
         self.PATH = "v1\BackEnd\Assobio\db\BaseDadosAssobio.db"
 
-        self.CONECTOR = sqlite3.connect (self.PATH)
-
-
     def ADD_DATA (self, audio, transcrição, auditoria, modelo):
 
-        CURSOR = self.CONECTOR.cursor ()
+        CONECTOR = sqlite3.connect (self.PATH)
+
+        CURSOR = CONECTOR.cursor ()
 
         data = datetime.datetime.now ()
 
@@ -21,12 +20,12 @@ class SQL_FUNCTS:
             """
             INSERT INTO Assobio (data, audio, transcrição, auditoria, modelo)
             VALUES (?, ?, ?, ?, ?)
-            """
+            """,
             (data, audio, transcrição, auditoria, modelo)
         )
 
-        self.CONECTOR.commit ()
-        self.CONECTOR.close ()
+        CONECTOR.commit ()
+        CONECTOR.close ()
 
 
     """
@@ -77,8 +76,8 @@ class SQL_FUNCTS:
         TRANS = LOG[3]
         AUDITORIA = LOG[4]
         MODEL = LOG[5]
-        AVAL = LOG[6]
+        #AVAL = LOG[6] # Nesta versão 2 fuck AVAL
 
         CONECTOR.close ()
 
-        return DATA, AUDIO, TRANS, AUDITORIA, MODEL, AVAL # Para retornar todos 
+        return DATA, AUDIO, TRANS, AUDITORIA, MODEL # Para retornar todos 

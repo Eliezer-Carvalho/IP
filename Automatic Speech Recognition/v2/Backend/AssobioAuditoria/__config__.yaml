@@ -14,11 +14,15 @@ SLM_CPU:
     hf: https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct
     params: 0.5B
  
-  Microsoft Phi 3.5 Q4.0:
+########### Modelo com ERRO ??
+
+  #Microsoft Phi 3.5 Q4.0:
     
-    path: C:\Users\Admin\Desktop\models\Language Models\Microsoft Phi 3.5 Q4.0\Microsoft Phi 3.5 Q4.0.gguf
-    hf: https://huggingface.co/microsoft/Phi-3.5-mini-instruct
-    params: 4B
+    #path: C:\Users\Admin\Desktop\models\Language Models\Microsoft Phi 3.5 Q4.0\Microsoft Phi 3.5 Q4.0.gguf
+    #hf: https://huggingface.co/microsoft/Phi-3.5-mini-instruct
+    #params: 4B
+
+###############
 
 ####
 

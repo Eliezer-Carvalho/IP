@@ -28,7 +28,7 @@ class Speech_To_Text:
         self.PROCESSOR = None
         self.MODEL_ASR = None
 
-        with open (r"v2\Backend\Assobio - Auditoria\__config__.yaml", "r", encoding = "utf-8") as f:
+        with open (r"v2\Backend\AssobioAuditoria\__config__.yaml", "r", encoding = "utf-8") as f:
             self.CONFIG = yaml.safe_load (f)
 
 
