@@ -33,6 +33,8 @@ class SLM:
         
         HISTÓRICO = [] # Reconstrução do History porque traz informação a mais
 
+        #print (HISTORY)
+
         """ Debug
         #if len (HISTORY) > 0:
 
@@ -42,17 +44,19 @@ class SLM:
             #print (HISTORY[0]["role"])
             #print (HISTORY[0]["content"])
         """
-        for i in HISTORY:
 
-            """ Debug 
-            #print (i)
-            #print (i["role"])
-            #print (i["content"])
-            """
+        if HISTORY: 
+            for i in HISTORY:
 
-            HISTÓRICO.append ({
-                "role": i["role"], "content": i["content"][0]["text"],
-            }) 
+                """ Debug 
+                #print (i)
+                #print (i["role"])
+                #print (i["content"])
+                """
+
+                HISTÓRICO.append ({
+                    "role": i["role"], "content": i["content"][0]["text"],
+                }) 
 
         #print (HISTÓRICO)
         
@@ -104,10 +108,12 @@ class SLM:
         #################### #################### #################### #################### ####################
         
         output = [
-            *HISTORY,
+            *HISTÓRICO,
             {"role": "user", "content": PROMPT},
-            {"role": "assistant", "content": []}
+            {"role": "assistant", "content": ""}
         ]        
+
+        #print (output)
 
         resposta = ""
 
@@ -117,5 +123,6 @@ class SLM:
 
             output[-1]["content"] = resposta #-1 é o último
         
-            yield output
+            yield output, output
 
+        #print (type(output)) List

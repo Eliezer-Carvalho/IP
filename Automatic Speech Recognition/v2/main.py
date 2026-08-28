@@ -7,9 +7,8 @@ from Backend.AssobioChat.SLM import SLM
 from Backend.AssobioChat.Database import SQL_FUNCT_ASSOBIOCHAT
 
 
-
 DB = SQL_FUNCTS ()
-TESTE = SLM ()
+LM = SLM ()
 
 DB2 = SQL_FUNCT_ASSOBIOCHAT ()
 
@@ -86,50 +85,38 @@ with gr.Blocks (title = "Assobio V2") as App:
 
 
     ############################################### Assobio Chat #################################################
+    ##############################################################################################################
+    ##############################################################################################################
 
     with gr.Tab ("Assobio - Chat"):
-
-
         with gr.Sidebar (open = False):
 
-            gr.Markdown ("## teste")
+            gr.Markdown ("## Conversas")
+
+            CHAT_LIST = gr.Radio (choices = DB2.NUMBER_CHATS (), label = "", show_label = False, min_width = 50)
+
+
 
         #gr.ChatInterface (fn = print ("Hello World"))
         #gr.Chatbot (value = [{"role": "user", "content": "Olá"}, {"role": "assistant", "content": "Olá! Como posso ajudar?"}], label = "NJSCSNJ", buttons = ["copy_all"], layout = "bubble", placeholder = ["Olá", "Adeus"])
         #gr.ChatMessage (content = "")
 
 
-        CHATBOX = gr.Chatbot (visible = True, elem_id = "CHATBOX", min_height = 725, label = "Chat History")
-        CHATBOX.clear (fn = DB2.ADD_CHAT_HISTORY, inputs = CHATBOX)
+        CHATBOX = gr.Chatbot (visible = True, elem_id = "CHATBOX", min_height = 725, label = "", show_label = False)
+
+        CHATBOXSAVE = gr.List (visible = False) # Este componente guarda o histórico da conversa.
+
+        CHATBOX.clear (fn = DB2.ADD_CHAT_HISTORY, inputs = CHATBOXSAVE) # Ao limpar, guarda na DB a conversa.
         #print (CHATBOX)
         
-
+        X = CHAT_LIST.change (fn = DB2.GET_CHAT, inputs = CHAT_LIST, outputs = CHATBOX)
+        X.then (fn = lambda: gr.update (choices = DB2.NUMBER_CHATS ()), outputs = CHAT_LIST)
 
         #MODELS = gr.Dropdown (show_label = False, choices = ["Mistral 7B Q4.0", "Microsoft Phi 4 Q4.0", "Amália 9B DPO Q8"], interactive = True, elem_id = "MODELS")
-        PROMPT = gr.Textbox (submit_btn = True, type = "text", label = "Prompt", elem_id = "PROMPT", placeholder = "Olá")
-        PROMPT.submit (TESTE.LOAD_INFER_MODEL, inputs = [PROMPT, CHATBOX], outputs = CHATBOX)
+        PROMPT = gr.Textbox (submit_btn = True, type = "text", label = "", show_label = False, elem_id = "PROMPT", placeholder = "Olá")
+        PROMPT.submit (LM.LOAD_INFER_MODEL, inputs = [PROMPT, CHATBOX], outputs = [CHATBOX, CHATBOXSAVE])
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+   
 """
 És um sistema de Inteligência Artificial inserido num sistema de Transcrição de Áudios em Português Europeu.
 Deves realizar auditoria ás transcrições dos áudios de acordo com estes parâmetros:
@@ -168,6 +155,8 @@ App.launch (
         top: 765px;
     }
 
+    
+
     footer {
         visibility: hidden;
     }
@@ -188,10 +177,3 @@ App.launch (
 
     inbrowser = True, # Tem que ficar em último, se não, não funciona!
 )
-
-
-
-
-
-
-
