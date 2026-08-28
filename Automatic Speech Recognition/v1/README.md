@@ -1,4 +1,6 @@
-<h1> <a href = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/v1/img/main.gif"> VER </a> </h1> 
+<p align = "center">  <img width = "1000" height = "500" src = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/v1/img/main.gif">  </p>
+
+<hr>
 
 ```mermaid
 flowchart TD
@@ -30,3 +32,8 @@ flowchart TD
     style NOTE fill:#ff4040 , stroke:#e62020, color:#000000 
     style NOTE2 fill:#ff4040 , stroke:#e62020, color:#000000
     style NOTE3 fill:#ff4040 , stroke:#e62020, color:#000000
+
+
+
+
+
