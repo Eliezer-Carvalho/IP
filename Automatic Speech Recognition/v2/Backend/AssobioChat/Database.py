@@ -78,12 +78,16 @@ class SQL_FUNCT_ASSOBIOCHAT:
 
             hist = json.loads (conversas)
 
-            USER_CONTENT = str(hist[0][0]["content"])
-            ASSISTANT_CONTENT = str(hist[1][0]["content"])  
+            #print (hist)
+            ### Proteção caso haja valores vazios na DB
+            if hist:
 
-            TOTAL_CONTENT = "".join (USER_CONTENT + ASSISTANT_CONTENT)
+                USER_CONTENT = str(hist[0][0]["content"])
+                ASSISTANT_CONTENT = str(hist[1][0]["content"])  
 
-            TITLE.append ((TOTAL_CONTENT[:30], idx))
+                TOTAL_CONTENT = "".join (USER_CONTENT + ASSISTANT_CONTENT)
+
+                TITLE.append ((TOTAL_CONTENT[:30], idx))
             
 
         #print (TITLE)
@@ -92,7 +96,7 @@ class SQL_FUNCT_ASSOBIOCHAT:
             #print (hist[0][0]) # Printa Prompt em Dict
             #print (type(hist))
         
-        #print (TITLE)
+        print (TITLE)
         return TITLE
 
 
