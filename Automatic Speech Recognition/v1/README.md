@@ -1,3 +1,8 @@
+
+<p align = "center">  <img width = "725" height = "600" src = "C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v1\img\main.gif">  </p>
+
+
+
 ```mermaid
 flowchart TD
     subgraph INPUTS["Inputs do Sistema"]
