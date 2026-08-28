@@ -1,5 +1,5 @@
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor
-from transformers.audio_utils import load_audio
+import librosa
 import torch
 import traceback #ERROS
 
@@ -44,7 +44,7 @@ class Whisper:
 
         try:
 
-            WAV = load_audio (path, sampling_rate = 16000)
+            WAV, SAMPLE_RATE = librosa.load (path, sr = 16000, mono = True)
 
             """ Prefill 
             NOVA VERSÃO - Mais controlo do sistema, e aplicação de Truncation para áudios > 30s.
@@ -59,22 +59,23 @@ class Whisper:
             #https://huggingface.co/blog/mlabonne/decoding-strategies
             """
 
-            outputs = self.MODELO_SPEECH.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt", num_beams = 10) #beams, número de opções que o modelo tem para selecionar
+            outputs = self.MODELO_SPEECH.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt") #beams, número de opções que o modelo tem para selecionar
 
-            TRANSCRITO = self.PROCESSADOR_SPEECH.decode (outputs)
+            TRANSCRITO = self.PROCESSADOR_SPEECH.batch_decode (outputs, skip_special_tokens = True)[0]
 
             #yield f"Áudio Número {idx} Transcrito"
             #print (TRANSCRITO) #{'text': 'x'}
             ##################################
 
-            ROUTING = len(str(TRANSCRITO).split()) # Número de Palavras ou Número de Caractéres ? 
-            TEXTO = str(TRANSCRITO)
+            ROUTING = len(TRANSCRITO.split()) # Número de Palavras ou Número de Caractéres ? 
+            TEXTO = TRANSCRITO
             #print (ROUTING)
             #print (TEXTO)
 
             #torch.cuda.empty_cache ()
 
-            return (ROUTING, TEXTO)
+            print (ROUTING, TEXTO)
+            return ROUTING, TEXTO
 
         except Exception as e:
             traceback.print_exc()
