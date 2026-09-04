@@ -9,7 +9,7 @@ https://arxiv.org/abs/2510.12827v1
 
 <h1> Stack </h1>
 
-datasets, gradio, nvidiampl, openai, sqllite3, POO, yaml, traceback, subprocess, psutil, transformers, torch, llama.cpp 
+datasets, gradio, nvidiampl, openai, sqllite3, POO, yaml, traceback, subprocess, psutil, transformers, torch, llama.cpp, streaming tokens
 
 <h1> Ver </h1>
 
