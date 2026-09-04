@@ -11,5 +11,7 @@ https://arxiv.org/abs/2510.12827v1
 
 datasets, gradio, nvidiampl, openai, sqllite3, POO, yaml, traceback, subprocess, psutil, transformers, torch, llama.cpp 
 
+<h1> Ver </h1>
 
-
+https://github.com/facebookresearch/demucs <br>
+https://github.com/snakers4/silero-vad?tab=readme-ov-file
