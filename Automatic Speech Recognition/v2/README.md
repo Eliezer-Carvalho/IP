@@ -1,11 +1,3 @@
-<h1> Resultados dos Benchmarks </h1>
-
-<p align = "center">  <img width = "500" height = "800" src = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/v2/Eval/Screenshot%202026-08-26%20102758.png">  </p>
-<p align = "center">  <img width = "500" height = "800" src = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/v2/Eval/Screenshot%202026-08-26%20103526.png">  </p>
-<p align = "center">  <img width = "500" height = "800" src = "https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/v2/Eval/Screenshot%202026-08-26%20104205.png">  </p>
-
-<hr>
-
 <h1> Assobio - Auditoria </h1>
 
 
