@@ -17,3 +17,11 @@
 <h1> Stack </h1>
 <p> transformers, llama.cpp, bitsandbytes, hugging face, gguf models, quantization, lm_eval, uv, torch </p>
 
+<h1> CPU vs GPU </h1>
+
+<video
+  src="https://github.com/Eliezer-Carvalho/IP/raw/refs/heads/master/A%20Three-Dimensional%20Analysis%20for%20LLM%20Deployment/videoplayback.mp4"
+  controls
+  width="800">
+</video>
+
