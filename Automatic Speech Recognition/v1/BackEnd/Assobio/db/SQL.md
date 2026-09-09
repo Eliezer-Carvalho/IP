@@ -6,7 +6,7 @@
 Criar tabelas
 
 ```sql
-CREATE TABLE clientes (id INTEGER, nome TEXT) 
+CREATE TABLE clientes (id INTEGER PRIMARY KEY, nome TEXT NOT NULL) 
 ```
 <hr>
 
@@ -42,538 +42,122 @@ SELECT nome AS cliente, idade AS anos FROM clientes
 
 
 
-
-**Update**
-
+<h3> UPDATE </h3>
 Atualizar dados
 
-
-
-"""
-
-**UPDATE** clientes **SET** nome = "Eliezer" **WHERE** id = 1
-
-"""
-
-\##########################################################
+```sql
+UPDATE clientes SET nome = 'Eliezer' WHERE id = 1
+```
+<hr>
 
 
 
-
-
-**Delete**
-
+<h3> DELETE </h3>
 Eliminar dados
 
+```sql
+DELETE FROM clientes WHERE id = 1
+```
+<hr>
 
 
-"""
 
-**DELETE FROM** clientes **WHERE** id = 1
+<h3> WHERE </h3>
+Filtragem
 
-"""
+```sql
+SELECT * FROM clientes WHERE id > 10
+```
 
-\##########################################################
+Múltipla Filtragem
 
+```sql
+SELECT * FROM clientes WHERE id > 10 AND nome = 'Sara'
+```
+```sql
+SELECT * FROM clientes WHERE id > 10 OR nome = 'Sara'
+```
+```sql
+SELECT * FROM clientes WHERE NOT nome = 'Sara'
+```
+<hr>
 
 
+<h3> LIKE </h3>
+Começa por:
 
+```sql
+WHERE nome LIKE 'A%'
+```
 
-**Where**
+Termina em: 
+```sql
+WHERE nome LIKE '%a'
+```
 
-Selecionar dados 
+Contém:
+```sql
+WHERE nome LIKE '%silva%'
+```
+<hr>
 
 
 
-""" Filtragem """
-
-**SELECT \* FROM** clientes **WHERE** id > 10
-
-"""
-
-
-
-""" Múltipla Filtragem """
-
-**SELECT \* FROM** clientes **WHERE** id > 10 **AND** nome = "Sara"
-
-
-
-**SELECT \* FROM** clientes **WHERE** id > 10 **OR** nome = "Sara"
-
-
-
-**SELECT \* FROM** clientes **WHERE NOT** nome = "Sara"
-
-"""
-
-\##########################################################
-
-
-
-**Operadores**
-
-
-
-> - Maior
-
-< - Menor
-
->= - Maior ou Igual
-
-= - Igual
-
-<> - Diferente de
-
-\##########################################################
-
-
-
-
-
-**Like**
-
-Selecionar por texto
-
-
-
-""" Começa por: """
-
-**WHERE** nome **LIKE** "A%"
-
-"""
-
-
-
-""" Termina em: """
-
-**WHERE** nome **LIKE** "%a"
-
-"""
-
-
-
-""" Contém: """
-
-**WHERE** nome **LIKE** "%silva%"
-
-"""
-
-\##########################################################
-
-
-
-
-
-**In**
-
+<h3> IN </h3>
 Selecionar especificamente
 
-
-
-"""
-
-**WHERE** nome **IN** ("Eliezer", "Ana")
-
-"""
-
-\##########################################################
+```sql
+WHERE nome IN ('Eliezer', 'Ana')
+```
+<hr>
 
 
 
-
-
-**Between** 
-
+<h3> BETWEEN </h3> 
 Entre
 
+```sql
+WHERE id BETWEEN 20 AND 30
+```
+<hr>
 
-
-"""
-
-**WHERE** id **BETWEEN** 20 **AND** 30
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-**Order By**
-
+<h3> ORDER BY </h3>
 Ordenar
 
+```sql
+SELECT * FROM clientes ORDER BY id
+```
+
+Decrescente
+```sql
+SELECT * FROM clientes ORDER BY id DESC
+```
+<hr>
 
 
-"""
-
-**SELECT \* FROM** clientes **ORDER BY** id
-
-"""
-
-
-
-""" Decrescente """
-
-**SELECT \* FROM** clientes **ORDER BY** id **DESC**
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-**Limit**
-
+<h3> LIMIT </h3>
 Limitar o número de linhas
 
+```sql
+SELECT * FROM clientes LIMIT 10
+```
+<hr>
+
+<h3> COUNT </h3>
+Número de linhas
+
+```sql
+SELECT COUNT(*) FROM clientes
+```
+<hr>
 
 
-"""
-
-**SELECT \* FROM** clientes **LIMIT** 10
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-**Count**
-
-Número de linhas - tipo len
-
-
-
-"""
-
-**SELECT COUNT(\*) FROM** clientes
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-
-
-**Distinct**
-
+<h3> DISTINCT </h3>
 Eliminar dups
 
-
-
-"""
-
-**SELECT DISTINCT** nome **FROM** clientes
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-**Group By**
-
-Fundamental para ML.
-
-Imagina milhões de vendas e queremos saber quantos clientes por cidade por exemplo.
-
-
-
-
-
-"""
-
-**SELECT** cidade **COUNT(\*) AS** clientes **FROM** clientes **GROUP BY** cidade
-
-"""
-
-\##########################################################
-
-
-
-
-
-
-
-**Join**
-
-Merge de tabelas
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```sql
+SELECT DISTINCT nome FROM clientes
+```
+<hr>
 
 
