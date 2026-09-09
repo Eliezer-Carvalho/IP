@@ -2,6 +2,17 @@
 <p> Linguagem utilizada para comunicar com bases de dados. </p>
 <hr>
 
+<h3> Fetch </h3>
+
+<ul>
+    <li> fetchone </li>
+    <li> fetchall </li>
+    <li> fetchmany (10) </li>
+</ul>
+<hr>
+
+
+
 <h3> CREATE </h3>
 Criar tabelas
 
