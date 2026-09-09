@@ -1,68 +1,44 @@
 <h1> SQL - Structured Query Language </h1>
 <p> Linguagem utilizada para comunicar com bases de dados. </p>
+<hr>
 
-
-**Create**
-
+<h3> CREATE </h3>
 Criar tabelas
 
 ```sql
-
 CREATE TABLE clientes (id INTEGER, nome TEXT) 
-
 ```
+<hr>
 
 
 
-
-
-
-**Insert**
-
+<h3> INSERT </h3>
 Inserir dados
 
-
-
-"""
-
-**INSERT INTO** clientes **VALUES** (23, 'Ana')
-
-"""
-
-\##########################################################
+```sql
+INSERT INTO clientes VALUES (23, 'Ana')
+```
+<hr>
 
 
 
+<h3> READ </h3>
+Selecionar tudo
 
+```sql
+SELECT * FROM clientes
+```
 
-**Read**
+Selecionar algumas colunas
+```sql
+SELECT id, nome FROM clientes 
+```
 
-Ler dados
-
-
-
-""" Selecionar Tudo """
-
-**SELECT \* FROM** clientes
-
-"""
-
-
-
-""" Selecionar algumas colunas """
-
-**SELECT** id, nome **FROM** clientes 
-
-"""
-
-
-
-""" Renomear Colunas """
-
-**SELECT** nome **AS** cliente, idade **AS** anos **FROM** clientes
-
-\##########################################################
-
+Renomear colunas
+```sql
+SELECT nome AS cliente, idade AS anos FROM clientes
+```
+<hr>
 
 
 
