@@ -88,7 +88,7 @@ with gr.Blocks (title = "Assobio V2") as App:
     ##############################################################################################################
     ##############################################################################################################
 
-    with gr.Tab ("Assobio - Chat"):
+    with gr.Tab ("Assobio - Chat - FASE BETA"):
         with gr.Sidebar (open = False):
 
             gr.Markdown ("## Conversas")
