@@ -1,26 +1,17 @@
-SQL - Structured Query Language é a linguagem utilizada para comunicar com bases de dados.
-
-
-
-
-
-**CRUD são as 4 operações principais**
-
+<h1> SQL - Structured Query Language </h1>
+<p> Linguagem utilizada para comunicar com bases de dados. </p>
 
 
 **Create**
 
 Criar tabelas
 
+```sql
 
+CREATE TABLE clientes (id INTEGER, nome TEXT) 
 
-"""
+```
 
-**CREATE** **TABLE** clientes (id **INTEGER,** nome **TEXT**) 
-
-"""
-
-\##########################################################
 
 
 
