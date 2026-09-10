@@ -1,0 +1,8 @@
+{
+    "yaml.disableSchemaDetection": [
+        "file:///c%3A/Users/Admin/Desktop/ip/Automatic%20Speech%20Recognition/code/SEMANTIC_MODEL.yaml"
+    ],
+    "yaml.schemas": {
+        "https://www.schemastore.org/yamlfmt.json": "file:///c%3A/Users/Admin/Desktop/ip/Automatic%20Speech%20Recognition/code/SEMANTIC_MODEL.yaml"
+    }
+}

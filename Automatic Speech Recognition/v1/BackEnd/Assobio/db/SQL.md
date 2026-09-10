@@ -171,4 +171,11 @@ SELECT DISTINCT nome FROM clientes
 ```
 <hr>
 
+<h3> AVG </h3>
+Média de uma coluna
 
+```sql
+SELECT AVG (coluna)
+FROM clientes
+```
+<hr>

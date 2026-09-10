@@ -7,3 +7,12 @@ SELECT name
 FROM sqlite_master
 WHERE type = 'table'
 ```
+<hr>
+
+<h3> E se eu quiser ver o nome das colunas da minha tabela ? </h3>
+
+```sql
+SELECT name
+FROM pragma_table_info('nome da tabela')
+```
+<hr>

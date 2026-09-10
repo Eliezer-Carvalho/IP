@@ -1,0 +1,45 @@
+FUNCTIONS:
+
+  RETURN:
+    descr: Esta função serve para retornar todos os valores de uma coluna.
+    type: return_all
+    args: 
+      name: COLUNAS
+
+  COUNT: 
+    descr: Esta função serve para retornar o número de linhas de uma coluna.
+    type: return_len
+    args:
+      name: COLUNAS
+
+  MEAN:
+    descr: Esta função serve para calcular a média.
+    type: mean
+    args:
+      name: 
+        - score
+
+
+COLUNAS:
+
+  data:
+    descr: Representa a data em que foi realizada a transcrição.
+
+  audio:
+    descr: O caminho para o áudio que foi transcrito.
+
+  transcrição:
+    descr: A transcrição final realizada pelo modelo ASR.
+
+  auditoria:
+    descr: Auditoria realizada por um modelo Small Language Model.
+
+  modelo:
+    descr: Modelo que realizou a auditoria.
+    valores: ["Bonsai 27B Q1.0", "Microsoft Phi 3.5 Q4.0", "QWEN 2.5 0.5B", "Mistral 7B Q4.0", "Microsoft Phi 4 Q4.0", "Amália 9B DPO Q8"]
+
+  score: 
+    descr: Score dado por um humano para a transcrição e para a auditoria.
+
+
+
