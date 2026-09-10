@@ -19,6 +19,12 @@ FUNCTIONS:
       name: 
         - score
 
+  UNIQUE:
+    descr: Esta função serve para retornar os valores únicos de uma coluna.
+    type: unique
+    args:
+      name: COLUNAS
+
 
 COLUNAS:
 

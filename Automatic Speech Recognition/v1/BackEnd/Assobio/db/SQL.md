@@ -164,7 +164,7 @@ SELECT COUNT(*) FROM clientes
 
 
 <h3> DISTINCT </h3>
-Eliminar dups
+Valores únicos
 
 ```sql
 SELECT DISTINCT nome FROM clientes
