@@ -1,10 +1,19 @@
 import gradio as gr
-from Backend.AssobioAuditoria.main import RUN_ASSOBIO_AUDITORIA
-from Backend.AssobioAuditoria.Database import SQL_FUNCTS
+from dataclasses import dataclass
 
+from Backend.AssobioAuditoria.main import RUN_ASSOBIO_AUDITORIA
+
+from Backend.AssobioAuditoria.Database import SQL_FUNCTS
 
 from Backend.AssobioChat.SLM import SLM
 from Backend.AssobioChat.Database import SQL_FUNCT_ASSOBIOCHAT
+
+
+@dataclass
+class Info:
+    contexto: str = "O Contexto refere-se ás instruções que queremos que o sistema siga.\nAqui é onde devemos defenir papéis, regras e limitações."
+    prompt: str = "O Prompt é a mensagem que queremos enviar ao modelo.\nTendo defenido o contexto, o Prompt tem como objetivo comunicar com o modelo."
+
 
 
 DB = SQL_FUNCTS ()
@@ -14,42 +23,31 @@ DB2 = SQL_FUNCT_ASSOBIOCHAT ()
 
 with gr.Blocks (title = "Assobio V2") as App:
     
-    ########################################### Assobio Auditoria #################################################
-
+    """
+    Código para a Interface da Aba Assobio - Auditoria.
+    ##################################################
+    """
     with gr.Tab ("Assobio - Auditoria"):
 
         with gr.Row ():
+            with gr.Column (scale = 1):
 
-            with gr.Column (scale = 2, min_width = 500):
+                AUDIOS_PATH = gr.File (file_count = "multiple", file_types = ["audio"], label = "", show_label = False, elem_id = "AUDIO") # Melhor que gr.Audio porque permite melhor controlo
+                CONTEXTO = gr.TextArea (label = "Contexto", interactive = True, type = "text", autofocus = True, info = Info.contexto) # Text area para colocar o contexto
+                PROMPT = gr.TextArea (label = "Prompt", interactive = True, type = "text", autofocus = True, info = Info.prompt) # Text area para colocar o prompt
 
-                AUDIOS_PATH = gr.File (file_count = "multiple", file_types = ["audio"], height = 0, label = "Audio Files", elem_id = "AUDIO") 
-                # Melhor que gr.Audio porque permite melhor controlo
-                
-            with gr.Column (scale = 2, min_width = 300):
+                RUN = gr.Button (size = "md", elem_id = "RUN") # Botão para rodar o sistema
+                ESTADO = gr.Textbox (interactive = False, label = "", show_label =  False, visible = False, elem_id = "ESTADO") # Textbox para mostrar o estado da auditoria
+                RUN.click (fn = RUN_ASSOBIO_AUDITORIA, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT], outputs = ESTADO) # O que acontece após clicar no botão ? 
+                    
+    """
+    Código para a Interface da Aba Assobio - Auditoria.
+    ##################################################
+    """
+    
+    with gr.Tab ("Assobio - Base de Dados"):
 
-                CONTEXTO = gr.TextArea (label = "Contexto", interactive = True, type = "text", autofocus = True, elem_id = "CONTEXTO")
-                PROMPT = gr.TextArea (label = "Prompt", interactive = True, type = "text", autofocus = True, elem_id = "CONTEXTO")
-
-        with gr.Row ():
-
-            with gr.Column (scale = 2, min_width = 950):
-
-                BUTTON = gr.Button (size = "sm")
-
-                STATE = gr.Textbox (elem_id= "STATE", max_lines = 1, interactive = False, label = "Estados de Execução")
-
-        RUN = BUTTON.click (fn = RUN_ASSOBIO_AUDITORIA, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT], outputs = STATE)
-
-        """
-        ############################################################################################################
-        ############################################################################################################
-        ############################################################################################################
-        ############################################################################################################
-
-        ######### Base de Dados ##########################
-        """
-
-        ID = gr.Dropdown (label = "Selecionar ID", choices = DB.IDX_SQL (), elem_id = "ID") 
+        ID = gr.Dropdown (label = "", show_label = False, choices = DB.IDX_SQL (), elem_id = "ID") 
 
         with gr.Row ():
 
@@ -58,16 +56,16 @@ with gr.Blocks (title = "Assobio V2") as App:
                 DATA = gr.DateTime (label = "Data", interactive = False)
 
             with gr.Column (scale = 2, min_width = 500):
-            
+                
                 MODELO = gr.Textbox (label = "Modelo")
 
-            ################################################
+                ################################################
 
             with gr.Column (scale = 2, min_width = 1000):
 
                 AUDIO = gr.Audio (label = "Audio File")
 
-            ################################################
+                ################################################
 
             with gr.Column (scale = 2, min_width = 500):
 
@@ -77,8 +75,7 @@ with gr.Blocks (title = "Assobio V2") as App:
 
                 AUDITORIA = gr.Textbox (label = "Auditoria")
 
-            ###############################################
-
+                ###############################################
 
         INFO = ID.change (fn = DB.VIEW_SQL, inputs = ID, outputs = [DATA, AUDIO, TRANS, AUDITORIA, MODELO])
         INFO.then (fn = lambda: gr.update (choices = DB.IDX_SQL ()), outputs = ID) # Para alterar o idx após run
@@ -135,11 +132,17 @@ App.launch (
     css = 
     """
     #AUDIO {
-        height: 412px;
+        height: 200px;
     }
 
+    #ESTADO {
+        height: 50px;
+    }
+
+    /* */
+
     #ID {
-        height: 100px;
+        height: 75px;
     }
 
     #STATE {
@@ -163,12 +166,10 @@ App.launch (
 
     """,
 
-    theme = gr.themes.Base (
-        primary_hue = "teal", 
-        secondary_hue = "purple", 
-        neutral_hue = "neutral", #https://gradio.app/guides/theming-guide
-        
-        radius_size = "md",
+    theme = gr.themes.Ocean (
+        primary_hue = "red", #https://gradio.app/guides/theming-guide
+        secondary_hue = "blue",
+
         text_size = "md",
 
         #font = "Inter",

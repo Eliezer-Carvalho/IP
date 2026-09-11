@@ -1,4 +1,7 @@
 
+import gradio as gr
+import time
+
 from .SpeechToText import Speech_To_Text
 from .AuditoriaSLM import AuditoriaSLM
 from .Database import SQL_FUNCTS
@@ -18,6 +21,7 @@ def RUN_ASSOBIO_AUDITORIA (path, contexto, prompt):
 
     for audio in path:
 
+        yield gr.update (visible = True)
         yield "A começar Transcrição..."
         TRANSCRIÇÃO = STT.STT (audio)
         yield "Transcrição Terminada!"
@@ -55,3 +59,6 @@ def RUN_ASSOBIO_AUDITORIA (path, contexto, prompt):
             yield "Adicionado à Base de Dados!"
 
             SERVER.terminate () # Termina a linha de comando o que faz limpeza da memória
+
+        time.sleep (3)
+        yield gr.update (visible = False)

@@ -4,6 +4,13 @@ WhisperPT:
   path: C:\Users\Admin\Desktop\models\ASR Models\Whisper\WhisperLv3-PT-All 4Bit
   hf: https://huggingface.co/EliezerCarvalho/WhisperLv3-PT
 
+
+WhisperLarge:
+
+  nome: Whisper Large V3 Q4.0
+  path: C:\Users\Admin\Desktop\models\ASR Models\Whisper\Whisper-large-v3 4Bit
+  hf: https://huggingface.co/openai/whisper-large-v3
+
 ####
 
 SLM_CPU:
