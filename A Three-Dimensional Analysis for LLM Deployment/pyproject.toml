@@ -5,13 +5,28 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "accelerate>=1.13.0",
-    "bitsandbytes>=0.49.2",
-    "humanize>=4.15.0",
-    "ipykernel>=7.2.0",
-    "lm-eval>=0.4.12",
-    "torch>=2.5.1",
-    "torchaudio>=2.5.1",
-    "torchvision>=0.20.1",
-    "transformers>=5.10.2",
+    "accelerate>=1.15.0",
+    "bitsandbytes>=0.50.2",
+    "datasets>=2.19.1",
+    "humanize>=4.16.0",
+    "ipykernel>=7.3.0",
+    "llmcompressor>=0.6.0.1",
+    "lm-eval>=0.4.13",
+    "protobuf>=7.36.1",
+    "sentencepiece>=0.2.2",
+    "torch>=2.14.0",
+    "torchvision>=0.29.0",
+    "transformers>=4.52.4",
 ]
+
+[tool.uv.sources]
+torchvision = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu126"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
