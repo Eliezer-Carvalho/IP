@@ -6,6 +6,7 @@ import yaml
 import time 
 from demucs.api import Separator
 import soundfile as sf
+from uuid import uuid4
 
 """
 Esta classe é a PRIMEIRA classe da aba Assobio - Auditoria do sistema Assobio.
@@ -39,13 +40,12 @@ class Speech_To_Text:
     def LOAD_MODELS_STT (self):
 
         """
-        Load dos modelos importantes para realizar Speech To Text, neste caso 
-        representa o load do modelo Whisper e Separator.
+        Load dos modelos importantes para realizar Speech To Text, neste caso representa o load do modelo Whisper e Separator.
         """
 
-        if self.PROCESSOR is None:
+        if self.PROCESSOR_ASR is None:
 
-            self.PROCESSOR = AutoProcessor.from_pretrained (self.CONFIG["WhisperLarge"]["path"])
+            self.PROCESSOR_ASR = AutoProcessor.from_pretrained (self.CONFIG["WhisperLarge"]["path"])
             self.MODEL_ASR = AutoModelForSpeechSeq2Seq.from_pretrained (self.CONFIG["WhisperLarge"]["path"], device_map = self.device, dtype = torch.float16)
             self.DEMUCS_SEPARATOR = Separator (model = "htdemucs")
 
@@ -53,8 +53,7 @@ class Speech_To_Text:
     def WAV_PRE_PROCESSING (self, path_wav):
 
         """
-        Este método representa a camada de pré processamento adotada na versão 2 do sistema
-        Assobio.
+        Este método representa a camada de pré processamento adotada na versão 2 do sistema Assobio.
         Para mais info: 
         https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognition/Automatic%20Speech%20Recognition.pdf
         https://github.com/Eliezer-Carvalho/IP/tree/master/Automatic%20Speech%20Recognition/v2/Eval
@@ -97,14 +96,15 @@ class Speech_To_Text:
         GANHO = 10 ** (GANHO_DB / 20)
         VOZES = VOZES * GANHO
 
-        sf.write (r"")
-
+        ##Guardar o áudio pré processado para depois guardar na Database
+        PATH = rf"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\audios_pre_process\{uuid4().hex}.wav"
+        sf.write (PATH, VOZES, samplerate = 16000)
 
         TEMPO_PRE_PROCESS = time.time () - pre_process_begin
         #Fórmula = num_samples / sample_rate em hz
         TEMPO_ÁUDIO = len (VOZES) / 16000
 
-        return (VOZES, TEMPO_ÁUDIO, TEMPO_PRE_PROCESS)
+        return (VOZES, TEMPO_ÁUDIO, TEMPO_PRE_PROCESS, PATH)
 
 
     def SPEECH_TO_TEXT (self, AUDIO_POST_PROCESS):
@@ -121,7 +121,7 @@ class Speech_To_Text:
         #O processador converte o mesmo para tokens e após o processamento
         #converte para embeddings. Aqui até parece que podíamos usar Prefill e Decode mas o Prefill aqui acaba por ser diferente.
         #Por esse motivo dei o nome de tempo de processamento.
-        inputs = self.PROCESSOR (AUDIO_POST_PROCESS, sampling_rate = self.PROCESSOR.feature_extractor.sampling_rate, return_tensors = "pt", truncation = False) # Truncation obrigatório para áudios >30s
+        inputs = self.PROCESSOR_ASR (AUDIO_POST_PROCESS, sampling_rate = self.PROCESSOR_ASR.feature_extractor.sampling_rate, return_tensors = "pt", truncation = False) # Truncation obrigatório para áudios >30s
         inputs = inputs["input_features"].to (self.device, dtype = torch.float16) # Passar para GPU
 
         torch.cuda.synchronize ()
@@ -132,16 +132,22 @@ class Speech_To_Text:
         torch.cuda.synchronize ()
         begin_infer = time.time ()
 
-        #Aqui os embeddings entram no decoder do modelo ASR que vai converter os embeddings para texto.
+        #Aqui os embeddings entram no decoder do modelo ASR que vai converter os embeddings para tokens de output.
         with torch.inference_mode ():
             outputs = self.MODEL_ASR.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt", num_beams = 5) # Beam Search # return_timestamps obrigatório para áudios >30s 
 
+        #print (outputs)
+        #print (len (outputs))
+        #print (outputs.shape)
+        #print (outputs[0])
+        #print (len(outputs[0]))
+        
         torch.cuda.synchronize ()
         TEMPO_INFER = time.time () - begin_infer
 
         LAT = TEMPO_PROCESSAMENTO + TEMPO_INFER
-        TOKENS_perS_DECODE = len (outputs) / TEMPO_INFER
+        TOKENS_perS_DECODE = len (outputs[0]) / TEMPO_INFER  
 
-        TRANS = self.PROCESSOR.batch_decode (outputs, skip_special_tokens = True)[0] 
+        TRANS = self.PROCESSOR_ASR.batch_decode (outputs, skip_special_tokens = True)[0] 
 
         return (TRANS, TEMPO_PROCESSAMENTO, TEMPO_INFER, LAT, TOKENS_perS_DECODE)

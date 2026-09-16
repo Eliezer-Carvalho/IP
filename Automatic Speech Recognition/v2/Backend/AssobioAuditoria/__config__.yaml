@@ -56,11 +56,11 @@ GPU_CONFIG:
 
   llama.cpp:
 
-    GLM 31B Q2:
-      path: C:\Users\Admin\Desktop\models\Language Models\GPU\llama.cpp\GLM 31B Q2\GLM-4.7-Flash-UD-IQ2_M.gguf
-      hf: https://huggingface.co/zai-org/GLM-4.7-Flash
-      params: 31B
-      hardware: GPU
+    #GLM 31B Q2:
+      #path: C:\Users\Admin\Desktop\models\Language Models\GPU\llama.cpp\GLM 31B Q2\GLM-4.7-Flash-UD-IQ2_M.gguf
+      #hf: https://huggingface.co/zai-org/GLM-4.7-Flash
+      #params: 31B
+      #hardware: GPU
 
     GPT OSS 20B Q4:
       path: C:\Users\Admin\Desktop\models\Language Models\GPU\llama.cpp\GPT OSS 20B Q4\gpt-oss-20b-Q4_K_S.gguf
@@ -80,8 +80,8 @@ GPU_CONFIG:
       params: 15B
       hardware: GPU
 
-    Qwen 30B Q2:
-      path: C:\Users\Admin\Desktop\models\Language Models\GPU\llama.cpp\Qwen 30B Q2\Qwen_Qwen3-30B-A3B-IQ2_S.gguf
-      hf: https://huggingface.co/Qwen/Qwen3-30B-A3B
-      params: 30B
-      hardware: GPU
+    #Qwen 30B Q2:
+      #path: C:\Users\Admin\Desktop\models\Language Models\GPU\llama.cpp\Qwen 30B Q2\Qwen_Qwen3-30B-A3B-IQ2_S.gguf
+      #hf: https://huggingface.co/Qwen/Qwen3-30B-A3B
+      #params: 30B
+      #hardware: GPU

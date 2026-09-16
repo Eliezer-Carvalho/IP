@@ -2,63 +2,80 @@
 import gradio as gr
 import time
 
-from .SpeechToText import Speech_To_Text
-from .AuditoriaSLM import AuditoriaSLM
-from .Database import SQL_FUNCTS
+from .SpeechToText import Speech_To_Text #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\SpeechToText.py
+from .AuditoriaLLM import Auditoria_LLM #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\AuditoriaLLM.py
+from .DatabaseAssobioAuditoria.Database import SQL_Functions #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\Database.py
 
-import gc
-import torch
-
-
-STT = Speech_To_Text ()
-AUDITORIA_SLM = AuditoriaSLM ()
-DATABASE = SQL_FUNCTS ()
+AUDIO_TEXT = Speech_To_Text ()
+AUDITORIA = Auditoria_LLM ()
+DATABASE = SQL_Functions ()
 
 
-def RUN_ASSOBIO_AUDITORIA (path, contexto, prompt):
+def Assobio_Auditoria (PATH, CONTEXTO, PROMPT):
 
-    STT.LOAD_ASR_MODEL ()
+    yield gr.update (visible = True)
+    yield "A carregar modelos ASR"
+    AUDIO_TEXT.LOAD_MODELS_STT ()
+    yield "Modelos Carregados!"
+    time.sleep (1.5)
 
-    for audio in path:
+    for audio in PATH:
 
         yield gr.update (visible = True)
-        yield "A começar Transcrição..."
-        TRANSCRIÇÃO = STT.STT (audio)
-        yield "Transcrição Terminada!"
 
-        #print (len(TRANSCRIÇÃO)) # Número de Chars
+        ## 1. Pré Processamento
+        yield "A começar o Pré Processamento do Áudio..."
+        VOZES, TEMPO_ÁUDIO, TEMPO_PRE_PROCESS, PATH_PRE_PROCESS = AUDIO_TEXT.WAV_PRE_PROCESSING (audio)
+        yield "Áudio Pré Processado!"
+        time.sleep (1.5)
+        #----------------------------------------------------------------------------#
 
-        if len (TRANSCRIÇÃO) > 500:
+        ## 2. Transcrição
+        yield "A começar a Transcrição do Áudio para Texto..."
+        TRANS, TEMPO_PROCESSAMENTO, TEMPO_INFER, LAT, TOKENS_perS_DECODE_STT = AUDIO_TEXT.SPEECH_TO_TEXT (VOZES)
+        yield "Áudio Transcrito para Texto!"
+        time.sleep (1.5)
+        #----------------------------------------------------------------------------#
 
+        ## 3. Model Routing
+        if len (TRANS) > 750:
+
+            ## 3.1 Load Model
             yield "A carregar modelo na GPU..."
-            MODELO_SELECIONADO, TOKENIZER, MODELO = AUDITORIA_SLM.LOAD_MODELO_GPU () 
+            RANDOM_GPU, HARDWARE = AUDITORIA.LOAD_MODELS_GPU () 
             yield "Modelo carregado na GPU com sucesso!"
+            time.sleep (1.5)
 
+            ## 3.2 Infer Model
             yield "A começar inferência..."
-            AUDITORIA = AUDITORIA_SLM.INFER_GPU (contexto, prompt, TRANSCRIÇÃO)
+            RESPOSTA, TOKENS, TEMPO_PREFILL, TOKENS_perS_PREFILL, TEMPO_DECODE, TOKENS_perS_DECODE, LAT_LLM = AUDITORIA.INFER_GPU (CONTEXTO, PROMPT, TRANS)
             yield "Inferência Terminada!"
+            time.sleep (1.5)
 
-            DATABASE.ADD_DATA (audio, TRANSCRIÇÃO, AUDITORIA, MODELO_SELECIONADO)
+            ## 3.3 Add Data DB
+            DATABASE.ADD_DATA (CONTEXTO, PROMPT, audio, PATH_PRE_PROCESS, TEMPO_ÁUDIO, TEMPO_PRE_PROCESS, TRANS, TEMPO_PROCESSAMENTO, TEMPO_INFER, LAT, TOKENS_perS_DECODE_STT, HARDWARE, RANDOM_GPU, RESPOSTA, TOKENS, TEMPO_PREFILL, TOKENS_perS_PREFILL, TEMPO_DECODE, TOKENS_perS_DECODE, LAT_LLM)
             yield "Adicionado à Base de Dados!"
-
-            del TOKENIZER, MODELO
-            gc.collect ()
-            torch.cuda.empty_cache ()
-
+            time.sleep (2)
+        
         else:
 
+            ## 3.1 Load Model
             yield "A carregar modelo na CPU..."
-            MODELO, SERVER = AUDITORIA_SLM.LOAD_MODELO_CPU ()
+            RANDOM_CPU, HARDWARE = AUDITORIA.LOAD_MODELS_CPU ()
             yield "Modelo carregado na CPU com sucesso!"
+            time.sleep (1.5)
 
+            ## 3.2 Infer Model
             yield "A começar inferência..."
-            AUDITORIA = AUDITORIA_SLM.INFER_CPU (contexto, prompt, TRANSCRIÇÃO)
+            RESPOSTA, TOKENS, TEMPO_PREFILL, TOKENS_perS_PREFILL, TEMPO_DECODE, TOKENS_perS_DECODE, LAT_LLM = AUDITORIA.INFER_CPU (CONTEXTO, PROMPT, TRANS)
             yield "Inferência Terminada!"
+            time.sleep (1.5)
 
-            DATABASE.ADD_DATA (audio, TRANSCRIÇÃO, AUDITORIA, MODELO)
+            ## 3.3 Add Data DB
+            DATABASE.ADD_DATA (CONTEXTO, PROMPT, audio, PATH_PRE_PROCESS, TEMPO_ÁUDIO, TEMPO_PRE_PROCESS, TRANS, TEMPO_PROCESSAMENTO, TEMPO_INFER, LAT, TOKENS_perS_DECODE_STT, HARDWARE, RANDOM_CPU, RESPOSTA, TOKENS, TEMPO_PREFILL, TOKENS_perS_PREFILL, TEMPO_DECODE, TOKENS_perS_DECODE, LAT_LLM)
             yield "Adicionado à Base de Dados!"
-
-            SERVER.terminate () # Termina a linha de comando o que faz limpeza da memória
+            time.sleep (2)
+        #----------------------------------------------------------------------------#
 
         time.sleep (3)
         yield gr.update (visible = False)

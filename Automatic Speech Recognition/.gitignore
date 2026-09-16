@@ -1,2 +1,4 @@
 .gradio/
 audio/
+.vscode/
+.audios_pre_process/

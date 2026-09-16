@@ -9,7 +9,7 @@ Tanto é possível extrair dados como adicionar dados.
 """
 ################# Código Para Criar Database #########################################
 
-CONECTOR = sqlite3.connect (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\db\SQLDatabaseAssobio.db")
+CONECTOR = sqlite3.connect (r"C:/Users/Admin/Desktop/ip/Automatic Speech Recognition/v2/Backend/AssobioAuditoria/db/SQLDatabaseAssobio.db")
 
 CURSOR = CONECTOR.cursor ()
 
@@ -18,6 +18,8 @@ CURSOR.execute (
     (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     DATA TEXT NOT NULL,
+    CONTEXT TEXT NOT NULL,
+    PROMPT TEXT NOT NULL,
     AUDIO_ORIGINAL TEXT NOT NULL,
     AUDIO_PRÉ_PROCESSADO TEXT NOT NULL,
     AUDIO_TIME FLOAT NOT NULL,
@@ -44,7 +46,7 @@ CONECTOR.commit ()
 
 
 
-class SQL_FUNCTS:
+class SQL_Functions:
 
     def __init__ (self):
 
@@ -55,55 +57,58 @@ class SQL_FUNCTS:
         self.PATH = "v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\SQLDatabaseAssobio.db"
 
 
-    def ADD_DATA (self, AUDIO_ORIGINAL, AUDIO_PRÉ_PROCESSADO, AUDIO_TIME, TEMPO_PRÉ_PROCESSAMENTO, TRANSCRIÇÃO, TEMPO_PROCESSAMENTO_MODELO_ASR, TEMPO_INFERÊNCIA_MODELO_ASR, LATÊNCIA, TOKENS_PER_SECOND_DECODE, HARDWARE_LLM, MODELO_LLM, AUDITORIA_LLM, NÚMERO_DE_TOKENS_PROCESSADOS, TEMPO_PREFILL_LLM, TOKENS_PER_SECOND_PREFILL_LLM, TEMPO_DECODE_LLM, TOKENS_PER_SECOND_DECODE_LLM, LATÊNCIA_LLM):
+    def ADD_DATA (self, CONTEXT, PROMPT, AUDIO_ORIGINAL, AUDIO_PRÉ_PROCESSADO, AUDIO_TIME, TEMPO_PRÉ_PROCESSAMENTO, TRANSCRIÇÃO, TEMPO_PROCESSAMENTO_MODELO_ASR, TEMPO_INFERÊNCIA_MODELO_ASR, LATÊNCIA, TOKENS_PER_SECOND_DECODE, HARDWARE_LLM, MODELO_LLM, AUDITORIA_LLM, NÚMERO_DE_TOKENS_PROCESSADOS, TEMPO_PREFILL_LLM, TOKENS_PER_SECOND_PREFILL_LLM, TEMPO_DECODE_LLM, TOKENS_PER_SECOND_DECODE_LLM, LATÊNCIA_LLM):
+
+        """
+        Método que após correr a Auditoria, adiciona toda a informação à DataBase.
+        Não é o código mais bonito but it does the job.
+        """
 
         CONECTOR = sqlite3.connect (self.PATH)
-
         CURSOR = CONECTOR.cursor ()
 
-        data = datetime.datetime.now ()
-
-        ##### CONTINUAR AQUI
+        DATA = datetime.datetime.now ()
 
         CURSOR.execute ( 
             """
-            INSERT INTO Assobio (data, audio, transcrição, auditoria, modelo)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO Assobio (DATA, CONTEXT, PROMPT, AUDIO_ORIGINAL, AUDIO_PRÉ_PROCESSADO, AUDIO_TIME, TEMPO_PRÉ_PROCESSAMENTO, TRANSCRIÇÃO, TEMPO_PROCESSAMENTO_MODELO_ASR, TEMPO_INFERÊNCIA_MODELO_ASR, LATÊNCIA, TOKENS_PER_SECOND_DECODE, HARDWARE_LLM, MODELO_LLM, AUDITORIA_LLM, NÚMERO_DE_TOKENS_PROCESSADOS, TEMPO_PREFILL_LLM, TOKENS_PER_SECOND_PREFILL_LLM, TEMPO_DECODE_LLM, TOKENS_PER_SECOND_DECODE_LLM, LATÊNCIA_LLM)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
-            (data, audio, transcrição, auditoria, modelo)
+            (DATA, CONTEXT, PROMPT, AUDIO_ORIGINAL, AUDIO_PRÉ_PROCESSADO, AUDIO_TIME, TEMPO_PRÉ_PROCESSAMENTO, TRANSCRIÇÃO, TEMPO_PROCESSAMENTO_MODELO_ASR, TEMPO_INFERÊNCIA_MODELO_ASR, LATÊNCIA, TOKENS_PER_SECOND_DECODE, HARDWARE_LLM, MODELO_LLM, AUDITORIA_LLM, NÚMERO_DE_TOKENS_PROCESSADOS, TEMPO_PREFILL_LLM, TOKENS_PER_SECOND_PREFILL_LLM, TEMPO_DECODE_LLM, TOKENS_PER_SECOND_DECODE_LLM, LATÊNCIA_LLM)
         )
 
         CONECTOR.commit ()
         CONECTOR.close ()
 
 
-    """
-    Método para descobrir quantas linhas existem na DataBase.
-    Importante para enviar a informação ao FrontEnd
-    """
     def IDX_SQL (self):
 
-        CONECTOR = sqlite3.connect (self.PATH)
+        """
+        Método para descobrir quantas linhas existem na DataBase.
+        Importante para enviar a informação ao FrontEnd
+        """
 
+        CONECTOR = sqlite3.connect (self.PATH)
         CURSOR = CONECTOR.cursor ()
 
         IDX_MAX = CURSOR.execute (
             """
-            SELECT id FROM Assobio
+            SELECT ID FROM Assobio
             """
         )
 
         list = [idx[0] for idx in IDX_MAX.fetchall()] # Dropdown aceita um lista por isso temos de converter
 
         CONECTOR.close ()
-
         return list
 
-    """
-    Método para visualizar o SQL no FrontEnd.
-    Recebe o id que corresponde ao idx selecionado pelo frontend e depois distribui a informação por variáveis
-    """
+   
     def VIEW_SQL (self, id):
+
+        """
+        Método para visualizar o SQL no FrontEnd.
+        Recebe o id que corresponde ao idx selecionado pelo frontend e depois distribui a informação por variáveis
+        """
 
         CONECTOR = sqlite3.connect (self.PATH)
 
@@ -113,7 +118,7 @@ class SQL_FUNCTS:
             """ 
             SELECT * 
             FROM Assobio
-            WHERE id = ?
+            WHERE ID = ?
             """,
             (id,)
             )
@@ -121,12 +126,27 @@ class SQL_FUNCTS:
         LOG = CURSOR.fetchone() #fetchone | fetchall
 
         DATA = LOG[1]
-        AUDIO = LOG[2]
-        TRANS = LOG[3]
-        AUDITORIA = LOG[4]
-        MODEL = LOG[5]
-        #AVAL = LOG[6] # Nesta versão 2 fuck AVAL
+        CONTEXT = LOG[2]
+        PROMPT = LOG [3]
+        AUDIO_ORIGINAL = LOG[4]
+        AUDIO_PRÉ_PROCESSADO = LOG[5]
+        AUDIO_TIME = LOG[6]
+        TEMPO_PRÉ_PROCESSAMENTO = LOG[7]
+        TRANSCRIÇÃO = LOG[8]
+        TEMPO_PROCESSAMENTO_MODELO_ASR = LOG[9]
+        TEMPO_INFERÊNCIA_MODELO_ASR = LOG[10]
+        LATÊNCIA = LOG[11]
+        TOKENS_PER_SECOND_DECODE = LOG[12]
+        HARDWARE_LLM = LOG[13]
+        MODELO_LLM = LOG[14]
+        AUDITORIA_LLM = LOG[15]
+        NÚMERO_DE_TOKENS_PROCESSADOS = LOG[16]
+        TEMPO_PREFILL_LLM = LOG[17]
+        TOKENS_PER_SECOND_PREFILL_LLM = LOG[18]
+        TEMPO_DECODE_LLM = LOG[19]
+        TOKENS_PER_SECOND_DECODE_LLM = LOG[20]
+        LATÊNCIA_LLM = LOG[21]
 
         CONECTOR.close ()
 
-        return DATA, AUDIO, TRANS, AUDITORIA, MODEL # Para retornar todos 
+        return DATA, CONTEXT, PROMPT, AUDIO_ORIGINAL, AUDIO_PRÉ_PROCESSADO, AUDIO_TIME, TEMPO_PRÉ_PROCESSAMENTO, TRANSCRIÇÃO, TEMPO_PROCESSAMENTO_MODELO_ASR, TEMPO_INFERÊNCIA_MODELO_ASR, LATÊNCIA, TOKENS_PER_SECOND_DECODE, HARDWARE_LLM, MODELO_LLM, AUDITORIA_LLM, NÚMERO_DE_TOKENS_PROCESSADOS, TEMPO_PREFILL_LLM, TOKENS_PER_SECOND_PREFILL_LLM, TEMPO_DECODE_LLM, TOKENS_PER_SECOND_DECODE_LLM, LATÊNCIA_LLM # Para retornar todos 

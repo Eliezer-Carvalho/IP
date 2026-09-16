@@ -1,25 +1,27 @@
 import gradio as gr
+
 from dataclasses import dataclass
 
-from Backend.AssobioAuditoria.main import RUN_ASSOBIO_AUDITORIA
+from Backend.AssobioAuditoria.main import Assobio_Auditoria
+from Backend.AssobioAuditoria.DatabaseAssobioAuditoria.Database import SQL_Functions
+from Backend.Estats import Statistics_Monitor
 
-from Backend.AssobioAuditoria.Database import SQL_FUNCTS
+SQL = SQL_Functions ()
+STATS = Statistics_Monitor ()
 
-from Backend.AssobioChat.SLM import SLM
-from Backend.AssobioChat.Database import SQL_FUNCT_ASSOBIOCHAT
+###################################
 
+#from Backend.AssobioChat.SLM import SLM
+
+#from Backend.AssobioChat.Database import SQL_Functions_Chat
+
+#SQL_CHAT = SQL_Functions_Chat ()
 
 @dataclass
 class Info:
     contexto: str = "O Contexto refere-se ás instruções que queremos que o sistema siga.\nAqui é onde devemos defenir papéis, regras e limitações."
     prompt: str = "O Prompt é a mensagem que queremos enviar ao modelo.\nTendo defenido o contexto, o Prompt tem como objetivo comunicar com o modelo."
 
-
-
-DB = SQL_FUNCTS ()
-LM = SLM ()
-
-DB2 = SQL_FUNCT_ASSOBIOCHAT ()
 
 with gr.Blocks (title = "Assobio V2") as App:
     
@@ -28,6 +30,26 @@ with gr.Blocks (title = "Assobio V2") as App:
     ##################################################
     """
     with gr.Tab ("Assobio - Auditoria"):
+
+        with gr.Sidebar (open = True):
+        
+            gr.Markdown ("# Estatísticas")
+            gr.Markdown ("<hr>")
+        
+            #####################################################
+            gr.Markdown (value = STATS.GPU_NAME) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_MEMORY, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_UTILIZATION, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_TEMP, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_POWER, every = 1)
+            gr.Markdown (value = STATS.GPU_ENERGY, every = 1)
+        
+            gr.Markdown ("<hr>")
+        
+            gr.Markdown (value = STATS.CPU_NAME)
+            gr.Markdown (value = STATS.CPU_MEM_TOTAL, every = 1)
+            gr.Markdown (value = STATS.CPU_MEM_USADA, every = 1)
+            gr.Markdown (value = STATS.CPU_UTIL, every = 1)
 
         with gr.Row ():
             with gr.Column (scale = 1):
@@ -38,7 +60,7 @@ with gr.Blocks (title = "Assobio V2") as App:
 
                 RUN = gr.Button (size = "md", elem_id = "RUN") # Botão para rodar o sistema
                 ESTADO = gr.Textbox (interactive = False, label = "", show_label =  False, visible = False, elem_id = "ESTADO") # Textbox para mostrar o estado da auditoria
-                RUN.click (fn = RUN_ASSOBIO_AUDITORIA, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT], outputs = ESTADO) # O que acontece após clicar no botão ? 
+                RUN.click (fn = Assobio_Auditoria, inputs = [AUDIOS_PATH, CONTEXTO, PROMPT], outputs = ESTADO) # O que acontece após clicar no botão ? 
                     
     """
     Código para a Interface da Aba Assobio - Auditoria.
@@ -47,87 +69,118 @@ with gr.Blocks (title = "Assobio V2") as App:
     
     with gr.Tab ("Assobio - Base de Dados"):
 
-        ID = gr.Dropdown (label = "", show_label = False, choices = DB.IDX_SQL (), elem_id = "ID") 
+        with gr.Sidebar (open = True):
+                
+            gr.Markdown ("# Estatísticas")
+            gr.Markdown ("<hr>")
+                
+            #####################################################
+            gr.Markdown (value = STATS.GPU_NAME) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_MEMORY, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_UTILIZATION, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_TEMP, every = 1) #https://gradio-two.vercel.app/main/docs/gradio/markdown
+            gr.Markdown (value = STATS.GPU_POWER, every = 1)
+            gr.Markdown (value = STATS.GPU_ENERGY, every = 1)
+                
+            gr.Markdown ("<hr>")
+                
+            gr.Markdown (value = STATS.CPU_NAME)
+            gr.Markdown (value = STATS.CPU_MEM_TOTAL, every = 1)
+            gr.Markdown (value = STATS.CPU_MEM_USADA, every = 1)
+            gr.Markdown (value = STATS.CPU_UTIL, every = 1)
+
+        ID = gr.Dropdown (label = "", show_label = False, choices = SQL.IDX_SQL (), elem_id = "ID") 
 
         with gr.Row ():
 
-            with gr.Column (scale = 2, min_width = 500):
+            DATA = gr.DateTime (interactive = False, label = "Data", min_width = 300)
+            CONTEXT = gr.Textbox (label = "Contexto", min_width = 300)
+            PROMPT = gr.Textbox (label = "Prompt", min_width = 300)
 
-                DATA = gr.DateTime (label = "Data", interactive = False)
+        with gr.Row ():
 
-            with gr.Column (scale = 2, min_width = 500):
-                
-                MODELO = gr.Textbox (label = "Modelo")
+            AUDIO_ORIGINAL = gr.Audio (label = "Áudio Original", min_width = 500)
+            AUDIO_PRE_PROCESS = gr.Audio (label = "Áudio Pré Processado", min_width = 500)
 
-                ################################################
+        with gr.Row ():
 
-            with gr.Column (scale = 2, min_width = 1000):
+            AUDIO_TIME = gr.Textbox (label = "Duração do Áudio (s)", min_width = 500)
+            TEMPO_PRE_PROCESS = gr.Textbox (label = "Tempo de Pré Processamento (s)", min_width = 500)
 
-                AUDIO = gr.Audio (label = "Audio File")
+        with gr.Row ():
 
-                ################################################
+            TRANS = gr.Textbox (label = "Transcrição do Áudio")
 
-            with gr.Column (scale = 2, min_width = 500):
+        with gr.Row ():
 
-                TRANS = gr.Textbox (label = "Transcrição")
+            TEMPO_PROCESS = gr.Textbox (label = "Tempo de Processamento do Modelo ASR (s)", min_width = 300)
+            TEMPO_INFER = gr.Textbox (label = "Tempo de Inferência do Modelo ASR (s)", min_width = 300)
+            LAT = gr.Textbox (label = "Latência do Modelo ASR (s)", min_width = 300)
+            TOKENS_per_s = gr.Textbox (label = "Throughput do Modelo ASR (tokens/s)", min_width = 300)
 
-            with gr.Column (scale = 2, min_width = 500):
+        gr.Markdown ("\n<hr>\n")
 
-                AUDITORIA = gr.Textbox (label = "Auditoria")
+        with gr.Row ():
 
-                ###############################################
+            HARDWARE = gr.Textbox (label = "Hardware", min_width = 500)
+            MODELO = gr.Textbox (label = "Modelo", min_width = 500)
 
-        INFO = ID.change (fn = DB.VIEW_SQL, inputs = ID, outputs = [DATA, AUDIO, TRANS, AUDITORIA, MODELO])
-        INFO.then (fn = lambda: gr.update (choices = DB.IDX_SQL ()), outputs = ID) # Para alterar o idx após run
+        with gr.Row ():
+
+            AUDITORIA = gr.Markdown (label = "Auditoria")
+
+        with gr.Row ():
+
+            NUMERO_TOKENS = gr.Textbox (label = "Número de Tokens Processados pelo Modelo", min_width = 500)
+            LATENCIA_LLM = gr.Textbox (label = "Latência (s)", min_width = 500)
+
+        with gr.Row ():
+
+            TEMPO_PREFILL = gr.Textbox (label = "Tempo Prefill (s)")
+            TOKENS_PER_s_PREFILL = gr.Textbox (label = "Throughput Prefill (tokens/s)")
+            TEMPO_DECODE = gr.Textbox (label = "Tempo Decode (s)")
+            TOKENS_PER_S_DECODE = gr.Textbox (label = "Throughput Decode (tokens/s)")
+            
+            
+        INFO = ID.change (fn = SQL.VIEW_SQL, inputs = ID, outputs = [DATA, CONTEXT, PROMPT, AUDIO_ORIGINAL, AUDIO_PRE_PROCESS, AUDIO_TIME, TEMPO_PRE_PROCESS, TRANS, TEMPO_PROCESS, TEMPO_INFER, LAT, TOKENS_per_s, HARDWARE, MODELO, AUDITORIA, NUMERO_TOKENS, TEMPO_PREFILL, TOKENS_PER_s_PREFILL, TEMPO_DECODE, TOKENS_PER_S_DECODE, LATENCIA_LLM])
+        INFO.then (fn = lambda: gr.update (choices = SQL.IDX_SQL ()), outputs = ID) # Para alterar o idx após run
 
 
-    ############################################### Assobio Chat #################################################
-    ##############################################################################################################
-    ##############################################################################################################
+    """
+    Código para a Interface da Aba Assobio - Chat.
+    ##################################################
+    """
 
+    """
     with gr.Tab ("Assobio - Chat - FASE BETA"):
         with gr.Sidebar (open = False):
 
             gr.Markdown ("## Conversas")
 
-            CHAT_LIST = gr.Radio (choices = DB2.NUMBER_CHATS (), label = "", show_label = False, min_width = 50)
+            CHATS = gr.Radio (choices = SQL_CHAT.NUMBER_CHATS (), label = "", show_label = False, min_width = 50)
 
-
+    """
 
         #gr.ChatInterface (fn = print ("Hello World"))
         #gr.Chatbot (value = [{"role": "user", "content": "Olá"}, {"role": "assistant", "content": "Olá! Como posso ajudar?"}], label = "NJSCSNJ", buttons = ["copy_all"], layout = "bubble", placeholder = ["Olá", "Adeus"])
         #gr.ChatMessage (content = "")
 
 
-        CHATBOX = gr.Chatbot (visible = True, elem_id = "CHATBOX", min_height = 725, label = "", show_label = False)
+        #CHATBOX = gr.Chatbot (visible = True, elem_id = "CHATBOX", min_height = 725, label = "", show_label = False)
 
-        CHATBOXSAVE = gr.List (visible = False) # Este componente guarda o histórico da conversa.
+        #CHATBOXSAVE = gr.List (visible = False) # Este componente guarda o histórico da conversa.
 
-        CHATBOX.clear (fn = DB2.ADD_CHAT_HISTORY, inputs = CHATBOXSAVE) # Ao limpar, guarda na DB a conversa.
+        #CHATBOX.clear (fn = DB2.ADD_CHAT_HISTORY, inputs = CHATBOXSAVE) # Ao limpar, guarda na DB a conversa.
         #print (CHATBOX)
         
-        X = CHAT_LIST.change (fn = DB2.GET_CHAT, inputs = CHAT_LIST, outputs = CHATBOX)
-        X.then (fn = lambda: gr.update (choices = DB2.NUMBER_CHATS ()), outputs = CHAT_LIST)
+        #X = CHAT_LIST.change (fn = DB2.GET_CHAT, inputs = CHAT_LIST, outputs = CHATBOX)
+        #X.then (fn = lambda: gr.update (choices = DB2.NUMBER_CHATS ()), outputs = CHAT_LIST)
 
         #MODELS = gr.Dropdown (show_label = False, choices = ["Mistral 7B Q4.0", "Microsoft Phi 4 Q4.0", "Amália 9B DPO Q8"], interactive = True, elem_id = "MODELS")
-        PROMPT = gr.Textbox (submit_btn = True, type = "text", label = "", show_label = False, elem_id = "PROMPT", placeholder = "Olá")
-        PROMPT.submit (LM.LOAD_INFER_MODEL, inputs = [PROMPT, CHATBOX], outputs = [CHATBOX, CHATBOXSAVE])
+        #PROMPT = gr.Textbox (submit_btn = True, type = "text", label = "", show_label = False, elem_id = "PROMPT", placeholder = "Olá")
+        #PROMPT.submit (LM.LOAD_INFER_MODEL, inputs = [PROMPT, CHATBOX], outputs = [CHATBOX, CHATBOXSAVE])
         
    
-"""
-És um sistema de Inteligência Artificial inserido num sistema de Transcrição de Áudios em Português Europeu.
-Deves realizar auditoria ás transcrições dos áudios de acordo com estes parâmetros:
-
- . Análise de Sentimentos - Contente, Neutro ou Infeliz
- . Análise de Linguagem Técnica - Forte, Neutra ou Fraca
-Deves retornar o output em formato JSON.
-
-Lembra-te do teu papel, és um modelo que Audita transcrições de Áudio e deves retornar o output em formato JSON.
-
-Olá, faz uma análise de Transcrição destes áudios.
-
-"""
-
 App.launch (
     css = 
     """

@@ -3,6 +3,7 @@ import random
 from subprocess import Popen #https://coderivers.org/blog/python-popen-subprocess/
 from openai import OpenAI
 import requests
+import time
 
 """
 Esta classe é a SEGUNDA classe da aba Assobio - Auditoria do sistema Assobio.
@@ -54,7 +55,7 @@ class Auditoria_LLM:
         self.GPU = Popen ([            
             r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
             "-m", self.CONFIG["GPU_CONFIG"]["llama.cpp"][RANDOM_GPU]["path"],
-            "-c", "780",
+            "-c", "2048",
             "-ngl", "all",
             "--reasoning", "off",
 
@@ -64,22 +65,25 @@ class Auditoria_LLM:
             "--no-webui",
         ])
 
-        #MUITO IMPORTANTE! 
+        #MUITO IMPORTANTE! #Muita Atenção com loops while, facilmente podem entrar num loop infinito
         #Podemos rodar comandos do cmd mas os comandos não rodam de maneira instantânea.
-        #Precisamos de um mecanismo que confirme que o modelo já está a escutar na porta. 
+        #Precisamos de um mecanismo que confirme que o modelo já está a escutar na porta.
+        time.sleep (3)
         while True:
 
-            request = requests.get ("http://127.0.0.1:8080/health", timeout = 1)
+            request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
             estado = request.status_code #503 - loading | 200 - loaded
 
             if estado == 200:
                 break
 
+            if estado == 503:
+                continue
+
             else:
                 print ("Erro na Porta GPU!")
                 break
                 
-
         return RANDOM_GPU, HARDWARE
 
 
@@ -103,12 +107,12 @@ class Auditoria_LLM:
             TOKENS = OUTPUT.usage.total_tokens
 
             ##Prefil Stats
-            TEMPO_PREFILL = OUTPUT.timings["prompt_ms"]
-            TOKENS_perS_PREFILL = OUTPUT.timings["prompt_per_second"]
+            TEMPO_PREFILL = OUTPUT.timings["prompt_ms"] / 1000
+            TOKENS_perS_PREFILL = OUTPUT.timings["prompt_per_second"] 
 
             ##Decode Stats
-            TEMPO_DECODE = OUTPUT.timings["predicted_ms"]
-            TOKENS_perS_DECODE = OUTPUT.timings["predicted_per_second"]
+            TEMPO_DECODE = OUTPUT.timings["predicted_ms"] / 1000
+            TOKENS_perS_DECODE = OUTPUT.timings["predicted_per_second"] 
 
             ##Latência Total
             LAT = TEMPO_PREFILL + TEMPO_DECODE
@@ -146,7 +150,7 @@ class Auditoria_LLM:
         self.CPU = Popen ([            
             r"C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\llama-server.exe",
             "-m", self.CONFIG["CPU_CONFIG"][RANDOM_CPU]["path"],
-            "-c", "780",
+            "-c", "2048",
             "-ngl", "0",
             "--reasoning", "off",
 
@@ -159,15 +163,19 @@ class Auditoria_LLM:
         #MUITO IMPORTANTE! 
         #Podemos rodar comandos do cmd mas os comandos não rodam de maneira instantânea.
         #Precisamos de um mecanismo que confirme que o modelo já está a escutar na porta. 
+        time.sleep (3)
         while True:
 
-            request = requests.get ("http://127.0.0.1:8080/health", timeout = 1)
+            request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
             estado = request.status_code #503 - loading | 200 - loaded
 
             if estado == 200:
                 break
 
-            else: 
+            if estado == 503: 
+                continue
+
+            else:
                 print ("Erro na Porta CPU!")
                 break
 
@@ -194,11 +202,11 @@ class Auditoria_LLM:
             TOKENS = OUTPUT.usage.total_tokens
         
             ##Prefil Stats
-            TEMPO_PREFILL = OUTPUT.timings["prompt_ms"]
+            TEMPO_PREFILL = OUTPUT.timings["prompt_ms"] / 1000
             TOKENS_perS_PREFILL = OUTPUT.timings["prompt_per_second"]
         
-            ##Decode Stats
-            TEMPO_DECODE = OUTPUT.timings["predicted_ms"]
+            ##Decode Stats 
+            TEMPO_DECODE = OUTPUT.timings["predicted_ms"] / 1000
             TOKENS_perS_DECODE = OUTPUT.timings["predicted_per_second"]
         
             ##Latência Total
