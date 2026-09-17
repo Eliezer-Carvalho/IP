@@ -99,6 +99,8 @@ class Auditoria_LLM:
             {"role": "user", "content": f"{PROMPT}"}
         ]
 
+        print (MENSAGENS)
+        
         try:
 
             OUTPUT = self.API.chat.completions.create (model = "None", messages = MENSAGENS)
@@ -193,6 +195,8 @@ class Auditoria_LLM:
             {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n" f"{CONTEXTO}\n" f"{TRANSCRIÇÃO}\n"},
             {"role": "user", "content": f"{PROMPT}"}
         ]
+
+        print (MENSAGENS)
 
         try: 
     
