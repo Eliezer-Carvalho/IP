@@ -10,36 +10,17 @@ Uma imagem é como uma receita de uma aplicação. Na mesma está contida todas 
 Um container é onde uma imagem vive. Os containers são especiais porque podemos ter vários containers a rodar uma imagem. 
 <hr>
 
+<h2> Alguns Comandos Importantes </h2>
+
+<i>docker images</i> -> ver as imagens <br>
+<i>docker image</i> -> ver as opções para iniciar uma imagem <br>
+<i>docker container</i> -> ver as opções para iniciar um container <br> 
+<i>docker ps -a</i> -> ver containers <br> 
+<i>docker rename "nome" "nome-novo"</i> -> alterar o nome de um container <br>
+<i>docker start "nome-container"</i> -> Correr container existente <br>
 
 
-docker images -> ver as imagens
-docker image -> ver as opções para iniciar uma imagem
-docker container -> ver as opções para iniciar um container 
-
-
-docker run `     
-   --gpus all `
-   --ipc=host `
-   -p 8000:8000 `
-   -e VLLM_USE_V2_MODEL_RUNNER=0 `
-   -v "C:\Users\Admin\Desktop\models\Language Models\GPU\Qwen 14B AWQ Q4:/models/qwen14B" `
-   vllm/vllm-openai:latest `
-   /models/qwen14B `
-   --max-model-len 2046
-
-
-docker run --rm`     
-   --gpus all `
-   --ipc=host `
-   -p 8000:8000 `
-   -e VLLM_USE_V2_MODEL_RUNNER=0 `
-   -v "C:\Users\Admin\Desktop\models\Language Models\GPU\Qwen 14B AWQ Q4:/models/qwen14B" `
-   vllm/vllm-openai:latest `
-   /models/qwen14B `
-   --max-model-len 2046
-
-
-
-
-
-docker run --runtime nvidia --gpus "device=0" --ipc=host -v "C:\Users\Admin\Desktop\models\Language Models\GPU\Microsoft Phi 14B Q4:models/phi14b" -p 8000:8000 vllm/vllm-openai:latest --model models/phi14b --gpu-memory-utilization 0.85 --max-model-len 1600
+Esta run funcionou no servidor:
+``` python
+docker run --runtime nvidia --gpus "device=0" -e VLLM_USE_V2_MODEL_RUNNER=0 --ipc=host -v "C:\Users\Admin\Desktop\models\Language Models\GPU\Microsoft Phi 15B GPTQ:/modelos/MicrosoftPhi15B" -p 8000:8000 vllm/vllm-openai:latest --model /modelos/MicrosoftPhi15B --gpu-memory-utilization 0.85 --max-model-len 1600
+```

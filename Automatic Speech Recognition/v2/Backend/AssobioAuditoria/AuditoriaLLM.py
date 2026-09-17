@@ -71,18 +71,19 @@ class Auditoria_LLM:
         time.sleep (3)
         while True:
 
-            request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
-            estado = request.status_code #503 - loading | 200 - loaded
+            try:
+                request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
+                estado = request.status_code #503 - loading | 200 - loaded
 
-            if estado == 200:
+                if estado == 200:
+                    break
+
+                if estado == 503:
+                    continue
+
+            except requests.exceptions.RequestException:
                 break
-
-            if estado == 503:
-                continue
-
-            else:
-                print ("Erro na Porta GPU!")
-                break
+                print ("Erro na comunicação da porta llama.cpp GPU")
                 
         return RANDOM_GPU, HARDWARE
 
@@ -95,8 +96,8 @@ class Auditoria_LLM:
         """
 
         MENSAGENS = [
-            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n" f"{CONTEXTO}\n" f"{TRANSCRIÇÃO}\n"},
-            {"role": "user", "content": f"{PROMPT}"}
+            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n\n" f"{CONTEXTO}\n"},
+            {"role": "user", "content": f"{TRANSCRIÇÃO}\n\n" f"{PROMPT}"}
         ]
 
         print (MENSAGENS)
@@ -168,18 +169,19 @@ class Auditoria_LLM:
         time.sleep (3)
         while True:
 
-            request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
-            estado = request.status_code #503 - loading | 200 - loaded
+            try:
+                request = requests.get ("http://127.0.0.1:8080/health", timeout = 2)
+                estado = request.status_code #503 - loading | 200 - loaded
 
-            if estado == 200:
+                if estado == 200:
+                    break
+
+                if estado == 503: 
+                    continue
+
+            except requests.exceptions.RequestException:
                 break
-
-            if estado == 503: 
-                continue
-
-            else:
-                print ("Erro na Porta CPU!")
-                break
+                print ("Erro na comunicação da porta llama.cpp CPU")
 
         return RANDOM_CPU, HARDWARE
 
@@ -192,8 +194,8 @@ class Auditoria_LLM:
         """
     
         MENSAGENS = [
-            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n" f"{CONTEXTO}\n" f"{TRANSCRIÇÃO}\n"},
-            {"role": "user", "content": f"{PROMPT}"}
+            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n\n" f"{CONTEXTO}\n"},
+            {"role": "user", "content": f"{TRANSCRIÇÃO}\n\n" f"{PROMPT}"}
         ]
 
         print (MENSAGENS)

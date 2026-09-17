@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from Backend.AssobioAuditoria.main import Assobio_Auditoria
 from Backend.AssobioAuditoria.DatabaseAssobioAuditoria.Database import SQL_Functions
-from Backend.Estats import Statistics_Monitor
+from Backend.AssobioAuditoria.Estats import Statistics_Monitor
 
 SQL = SQL_Functions ()
 STATS = Statistics_Monitor ()
@@ -17,10 +17,18 @@ STATS = Statistics_Monitor ()
 
 #SQL_CHAT = SQL_Functions_Chat ()
 
+from Backend.AssobioChat.LargeLanguageModel import LargeLanguageModelvLLM
+
+vLLM_LLM = LargeLanguageModelvLLM ()
+
+
 @dataclass
 class Info:
     contexto: str = "O Contexto refere-se ás instruções que queremos que o sistema siga.\nAqui é onde devemos defenir papéis, regras e limitações."
     prompt: str = "O Prompt é a mensagem que queremos enviar ao modelo.\nTendo defenido o contexto, o Prompt tem como objetivo comunicar com o modelo."
+
+
+
 
 
 with gr.Blocks (title = "Assobio V2") as App:
@@ -151,23 +159,25 @@ with gr.Blocks (title = "Assobio V2") as App:
     ##################################################
     """
 
-    """
+    
     with gr.Tab ("Assobio - Chat - FASE BETA"):
         with gr.Sidebar (open = False):
 
             gr.Markdown ("## Conversas")
 
-            CHATS = gr.Radio (choices = SQL_CHAT.NUMBER_CHATS (), label = "", show_label = False, min_width = 50)
-
-    """
-
-        #gr.ChatInterface (fn = print ("Hello World"))
-        #gr.Chatbot (value = [{"role": "user", "content": "Olá"}, {"role": "assistant", "content": "Olá! Como posso ajudar?"}], label = "NJSCSNJ", buttons = ["copy_all"], layout = "bubble", placeholder = ["Olá", "Adeus"])
-        #gr.ChatMessage (content = "")
-
+            #CHATS = gr.Radio (choices = SQL_CHAT.NUMBER_CHATS (), label = "", show_label = False, min_width = 50)
 
         #CHATBOX = gr.Chatbot (visible = True, elem_id = "CHATBOX", min_height = 725, label = "", show_label = False)
+        with gr.Row ():
+            BUTTON_LOAD_MODEL_vLLM = gr.Button (value = "Load Model", min_width = 350)
+            BUTTON_LOAD_MODEL_vLLM.click (fn = vLLM_LLM.LOAD_MODEL_GPU_vLLM_DOCKER)
 
+            BUTTON_KILL_vLLM = gr.Button (value = "Kill Docker", min_width = 350)
+
+        gr.Markdown ("<hr>")
+
+        CHATBOX = gr.ChatInterface (fn = vLLM_LLM.INFER_GPU_vLLM_DOCKER)
+        
         #CHATBOXSAVE = gr.List (visible = False) # Este componente guarda o histórico da conversa.
 
         #CHATBOX.clear (fn = DB2.ADD_CHAT_HISTORY, inputs = CHATBOXSAVE) # Ao limpar, guarda na DB a conversa.
@@ -176,7 +186,6 @@ with gr.Blocks (title = "Assobio V2") as App:
         #X = CHAT_LIST.change (fn = DB2.GET_CHAT, inputs = CHAT_LIST, outputs = CHATBOX)
         #X.then (fn = lambda: gr.update (choices = DB2.NUMBER_CHATS ()), outputs = CHAT_LIST)
 
-        #MODELS = gr.Dropdown (show_label = False, choices = ["Mistral 7B Q4.0", "Microsoft Phi 4 Q4.0", "Amália 9B DPO Q8"], interactive = True, elem_id = "MODELS")
         #PROMPT = gr.Textbox (submit_btn = True, type = "text", label = "", show_label = False, elem_id = "PROMPT", placeholder = "Olá")
         #PROMPT.submit (LM.LOAD_INFER_MODEL, inputs = [PROMPT, CHATBOX], outputs = [CHATBOX, CHATBOXSAVE])
         
