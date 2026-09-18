@@ -1,0 +1,81 @@
+FUNCTIONS:
+
+  RETURN:
+    descr: Esta função serve para retornar todos os valores de uma coluna.
+    type: return_all
+    args: 
+      name: COLUNAS
+
+  COUNT: 
+    descr: Esta função serve para retornar o número de linhas de uma coluna.
+    type: return_len
+    args:
+      name: COLUNAS
+
+
+COLUNAS:
+
+  DATA:
+    descr: Representa a data em que foi realizada a transcrição.
+
+  CONTEXT:
+    descr: O contexto enviado pelo utilizador.
+
+  PROMPT:
+    descr: O prompt enviado pelo utilizador.
+
+  AUDIO_ORIGINAL:
+    descr: Caminho para o áudio original.
+
+  AUDIO_PRÉ_PROCESSADO:
+    descr: Caminho para o áudio pré processado.
+
+  AUDIO_TIME: 
+    descr: Tempo em segundos, de cada áudio.
+
+  TEMPO_PRÉ_PROCESSAMENTO:
+    descr: Tempo em segundos, demorado para realizar o pré processamento do áudio.
+
+  TRANSCRIÇÃO:
+    descr: Transcrição realizada pelo modelo de Automatic Speech Recognition.
+
+  TEMPO_PROCESSAMENTO_MODELO_ASR:
+    descr: Tempo em segundos, que o modelo ASR demorou para realizar o processamento do Áudio, esta parte refere-se ao Encoding do áudio.
+
+  TEMPO_INFERÊNCIA_MODELO_ASR:
+    descr: Tempo em segundos, que o modelo ASR demorou para realizar a inferência após processamento do Áudio, esta parte refere-se ao Decoding do áudio.
+
+  LATÊNCIA:
+    descr: Tempo em segundos, que o modelo ASR demorou a realizar a transcrição do áudio.
+
+  TOKENS_PER_SECOND_DECODE:
+    descr: Throughput do modelo ASR na fase de Inferência, em tokens/s.
+  
+  HARDWARE_LLM:
+    descr: Hardware utilizado para realizar a inferência do modelo de Linguagem.
+
+  MODELO_LLM:
+    descr: Modelo de Linguagem utilizado para realizar a Auditoria ás transcrições de áudio.
+
+  AUDITORIA_LLM:
+    descr: Auditoria realizada pelo modelo de Linguagem.
+
+  NÚMERO_DE_TOKENS_PROCESSADOS:
+    descr: Número de tokens processados pelo modelo de Linguagem.
+
+  TEMPO_PREFILL_LLM:
+    descr: Tempo demorado em segundos pelo modelo de Linguagem a realizar a fase de Prefill.
+
+  TOKENS_PER_SECOND_PREFILL_LLM:
+    descr: Throughput realizado pelo modelo de Linguagem ao realizar a fase de Prefill, em tokens/s.
+
+  TEMPO_DECODE_LLM:
+    descr: Tempo demorado em segundos pelo modelo de Linguagem a realizar a fase de Decode.
+
+  TOKENS_PER_SECOND_DECODE_LLM:
+    descr: Throughput realizado pelo modelo de Linguagem ao realizar a fase de Decode, em tokens/s.
+
+  LATÊNCIA_LLM:
+    descr: Tempo total, em segundos, da fase de Inferência do modelo de Linguagem.
+
+
