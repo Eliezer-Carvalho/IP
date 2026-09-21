@@ -32,9 +32,6 @@ class LargeLanguageModelvLLM:
         with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SystemPrompts\SYSTEM_PROMPT.md", "r", encoding = "utf-8") as f:
             self.SYSTEM_PROMPT = f.read ()
 
-        with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SystemPrompts\CHAT_SYSTEM_PROMPT_SEMANTIC.md", "r", encoding = "utf-8") as f:
-            self.SYSTEM_PROMPT_SMLayer = f.read ()
-
     def LOAD_MODEL_GPU_vLLM_DOCKER (self):
 
         """
@@ -109,41 +106,22 @@ class LargeLanguageModelvLLM:
         yield gr.update (visible = False)
         #No fim deste método, temos o modelo selecionado a correr num Container Docker com uma imagem vLLM!
 
-    def INFER_GPU_vLLM_DOCKER (self, PROMPT, HISTÓRICO, ESTADO_SMLayer):
+    def INFER_GPU_vLLM_DOCKER (self, PROMPT, HISTÓRICO):
 
-        if ESTADO_SMLayer == True:
+        SEMANTIC_OUTPUT = RUN_SEMANTIC_LAYER (PROMPT, "Assobio")
 
-            OUTPUT_SEMANTIC_LAYER = RUN_SEMANTIC_LAYER (PROMPT)
-
-            #print ("\n\n\n\n\n\n\n", OUTPUT_SEMANTIC_LAYER)
-
-            MENSAGENS = [
-                {"role": "system", "content": f"{self.SYSTEM_PROMPT_SMLayer}" f"{OUTPUT_SEMANTIC_LAYER}"}
-            ]
-                    
-            if HISTÓRICO:
-                MENSAGENS.extend (HISTÓRICO)
-                        
-            MENSAGENS.append (
-                {"role": "user", "content": PROMPT}
-            )
-
-            print ("SML Ativado")
-
-        else:
-
-            MENSAGENS = [
-                {"role": "system", "content": self.SYSTEM_PROMPT}
-            ]
+        MENSAGENS = [
+            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n" f"{SEMANTIC_OUTPUT}"}
+        ]
         
-            if HISTÓRICO:
-                MENSAGENS.extend (HISTÓRICO)
+        if HISTÓRICO:
+            MENSAGENS.extend (HISTÓRICO)
             
-            MENSAGENS.append (
-                {"role": "user", "content": PROMPT}
-            )
+        MENSAGENS.append (
+            {"role": "user", "content": PROMPT}
+        )
 
-            print (MENSAGENS)
+        print (MENSAGENS)
 
         try:
 

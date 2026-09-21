@@ -27,22 +27,11 @@ class Semantic_Layer:
 
         self.DB_PATH = r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\SQLDatabaseAssobio.db"
 
-        with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SemanticLayerModel.yaml", "r", encoding = "utf-8") as f:
+        with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SystemPrompts\SemanticLayerModel.yaml", "r", encoding = "utf-8") as f:
             self.SEMANTIC_MODEL = yaml.safe_load (f)
 
-        with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SYSTEM_PROMPT_SMLAYER.md", "r", encoding = "utf-8") as f:
+        with open (r"C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioChat\SystemPrompts\SYSTEM_PROMPT_SMLAYER.md", "r", encoding = "utf-8") as f:
             self.SYSTEM_PROMPT = f.read ()
-
-
-    def GRADIO_SEMANTIC_LAYER_ACTIVE (self, ESTADO):
-
-        #print (ESTADO)
-
-        if ESTADO == "Camada Semântica: OFF":
-            return gr.update (value = "Camada Semântica: ON", variant = "primary"), True
-
-        elif ESTADO == "Camada Semântica: ON":
-            return gr.update (value = "Camada Semântica: OFF", variant = "primary"), False
 
 
     def SEMANTIC_LAYER (self, PROMPT):

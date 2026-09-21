@@ -12,6 +12,7 @@ dependencies = [
     "gradio>=6.21.0",
     "ipykernel>=7.3.0",
     "jiwer>=4.0.0",
+    "laya>=0.3.4",
     "librosa>=0.11.0",
     "matplotlib>=3.11.1",
     "noisereduce>=3.0.3",

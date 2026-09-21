@@ -94,5 +94,5 @@ GPU_CONFIG:
       hf: https://huggingface.co/microsoft/phi-4
       params: 15B
       hardware: GPU
-      container: vLLM-Microsoft-Phi-15B
+      container: jolly_hawking
     

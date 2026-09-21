@@ -201,18 +201,11 @@ with gr.Blocks (title = "Assobio V2") as App:
 
         #-----------------------------------------------------------------------------------------------------------------------------#
 
-        with gr.Row ():
-
-            ESTADO_SEMANTIC_LAYER = gr.State (False)
-            BUTTON_SEMANTIC_LAYER = gr.Button ("Camada Semântica: OFF", variant = "secondary", size = "md")
-            BUTTON_SEMANTIC_LAYER.click (fn = SM_Layer.GRADIO_SEMANTIC_LAYER_ACTIVE, inputs = BUTTON_SEMANTIC_LAYER, outputs = [BUTTON_SEMANTIC_LAYER, ESTADO_SEMANTIC_LAYER])
-
-            
         gr.Markdown ("<hr>")
 
         with gr.Column ():
             CHATBOT = gr.Chatbot (show_label = False, min_height = 700)
-            CHATBOX = gr.ChatInterface (fn = vLLM_LLM.INFER_GPU_vLLM_DOCKER, chatbot = CHATBOT, additional_inputs = [ESTADO_SEMANTIC_LAYER])
+            CHATBOX = gr.ChatInterface (fn = vLLM_LLM.INFER_GPU_vLLM_DOCKER, chatbot = CHATBOT)
          
         
 

@@ -1,0 +1,52 @@
+[
+    {
+        "id": 0,
+        "prompt": "Preciso de ver todos os valores da coluna onde estão os valores da latência do modelo ASR.",
+        "prompt_eng": "I need to see all the values in the column where the latency values of the ASR model are located.",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 1,
+        "prompt": "Quantas linhas tem a coluna que contém o hardware usado para executar os modelos de LLM ?",
+        "prompt_eng": "How many lines are in the column containing the hardware used to run the LLM models ?",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "HARDWARE_LLM"
+        
+        }
+    },
+
+    {
+        "id": 2,
+        "prompt": "Qual é a soma total do número de tokens processados ?",
+        "prompt_eng": "What is the total number of tokens processed ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 3,
+        "prompt": "Qual é a média do tempo de pré processamento do áudio ?",
+        "prompt_eng": "What is the average audio pre-processing time ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PRÉ_PROCESSAMENTO"
+        }
+    },
+
+    {
+        "id": 4,
+        "prompt": "Qual é a média da latência dos modelos LLM ?",
+        "prompt_eng": "What is the average latency of the LLM models ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA_LLM"
+        }
+    }
+]

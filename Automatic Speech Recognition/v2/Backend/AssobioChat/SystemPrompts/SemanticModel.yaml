@@ -1,0 +1,69 @@
+OPERATIONS:
+
+  RETURN:
+    descr: Retornar todos os valores de uma coluna da Base de Dados.
+    type: return_all
+    
+  COUNT: 
+    descr: Retornar o número de linhas de uma coluna da Base de Dados.
+    type: return_len
+    
+  MEAN:
+    descr: Calcular a média de uma coluna da Base de Dados.
+    type: mean
+    
+  SUM:
+    descr: Somar todos os valores existentes de uma coluna da Base de Dados.
+    type: sum
+    
+
+
+COLUMNS:
+
+  AUDIO_TIME: 
+    descr: Tempo de cada áudio, em segundos.
+
+  TEMPO_PRÉ_PROCESSAMENTO:
+    descr: Tempo do Pré Processamento, em segundos.
+
+  TRANSCRIÇÃO:
+    descr: Transcrição realizada pelo modelo de Automatic Speech Recognition.
+
+  TEMPO_PROCESSAMENTO_MODELO_ASR:
+    descr: Tempo de Processamento do modelo de Automatic Speech Recognition, em segundos.
+
+  TEMPO_INFERÊNCIA_MODELO_ASR:
+    descr: Tempo de Inferência do modelo de Automatic Speech Recognition, em segundos.
+
+  LATÊNCIA:
+    descr: Tempo que o modelo de Automatic Speech Recognition demorou a transcrever o Áudio, em segundos.
+
+  TOKENS_PER_SECOND_DECODE:
+    descr: Throughput do modelo de Automatic Speech Recognition, em tokens/s.
+  
+  HARDWARE_LLM:
+    descr: Hardware do Large Language Model.
+
+  MODELO_LLM:
+    descr: Large Language Model utilizado na Auditoria.
+
+  AUDITORIA_LLM:
+    descr: Auditoria realizada pelo Large Language Model.
+
+  NÚMERO_DE_TOKENS_PROCESSADOS:
+    descr: Número de tokens processados pelo Large Language Model.
+
+  TEMPO_PREFILL_LLM:
+    descr: Tempo da fase de Prefill do Large Language Model, em segundos.
+
+  TOKENS_PER_SECOND_PREFILL_LLM:
+    descr: Throughput da fase de Prefill do Large Language Model, em tokens/s. 
+
+  TEMPO_DECODE_LLM:
+    descr: Tempo da fase de Decode do Large Language Model, em segundos.
+
+  TOKENS_PER_SECOND_DECODE_LLM:
+    descr: Throughput da fase de Decode do Large Language Model, em tokens/s.
+ 
+  LATÊNCIA_LLM:
+    descr: Tempo que o Large Language Model demorou a realizar a Auditoria, em segundos.
