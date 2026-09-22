@@ -1,0 +1,631 @@
+[
+    {
+        "id": 1,
+        "prompt": "Qual é o tempo médio de latência do modelo ASR ?",
+        "prompt_eng": "What is the average latency of the ASR model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 2,
+        "prompt": "Qual é o número total de tokens processados pelo modelo LLM ?",
+        "prompt_eng": "What is the total number of tokens processed by the LLM ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 3,
+        "prompt": "Qual é a média de throughput do decode do LLM ?",
+        "prompt_eng": "What is the average throughput of the LLM decode ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TOKENS_PER_SECOND_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 4,
+        "prompt": "Qual é a média de tempo do pré-processamento ?",
+        "prompt_eng": "What is the average time of pre-processing ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PRÉ_PROCESSAMENTO"
+        }
+    },
+
+    {
+        "id": 5,
+        "prompt": "Qual é o tempo total de inferência do modelo ASR ?",
+        "prompt_eng": "What is the total inference time of the ASR model ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 6,
+        "prompt": "Qual é a média de throughput do decode do modelo ASR ?",
+        "prompt_eng": "What is the average throughput of the ASR model decode ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TOKENS_PER_SECOND_DECODE"
+        }
+    },
+
+    {
+        "id": 7,
+        "prompt": "Qual é o tempo médio de decoding do modelo LLM ?",
+        "prompt_eng": "What is the average decoding time of the LLM ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 8,
+        "prompt": "Qual é o valor médio de throughput do Prefill do modelo LLM ?",
+        "prompt_eng": "What is the average throughput of the prefill phase of the LLM ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TOKENS_PER_SECOND_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 9,
+        "prompt": "Qual a soma dos tempos de pré-processamento ?",
+        "prompt_eng": "What is the sum of pre-processing times ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PRÉ_PROCESSAMENTO"
+        }
+    },
+
+    {
+        "id": 10,
+        "prompt": "Qual é o tempo total de inferência do modelo ASR ?",
+        "prompt_eng": "What is the total inference time of the ASR model ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 11,
+        "prompt": "Qual é a latência média do modelo LLM ?",
+        "prompt_eng": "What is the average latency of the LLM model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA_LLM"
+        }
+    },
+
+    {
+        "id": 12,
+        "prompt": "Qual é o tempo médio de prefill do modelo LLM em todos os áudios?",
+        "prompt_eng": "What is the average prefill time of the LLM model for all audios?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 13,
+        "prompt": "Qual é a soma dos tempos de inferência do modelo ASR para todos os áudios?",
+        "prompt_eng": "What is the sum of inference times for all audios?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 14,
+        "prompt": "Qual é a média de tempo na fase Prefill do LLM ?",
+        "prompt_eng": "What is the average time in the Prefill phase of the LLM ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 15,
+        "prompt": "Qual é o número total de registos na coluna TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "prompt_eng": "What is the total number of records in the column TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 16,
+        "prompt": "Qual é o número total de tokens processados pelos LLMs ?",
+        "prompt_eng": "What is the total number of tokens processed by the LLMs ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 17,
+        "prompt": "Qual é a soma de todos os tempos de Decode do LLM ?",
+        "prompt_eng": "What is the sum of all decode times from the LLM ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 18,
+        "prompt": "Qual é o tempo médio de na fase Prefill do LLM ?",
+        "prompt_eng": "What is the average time in the Prefill phase?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 19,
+        "prompt": "Qual é a média de latência do modelo de Automatic Speech Recognition ?",
+        "prompt_eng": "What is the average latency of the Automatic Speech Recognition model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 20,
+        "prompt": "Qual é a soma de tempo de pré-processamento tem a base de dados ?",
+        "prompt_eng": "What is the sum of pre-processing time does the database have ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PRÉ_PROCESSAMENTO"
+        }
+    },
+
+    {
+        "id": 21,
+        "prompt": "Qual é a soma de tempo de inferência do modelo ASR ?",
+        "prompt_eng": "What is the total time of inference for the ASR model ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 22,
+        "prompt": "Qual é a média de tempo de decode do modelo LLM ?",
+        "prompt_eng": "What is the average time of Decode phase for the Large Language Model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 23,
+        "prompt": "Qual é o número de tokens processados pelo LLM no total ?",
+        "prompt_eng": "How many tokens processed by the Large Language Model in total ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 24,
+        "prompt": "Qual é a soma do tempo de latência do modelo LLM ?",
+        "prompt_eng": "What is the sum of latency of the Large Language Model ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "LATÊNCIA_LLM"
+        }
+    },
+
+    {
+        "id": 25,
+        "prompt": "Qual é a média de tempo de decode do LLM ?",
+        "prompt_eng": "What is the average time of Decode for the Large Language Model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 26,
+        "prompt": "Qual é o tempo médio de Prefill do modelo LLM ?",
+        "prompt_eng": "What is the average time of prefill for the Large Language Model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 27,
+        "prompt": "Quantos tokens foram processados pelo LLM ?",
+        "prompt_eng": "How many tokens processed by the Large Language Model ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 28,
+        "prompt": "Qual é a média da coluna LATÊNCIA na base de dados ?",
+        "prompt_eng": "What is the average of the column LATÊNCIA in the database ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 29,
+        "prompt": "Qual é a soma dos valores em TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "prompt_eng": "What is the sum of the values in TEMPO_PROCESSAMENTO_MODELO_ASR column ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 30,
+        "prompt": "Quais os valores da coluna AUDIO_TIME ?",
+        "prompt_eng": "What are the values in the AUDIO_TIME column ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "AUDIO_TIME"
+        }
+    },
+
+    {
+        "id": 31,
+        "prompt": "Quais os valores da coluna TEMPO_INFERÊNCIA_MODELO_ASR ?",
+        "prompt_eng": "What are the values in the TEMPO_INFERÊNCIA_MODELO_ASR column ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 32,
+        "prompt": "Qual é a média de TOKENS_PER_SECOND_DECODE na base de dados ?",
+        "prompt_eng": "What is the average TOKENS_PER_SECOND_DECODE in the database ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TOKENS_PER_SECOND_DECODE"
+        }
+    },
+
+    {
+        "id": 33,
+        "prompt": "Qual é a soma de TEMPO_PREFILL_LLM na base de dados ?",
+        "prompt_eng": "What is the sum of TEMPO_PREFILL_LLM in the database ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 34,
+        "prompt": "Quais os valores de LATÊNCIA na base de dados ?",
+        "prompt_eng": "What are the values of LATENCY in the database ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 35,
+        "prompt": "Quantos registos tem a coluna TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "prompt_eng": "How many records are in the TEMPO_PROCESSAMENTO_MODELO_ASR column ?",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 36,
+        "prompt": "Qual é a soma dos valores em TEMPO_DECODE_LLM na base de dados ?",
+        "prompt_eng": "What is the sum of the values in TEMPO_DECODE_LLM in the database ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 37,
+        "prompt": "Qual é a média de TEMPO_INFERÊNCIA_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What is the average TEMPO_INFERENCE_MODEL_ASR in the database ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 38,
+        "prompt": "Quais os valores de TEMPO_PROCESSAMENTO_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What are the values in the TEMPO_PROCESSAMENTO_MODELO_ASR column ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 39,
+        "prompt": "Qual é a soma de TEMPO_PROCESSAMENTO_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What is the sum of TEMPO_PROCESSAMENTO_MODELO_ASR in the database ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 40,
+        "prompt": "Qual é a média de LATÊNCIA na base de dados ?",
+        "prompt_eng": "What is the average LATENCY in the database ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 41,
+        "prompt": "Quais os valores de TEMPO_PROCESSAMENTO_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What are the values of TEMPO_PROCESSAMENTO_MODELO_ASR in the database ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+    
+    {
+        "id": 42,
+        "prompt": "Qual é a soma de AUDIO_TIME na base de dados ?",
+        "prompt_eng": "What is the sum of AUDIO_TIME in the database ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "AUDIO_TIME"
+        }
+    },
+
+    {
+        "id": 43,
+        "prompt": "Qual é a média de TEMPO_PROCESSAMENTO_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What is the average TEMPO_PROCESSAMENTO_MODEL_ASR in the database ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 44,
+        "prompt": "Quais os valores de LATÊNCIA na base de dados ?",
+        "prompt_eng": "What are the values of LATENCY in the database ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 45,
+        "prompt": "Quantos registos tem a coluna AUDIO_TIME na base de dados ?",
+        "prompt_eng": "How many records are in the AUDIO_TIME column in the database ?",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "AUDIO_TIME"
+        }
+    },
+
+    {
+        "id": 46,
+        "prompt": "Qual é a soma dos valores em TEMPO_PROCESSAMENTO_MODELO_ASR na base de dados ?",
+        "prompt_eng": "What is the sum of the values in TEMPO_PROCESSAMENTO_MODELO_ASR in the database ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 47,
+        "prompt": "Qual é a média de LATÊNCIA dos registos ?",
+        "prompt_eng": "What is the average LATÊNCI of the records ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 48,
+        "prompt": "Quero saber a média de TEMPO_PROCESSAMENTO_MODELO_ASR.",
+        "prompt_eng": "I want to know the mean of TEMPO_PROCESSAMENTO_MODELO_ASR.",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 49,
+        "prompt": "Qual é a soma de TOKENS_PER_SECOND_DECODE do LLM ?",
+        "prompt_eng": "What is the sum of TOKENS_PER_SECOND_DECODE of the LLM ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TOKENS_PER_SECOND_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 50,
+        "prompt": "Qual é o retorno dos valores de LATÊNCIA ?",
+        "prompt_eng": "What is the return of values of LATÊNCIA ?",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 51,
+        "prompt": "Quero saber a média de TEMPO_PREFILL_LLM.",
+        "prompt_eng": "I want to know the average of TEMPO_PREFILL_LLM.",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    },
+
+    {
+        "id": 52,
+        "prompt": "Qual é o total de NÚMERO_DE_TOKENS_PROCESSADOS ?",
+        "prompt_eng": "What is the total number of NUMERO_DE_TOKENS_PROCESSADOS ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 53,
+        "prompt": "Qual é a média de TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "prompt_eng": "What is the average of TEMPO_PROCESSAMENTO_MODELO_ASR ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PROCESSAMENTO_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 54,
+        "prompt": "Quero saber o retorno dos valores de TRANSCRIÇÃO.",
+        "prompt_eng": "I want to know the return of values of TRANSCRIÇÃO.",
+        "expected_output": {
+            "operation": "RETURN",
+            "columns": "TRANSCRIÇÃO"
+        }
+    },
+
+    {
+        "id": 55,
+        "prompt": "Qual é a média de LATÊNCIA_LLM ?",
+        "prompt_eng": "What is the average of LATÊNCIA_LLM ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA_LLM"
+        }
+    },
+
+    {
+        "id": 56,
+        "prompt": "Quero saber o valor total de TEMPO_DECODE_LLM.",
+        "prompt_eng": "I want to know the total value of TEMPO_DECODE_LLM.",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_DECODE_LLM"
+        }
+    },
+
+    {
+        "id": 57,
+        "prompt": "Qual é a média de latência do modelo ASR ?",
+        "prompt_eng": "What is the average latency of the ASR model ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "LATÊNCIA"
+        }
+    },
+
+    {
+        "id": 58,
+        "prompt": "Qual é o tempo médio de pre-processamento ?",
+        "prompt_eng": "What is the average pre-processing time ?",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PRÉ_PROCESSAMENTO"
+        }
+    },
+
+    {
+        "id": 59,
+        "prompt": "Qual é a contagem de tokens processados pelo modelo LLM ?",
+        "prompt_eng": "What is the count of tokens processed by the LLM model ?",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 60,
+        "prompt": "Qual é o tempo total de inferência do modelo ASR para todos os audios ?",
+        "prompt_eng": "What is the total inference time of the ASR model for all audios ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 61,
+        "prompt": "Qual foi a soma total dos tokens processados pelo modelo LLM em todos os registros ?",
+        "prompt_eng": "What was the total sum of tokens processed by the LLM model across all records ?",
+        "expected_output": {
+            "operation": "SUM",
+            "columns": "NÚMERO_DE_TOKENS_PROCESSADOS"
+        }
+    },
+
+    {
+        "id": 62,
+        "prompt": "Quero saber quantos registos existem na base de dados sobre a columa TEMPO_INFERÊNCIA_MODELO_ASR.",
+        "prompt_eng": "I would like to know how many records exist in the database regarding the column TEMPO_INFERÊNCIA_MODELO_ASR.",
+        "expected_output": {
+            "operation": "COUNT",
+            "columns": "TEMPO_INFERÊNCIA_MODELO_ASR"
+        }
+    },
+
+    {
+        "id": 63,
+        "prompt": "Quero saber qual é a média do tempo de Prefill LLM sobre os dados disponíveis.",
+        "prompt_eng": "I would like to know what is the average prefill time of LLM over the available data.",
+        "expected_output": {
+            "operation": "MEAN",
+            "columns": "TEMPO_PREFILL_LLM"
+        }
+    }
+]
