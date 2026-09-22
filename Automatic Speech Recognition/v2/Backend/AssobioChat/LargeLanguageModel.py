@@ -7,7 +7,7 @@ import requests
 import gradio as gr
 
 
-from .mainSMLayer import RUN_SEMANTIC_LAYER
+from .SemanticLayer import RUN_SEMANTIC_LAYER
 
 
 """
@@ -108,10 +108,10 @@ class LargeLanguageModelvLLM:
 
     def INFER_GPU_vLLM_DOCKER (self, PROMPT, HISTÓRICO):
 
-        SEMANTIC_OUTPUT = RUN_SEMANTIC_LAYER (PROMPT, "Assobio")
+        SEMANTIC_OUTPUT, SQL_QUERY = RUN_SEMANTIC_LAYER (PROMPT, "Assobio")
 
         MENSAGENS = [
-            {"role": "system", "content": f"{self.SYSTEM_PROMPT}\n" f"{SEMANTIC_OUTPUT}"}
+            {"role": "system", "content": f"{self.SYSTEM_PROMPT}"f"SQL_Query: {SQL_QUERY}"f"Resultado: {SEMANTIC_OUTPUT}"}
         ]
         
         if HISTÓRICO:

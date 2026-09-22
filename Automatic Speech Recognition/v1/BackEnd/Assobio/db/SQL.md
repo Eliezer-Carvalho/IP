@@ -179,3 +179,12 @@ SELECT AVG (coluna)
 FROM clientes
 ```
 <hr>
+
+<h3> SUM </h3>
+Soma de valores de uma coluna
+
+```sql
+SELECT SUM (coluna)
+FROM clientes
+```
+<hr>

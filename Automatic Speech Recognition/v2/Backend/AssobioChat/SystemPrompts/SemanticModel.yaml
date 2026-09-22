@@ -17,7 +17,6 @@ OPERATIONS:
     type: sum
     
 
-
 COLUMNS:
 
   AUDIO_TIME: 

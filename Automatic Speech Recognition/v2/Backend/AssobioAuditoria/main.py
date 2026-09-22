@@ -3,10 +3,12 @@ import gradio as gr
 import time
 
 from .SpeechToText import Speech_To_Text #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\SpeechToText.py
+from .Model_Routing import System_One_Model_Routing #C:\Users\Admin\Desktop\ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\Model_Routing.py
 from .AuditoriaLLM import Auditoria_LLM #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\AuditoriaLLM.py
 from .DatabaseAssobioAuditoria.Database import SQL_Functions #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\Database.py
 
 AUDIO_TEXT = Speech_To_Text ()
+ROUTING = System_One_Model_Routing ()
 AUDITORIA = Auditoria_LLM ()
 DATABASE = SQL_Functions ()
 
@@ -38,7 +40,9 @@ def Assobio_Auditoria (PATH, CONTEXTO, PROMPT):
         #----------------------------------------------------------------------------#
 
         ## 3. Model Routing
-        if len (TRANS) > 750:
+        DECISION = ROUTING.Model_Routing (TRANS)
+
+        if DECISION == "GPU":
 
             ## 3.1 Load Model
             yield "A carregar modelo na GPU..."
