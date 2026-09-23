@@ -17,9 +17,9 @@ class System_One_Model_Routing:
 
     def Model_Routing (self, TRANS):
 
-        if self.Laya == None:
+        if self.Laya is None:
 
-            self.Laya = laya.load (r"C:\Users\Admin\Desktop\models\System One Models\Laya", device = "cpu")
+            self.Laya = laya.load (r"C:\Users\Admin\Desktop\models\System One Models\Laya", device = "cuda")
 
         STATE = TRANS
 

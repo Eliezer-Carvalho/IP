@@ -8,7 +8,7 @@ from .AuditoriaLLM import Auditoria_LLM #ip\Automatic Speech Recognition\v2\Back
 from .DatabaseAssobioAuditoria.Database import SQL_Functions #ip\Automatic Speech Recognition\v2\Backend\AssobioAuditoria\DatabaseAssobioAuditoria\Database.py
 
 AUDIO_TEXT = Speech_To_Text ()
-ROUTING = System_One_Model_Routing ()
+#ROUTING = System_One_Model_Routing ()
 AUDITORIA = Auditoria_LLM ()
 DATABASE = SQL_Functions ()
 
@@ -40,7 +40,10 @@ def Assobio_Auditoria (PATH, CONTEXTO, PROMPT):
         #----------------------------------------------------------------------------#
 
         ## 3. Model Routing
-        DECISION = ROUTING.Model_Routing (TRANS)
+        yield "Realizando Model Routing.."
+        DECISION = "GPU" #ROUTING.Model_Routing (TRANS)
+        yield "A sair do Model Routing.."
+        time.sleep (1.5)
 
         if DECISION == "GPU":
 

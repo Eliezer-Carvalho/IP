@@ -28,7 +28,7 @@ class Speech_To_Text:
         """
 
         self.device = "cuda" if torch.cuda.is_available () else "cpu"
-
+        print (self.device)
         self.PROCESSOR_ASR = None
         self.MODEL_ASR = None
         self.DEMUCS_SEPARATOR = None
@@ -47,7 +47,7 @@ class Speech_To_Text:
 
             self.PROCESSOR_ASR = AutoProcessor.from_pretrained (self.CONFIG["WhisperLarge"]["path"])
             self.MODEL_ASR = AutoModelForSpeechSeq2Seq.from_pretrained (self.CONFIG["WhisperLarge"]["path"], device_map = self.device, dtype = torch.float16)
-            self.DEMUCS_SEPARATOR = Separator (model = "htdemucs")
+            self.DEMUCS_SEPARATOR = Separator (model = "htdemucs", device = self.device)
 
 
     def WAV_PRE_PROCESSING (self, path_wav):
@@ -133,8 +133,7 @@ class Speech_To_Text:
         begin_infer = time.time ()
 
         #Aqui os embeddings entram no decoder do modelo ASR que vai converter os embeddings para tokens de output.
-        with torch.inference_mode ():
-            outputs = self.MODEL_ASR.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt", num_beams = 5) # Beam Search # return_timestamps obrigatório para áudios >30s 
+        outputs = self.MODEL_ASR.generate (inputs, return_timestamps = True, task = "transcribe", language = "pt") # Beam Search # return_timestamps obrigatório para áudios >30s 
 
         #print (outputs)
         #print (len (outputs))
