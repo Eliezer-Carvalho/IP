@@ -9,5 +9,5 @@ https://github.com/Eliezer-Carvalho/IP/blob/master/Automatic%20Speech%20Recognit
 
 <h1> Stack </h1>
 
-datasets, gradio, nvidiampl, openai, sqllite3, POO, yaml, traceback, subprocess, psutil, transformers, torch, llama.cpp, streaming tokens
+datasets, gradio, nvidiampl, openai, sqllite3, POO, yaml, traceback, subprocess, psutil, transformers, torch, llama.cpp, docker, vllm, outlines, demucs, kiwer, laya, matplotlib, noisereduce, silero-vad, soundfile, sql
 
